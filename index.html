@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin Services - Login</title>
+    <title>Admin Services - Connexion</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="icon" href="./assets/img/logo.png">
 </head>
 <body>
     <div class="container">
+        <img src="./assets/img/logo.png" alt="Admin Services Logo">
         <h1>Admin Services</h1>
         <h2>Bienvenue, connectez-vous pour commencer</h2>
-        <form action="login">
+        <p class="information none">Vous allez être redigiré vers l'accueil</p>
+        <form>
             <input type="email" placeholder="Votre adresse mail">
             <input type="password" placeholder="Votre mot de passe">
             <input type="submit" value="Se connecter">
+            <p class="none error">Adresse e-mail ou mot de passe incorrect !</p>
         </form>
-        <p>Vous n'avez pas de session ? Cliquez <a href="./support/login.html">ici</a></p>
+        <p>Vous n'avez pas de session ? Cliquez <a href="./support/login.html" target="_blank" title="Obtenir de l'aide">ici</a></p>
     </div>
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>

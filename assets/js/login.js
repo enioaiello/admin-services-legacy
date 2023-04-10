@@ -1,0 +1,51 @@
+let loginButton = document.querySelector("input[type=submit]");
+let passwordError = document.querySelector(".error");
+let usernameInput = document.querySelector("input[type=email]");
+let passwordInput = document.querySelector("input[type=password]");
+let informationRedirect = document.querySelector(".information");
+
+let user = [
+    {
+        email: "root@admin-services.com",
+        password: "toor",
+        token: "5665d6zd46da465z465d4a56"
+    },
+]
+
+const redirect = () => {
+    window.location.href = "./views/admin.html";
+}
+
+const verifyToken = () => {
+    const token = localStorage.getItem("token");
+    for(const i of user){
+        if(i.token === token){
+            informationRedirect.classList.remove("none");
+            loginButton.disabled = true;
+            usernameInput.disabled = true;
+            passwordInput.disabled = true;
+            setTimeout(redirect, 3500);
+        }
+    }
+}
+
+verifyToken();
+
+const login = (loginParameters) => {
+    loginParameters.preventDefault();
+    for (const i of user) {
+        if (usernameInput.value === i.email && passwordInput.value === i.password) {
+            redirect()
+            localStorage.setItem('token', i.token);
+            break;
+        } else {
+            passwordError.classList.remove("none");
+            setTimeout(hideErrorText, 3500)
+        }
+    }
+}
+function hideErrorText() {
+    passwordError.classList.add("none");
+}
+
+loginButton.addEventListener("click", login);

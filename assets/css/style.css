@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    animation: 200ms;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.error {
+    background-color: red;
+    border: 1px solid darkred;
+    color: white;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.information {
+    background-color: royalblue;
+    border: 1px solid blue;
+    color: white;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.none {
+    display: none;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
