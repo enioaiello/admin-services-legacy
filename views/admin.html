@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Admin Services - Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="icon" href="../assets/img/logo.png">
 </head>
 <body>
     <div class="container">
-        
+        <h2>Bienvenue</h2>
+        <h3>Sur votre panel admin</h3>
+        <p>Que souhaitez-vous faire aujourd'hui ?</p>
+        <ul>
+            <li>
+                <a href="./settings.html">Paramètres</a>
+            </li>
+            <li>
+                <a onclick="logout()">Déconnectez-vous</a>
+            </li>
+        </ul>
     </div>
-<!--    <p><a href="#" onclick="logout()">Déconnexion</a></p>-->
-<!--    <script>-->
-<!--        function logout() {-->
-<!--            localStorage.removeItem("token");-->
-<!--            window.location.assign("../index.html");-->
-<!--        }-->
-<!--    </script>-->
+    <script>
+        function logout() {
+            alert("Merci d'avoir participé à cette bêta !");
+            localStorage.removeItem("token");
+            window.location.assign("../index.html");
+        }
+    </script>
 </body>
 </html>
