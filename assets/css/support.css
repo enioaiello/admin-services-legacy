@@ -1,0 +1,45 @@
+header {
+    background-color: white;
+}
+
+header nav {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 1%;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+code {
+    padding: 0.5%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: lightgray;
+}
+
+footer p {
+    text-align: center;
+}

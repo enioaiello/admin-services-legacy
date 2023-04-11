@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    animation: 200ms;
+    transition: 200ms;
 }
 
 body {
@@ -33,9 +33,23 @@ body {
 a {
     color: blue;
     text-decoration: none;
+    /*transition: 200ms;*/
 }
 
 a:hover {
     color: blue;
     text-decoration: underline;
+}
+
+.empty {
+    display: block;
+    margin: 1%;
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    width: 25%;
 }
