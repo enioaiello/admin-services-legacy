@@ -10,22 +10,52 @@
     <link rel="icon" href="../assets/img/logo.png">
 </head>
 <body>
-    <div class="container">
-        <h2>Bienvenue sur votre panel admin</h2>
-        <h3>Que souhaitez-vous faire aujourd'hui ?</h3>
-        <ul>
-            <li>
-                <a href="./settings.html">Paramètres</a>
-            </li>
-            <li>
-                <a href="./services.html">Services</a>
-            </li>
-            <li>
-                <a onclick="logout()">Déconnectez-vous</a>
-            </li>
-        </ul>
-        <p>Voir désirez en savoir plus sur cette version ? <a href="../support/update.html">Consultez le centre de mises à jours</a>.</p>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./admin.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="#" class="denied">Paramètres</a>
+                </li>
+                <li>
+                    <a href="./services.html">Services</a>
+                </li>
+                <li>
+                    <a href="../support/main.html">Support</a>
+                </li>
+                <li>
+                    <a onclick="logout()">Déconnexion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Bienvenue sur votre panel admin</h2>
+            <h3>Que souhaitez-vous faire aujourd'hui ?</h3>
+            <ul>
+                <li>
+                    <a href="./settings.html">Paramètres</a>
+                </li>
+                <li>
+                    <a href="./services.html">Services</a>
+                </li>
+                <li>
+                    <a onclick="logout()">Déconnectez-vous</a>
+                </li>
+            </ul>
+            <p>Vous pouvez également naviguer à travers le site avec la barre de navigation.</p>
+            <p>Voir désirez en savoir plus sur cette version ? <a href="../support/update.html">Consultez le centre de mises à jours</a>.</p>
+            <h2>Informations</h2>
+            <p>À compter du 22 avril 2023 à 14h, les pages de connexionx de <strong>Google Fake Admin Panel</strong> seront fermés définitivement. Pour en savoir plus cliquez
+                <a href="../support/eol-gfap.html" target="_blank">ici</a>.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
+    </footer>
     <script src="../assets/js/logout.js"></script>
 </body>
 </html>

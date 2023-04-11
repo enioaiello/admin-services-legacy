@@ -63,3 +63,22 @@ hr {
 article {
     width: 48%;
 }
+
+.denied {
+    cursor: not-allowed;
+}
+
+footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 1% 0;
+    text-align: center;
+}
+
+.empty2 {
+    display: block;
+    height: 100vh;
+}
