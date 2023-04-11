@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Services - Paramètres</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="icon" href="../assets/img/logo.png">
 </head>
 <body>
     <div class="container">
@@ -13,12 +15,6 @@
         <h3>Personnalisez votre expérience</h3>
         <p>Les paramètres ne sont pas disponible pour cette bêta. <a href="./admin.html">Retournez à l'accueil</a> ou <a onclick="logout()">déconnectez-vous</a>.</p>
     </div>
-    <script>
-        function logout() {
-            alert("Merci d'avoir participé à cette bêta !");
-            localStorage.removeItem("token");
-            window.location.assign("../index.html");
-        }
-    </script>
+    <script src="../assets/js/logout.js"></script>
 </body>
 </html>

@@ -33,7 +33,6 @@ body {
 a {
     color: blue;
     text-decoration: none;
-    /*transition: 200ms;*/
 }
 
 a:hover {
@@ -52,4 +51,15 @@ h2 {
 
 hr {
     width: 25%;
+}
+
+.articleContain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 48%;
 }

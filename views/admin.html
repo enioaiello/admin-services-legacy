@@ -11,9 +11,8 @@
 </head>
 <body>
     <div class="container">
-        <h2>Bienvenue</h2>
-        <h3>Sur votre panel admin</h3>
-        <p>Que souhaitez-vous faire aujourd'hui ?</p>
+        <h2>Bienvenue sur votre panel admin</h2>
+        <h3>Que souhaitez-vous faire aujourd'hui ?</h3>
         <ul>
             <li>
                 <a href="./settings.html">Paramètres</a>
@@ -22,13 +21,8 @@
                 <a onclick="logout()">Déconnectez-vous</a>
             </li>
         </ul>
+        <p>Voir désirez en savoir plus sur cette version ? <a href="../support/update.html">Consultez le centre de mises à jours</a>.</p>
     </div>
-    <script>
-        function logout() {
-            alert("Merci d'avoir participé à cette bêta !");
-            localStorage.removeItem("token");
-            window.location.assign("../index.html");
-        }
-    </script>
+    <script src="../assets/js/logout.js"></script>
 </body>
 </html>
