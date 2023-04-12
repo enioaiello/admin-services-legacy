@@ -62,6 +62,10 @@ hr {
 
 article {
     width: 48%;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
 }
 
 .denied {
@@ -81,4 +85,51 @@ footer p {
 .empty2 {
     display: block;
     height: 100vh;
+}
+
+.button {
+    background-color: #0075c4;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 1% 5%;
+}
+
+.button:hover {
+    background-color: #0267c1;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 1% 5%;
+}
+
+#mobileError {
+    display: none;
+    background-color: red;
+    color: white;
+    width: 75%;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+#mobileError a {
+    color: white;
+    text-decoration: underline;
+}
+
+#mobileError .button {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
+@media (max-width: 576px) {
+    .container {
+        display: none;
+    }
+
+    #mobileError {
+        display: block;
+    }
 }

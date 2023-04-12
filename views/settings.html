@@ -10,11 +10,48 @@
     <link rel="icon" href="../assets/img/logo.png">
 </head>
 <body>
-    <div class="container">
-        <h2>Paramètres</h2>
-        <h3>Personnalisez votre expérience</h3>
-        <p>Les paramètres ne sont pas disponible pour cette bêta. <a href="./admin.html">Retournez à l'accueil</a> ou <a onclick="logout()">déconnectez-vous</a>.</p>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./admin.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="./settings.html">Paramètres</a>
+                </li>
+                <li>
+                    <a href="./services.html">Services</a>
+                </li>
+                <li>
+                    <a href="../support/main.html">Support</a>
+                </li>
+                <li>
+                    <a onclick="logout()">Déconnexion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Paramètres (beta)</h2>
+            <h3>Personnalisez votre expérience</h3>
+            <p>Les paramètres ne sont pas disponible pour le compte utilisateur universel. Voici néanmoins quelques actions que vous pouvez faire.</p>
+            <ul>
+                <li>
+                    <a href="./admin.html">Retourner à l'accueil</a>
+                </li>
+                <li>
+                    <a href="../support/update.html">Consulter les mises à jours</a>
+                </li>
+                <li>
+                    <a onclick="logout()">Se déconnecter</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
+    </footer>
     <script src="../assets/js/logout.js"></script>
 </body>
 </html>
