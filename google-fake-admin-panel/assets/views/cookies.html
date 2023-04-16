@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Admin Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/favicon.png">
+</head>
+<body class="mainDiv">
+    <div class="logoutText none">Please wait</div>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="../img/favicon.png" alt="Logo">
+                </li>
+                <li>
+                    <a href="./panel.html" title="Access to the panel">Home</a>
+                </li>
+                <li>
+                    <a href="./debug.html" title="Enter in debug mode">Debug Mode</a>
+                </li>
+                <li>
+                    <a href="./open-source.html" title="Access to the open-source">Open-source</a>
+                </li>
+                <li>
+                    <a href="./cookies.html" title="Access to the cookies policy">Cookies policy</a>
+                </li>
+                <li>
+                    <a href="https://github.com/enioaiello/google-fake-admin-panel" target="_blank" title="See the GitHub project">GitHub project</a>
+                </li>
+                <li>
+                    <a href="#" class="logout" title="Log out of the Google Admin Panel">Logout</a>
+                </li>
+                <li>
+                    <a href="#" class="disconnect" title="Log out and return to Admin Services">Return to Admin Services</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Cookies</h2>
+        <p>This service only stores session data on your computer, such as your user ID, allowing us to keep you logged in.
+            We do not collect any other data.</p>
+    </main>
+    <div class="clear"></div>
+    <script>
+        let logoutButton = document.querySelector(".logout");
+        let logoutText = document.querySelector(".logoutText");
+        let timer = 6;
+        function logout() {
+            window.location.assign("../../index.html");
+        }
+        function confirmLogout() {
+            setInterval( function(){
+                timer -= 1;
+                logoutText.innerHTML = "Logout in " + timer + " seconds";
+            }, 1000)
+            logoutText.classList.remove("none");
+            console.log("Security: Logout in 10 seconds");
+            setTimeout(logout, 5000);
+        }
+        logoutButton.addEventListener("click", confirmLogout);
+
+        let disconnect = document.querySelector(".disconnect");
+
+        function disconnectAndReturnToAdminServices() {
+            window.location.assign("../../../index.html");
+            localStorage.removeItem("token")
+        }
+
+        disconnect.addEventListener("click", disconnectAndReturnToAdminServices);
+    </script>
+</body>
+</html>

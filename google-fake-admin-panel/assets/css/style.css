@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body {
+    font-size: 2.5vh;
+    width: 80%;
+    margin: 0;
+}
+
+.mainDiv {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 15%;
+}
+
+span {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header {
+    float: left;
+    width: 25%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: left;
+    margin: 2% 0 2% 0;
+}
+
+li a:hover {
+    color: gray;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main {
+    float: right;
+    width: 75%;
+    background-color: royalblue;
+    color: white;
+    padding: 7% 5%;
+    border-radius: 5px;
+}
+
+div {
+    padding: 5%;
+}
+
+input {
+    text-align: left;
+    padding: 1%;
+}
+
+input[type=submit] {
+    width: 10%;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.none {
+    display: none;
+}
+
+#loadingPage {
+    cursor: wait;
+}
+
+#loginLogo {
+    width: 10%;
+}
+
+.error {
+    background-color: #D33F49;
+    color: #D8E2DC;
+    border-radius: 5px;
+    width: 35%;
+    height: 5vh;
+    margin: 1% auto;
+    padding: 1%;
+}
+
+.button {
+    display: inline-block;
+    padding: 1% 5%;
+    background-color: royalblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #476aa1;
+}
+
+.denied {
+    cursor: not-allowed;
+}
+
+#articleLeft {
+    float: left;
+    width: 45%;
+}
+
+#articleRight {
+    float: right;
+    width: 45%;
+    padding: 1%;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}

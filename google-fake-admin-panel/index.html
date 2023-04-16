@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Admin Panel Mode</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/favicon.png">
+</head>
+<body>
+    <div class="mainDiv">
+        <img src="./assets/img/favicon.png" alt="Google Admin Panel logo">
+        <h1>Google Admin Panel Mode</h1>
+        <p><a href="#" id="logon" class="button">Login</a></p>
+        <p><a href="../index.html" style="color: blue; text-decoration: underline;">Return to Admin Services</a></p>
+    </div>
+    <script src="./assets/js/cookies.js"></script>
+    <script>
+        const token = localStorage.getItem("token");
+        const logonRestore = document.querySelector("#logon");
+
+        function logonRestoreAction() {
+            if (token != null || undefined) {
+                window.location.href = "./assets/views/restoreSession.html";
+            } else {
+                window.location.href = "./assets/views/loginType.html";
+            }
+        }
+
+        logonRestore.addEventListener("click", logonRestoreAction);
+    </script>
+</body>
+</html>
