@@ -11,8 +11,17 @@
     <h2>Welcome to the Google Mode</h2>
     <p>This functionnality allows you to use the classic <strong>Google Fake Admin Panel</strong>.</p>
     <p>This version of <strong>Google Fake Admin Panel</strong> is still in beta and is in English.</p>
-    <p>If you really want to access to this function click <a href="./google-fake-admin-panel/index.html">here</a>.</p>
+    <p>If you really want to access to this function click <a href="./google-fake-admin-panel/index.html" id="enable">here</a>.</p>
     <p>Note: This function is still under developement. If you notice any problems, click <a href="mailto:aielloenio@icloud.com">here</a>.</p>
     <p><a href="./index.html">Go back to the login page</a>.</p>
+    <script>
+        const active = document.querySelector("#enable");
+
+        function enableGoogleMode() {
+            localStorage.setItem('google-mode', true);
+        }
+
+        active.addEventListener("click", enableGoogleMode);
+    </script>
 </body>
 </html>
