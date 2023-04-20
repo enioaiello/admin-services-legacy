@@ -12,6 +12,7 @@ body {
     border-radius: 5px;
     padding: 1%;
     text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
 }
 
 .container img {
