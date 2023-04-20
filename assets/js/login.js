@@ -37,6 +37,7 @@ const login = (loginParameters) => {
         if (usernameInput.value === i.email && passwordInput.value === i.password) {
             redirect()
             localStorage.setItem('token', i.token);
+            localStorage.setItem('username', i.email)
             break;
         } else {
             passwordError.classList.remove("none");
