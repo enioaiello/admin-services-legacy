@@ -1,5 +1,6 @@
 const welcomeText = document.querySelector("#welcomeText");
 let username = localStorage.getItem("username");
+let token = localStorage.getItem("token");
 
 function userNameDisplay() {
     let token = localStorage.getItem("token");
