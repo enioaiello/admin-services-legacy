@@ -6,9 +6,8 @@ function userNameDisplay() {
     let token = localStorage.getItem("token");
     if (token === null) {
         window.location.assign("../index.html");
-    } else {
-        welcomeText.innerHTML = "Bienvenue " + username + " sur votre panel !";
     }
+    welcomeText.innerHTML = "Bienvenue " + username + " sur votre panel !";
 }
 
 userNameDisplay();
