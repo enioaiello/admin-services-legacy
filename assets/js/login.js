@@ -6,6 +6,7 @@ let informationRedirect = document.querySelector(".information");
 
 let user = [
     {
+        username: "root",
         email: "root@admin-services.com",
         password: "toor",
         token: "4555d6zd46da465z465d4c58"
@@ -37,7 +38,7 @@ const login = (loginParameters) => {
         if (usernameInput.value === i.email && passwordInput.value === i.password) {
             redirect()
             localStorage.setItem('token', i.token);
-            localStorage.setItem('username', i.email);
+            localStorage.setItem('username', i.username);
             break;
         } else {
             passwordError.classList.remove("none");
