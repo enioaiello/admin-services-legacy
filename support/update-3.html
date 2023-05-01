@@ -13,19 +13,28 @@
     <header>
         <nav>
             <ul>
-                <li>
-                    <a href="../views/admin.html">Accueil</a>
+                <li class="brand">
+                    <img src="../assets/img/logo.png" alt="Logo" height="30px"> Admin Services
                 </li>
-                <li>
-                    <a href="../views/settings.html">Paramètres</a>
-                </li>
-                <li>
-                    <a href="../views/services.html">Services</a>
-                </li>
-                <li>
-                    <a href="./main.html">Support</a>
-                </li>
+                <div class="items">
+                    <li>
+                        <a href="../views/admin.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../views/settings.html">Paramètres</a>
+                    </li>
+                    <li>
+                        <a href="../views/services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="./main.html">Support</a>
+                    </li>
+                    <li>
+                        <a onclick="logout()">Déconnexion</a>
+                    </li>
+                </div>
             </ul>
+            <div class="clear"></div>
         </nav>
     </header>
     <main>
@@ -43,15 +52,15 @@
                 </article>
                 <article>
                     <h3>Nouveau support</h3>
-                    <p>Suite à l'ouverture officielle du serveur Discord support, le serveur sera mis en avant et plus d'informations, concernant des mises à jours par exemple, seront disponibles.</p>
+                    <p>Suite à l'ouverture officielle du serveur Discord support, le serveur sera mis en avant et plus d'informations, concernant des mises à jour par exemple, seront disponibles.</p>
                 </article>
                 <article>
                     <h3>Préparation des paramètres pour les futurs comptes utilisateurs</h3>
-                    <p>Avec la possible ajout de la base de données, vous pourrez créer et personnaliser votre compte utilisateur de manière simple et rapdie.</p>
+                    <p>Avec la possible ajout de la base de données, vous pourrez créer et personnaliser votre compte utilisateur de manière simple et rapide.</p>
                 </article>
                 <article>
                     <h3>Ajout d'informations concernant les cookies</h3>
-                    <p>Comme le site stocke des données sur votre ordinateur, il semble prudent de notifier l'utilisateur que les données, tels que votre nom d'utilisateur, votre <strong>token</strong>, sont stocké localement sur votre ordinateur.</p>
+                    <p>Comme le site stocke des données sur votre ordinateur, il semble prudent de notifier l'utilisateur que les données, telles que votre nom d'utilisateur, votre <strong>token</strong>, sont stockées localement sur votre ordinateur.</p>
                 </article>
                 <article>
                     <h3>Ajout d'un thème sombre</h3>
@@ -59,10 +68,10 @@
                 </article>
                 <article>
                     <h3>Ajout d'un écran de bienvenue</h3>
-                    <p>Lorsque vous utilisez le site pour la première fois, une introduction et un écrabn de bienvenue vous accueillera.</p>
+                    <p>Lorsque vous utilisez le site pour la première fois, une introduction et un écran de bienvenue vous accueillera.</p>
                 </article>
                 <article>
-                    <h3>Corrections des fautes d'orthoragphes</h3>
+                    <h3>Corrections des fautes d'orthographes</h3>
                     <p>Le site a quelques fautes d'orthographes qui seront corrigés avec le temps.</p>
                 </article>
             </div>
@@ -72,5 +81,6 @@
         <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
     </footer>
     <script src="../assets/js/mobileCheck.js"></script>
+    <script src="../assets/js/logout.js"></script>
 </body>
 </html>

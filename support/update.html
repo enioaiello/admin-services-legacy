@@ -13,19 +13,28 @@
     <header>
         <nav>
             <ul>
-                <li>
-                    <a href="../views/admin.html">Accueil</a>
+                <li class="brand">
+                    <img src="../assets/img/logo.png" alt="Logo" height="30px"> Admin Services
                 </li>
-                <li>
-                    <a href="../views/settings.html">Paramètres</a>
-                </li>
-                <li>
-                    <a href="../views/services.html">Services</a>
-                </li>
-                <li>
-                    <a href="./main.html">Support</a>
-                </li>
+                <div class="items">
+                    <li>
+                        <a href="../views/admin.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../views/settings.html">Paramètres</a>
+                    </li>
+                    <li>
+                        <a href="../views/services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="./main.html">Support</a>
+                    </li>
+                    <li>
+                        <a onclick="logout()">Déconnexion</a>
+                    </li>
+                </div>
             </ul>
+            <div class="clear"></div>
         </nav>
     </header>
     <main>
@@ -35,6 +44,10 @@
             <p>Note : Pour une qualité optimale sur le site Web, utilisez la version pour ordinateur.</p>
             <p>Note : Vous pouvez consulter les mises à jours <strong>alpha</strong>, dites instables, <a href="../new/">ici</a>.</p>
             <div class="articleContain">
+                <article>
+                    <h3>Version 3.0.0</h3>
+                    <p>Cette mise à jour apporte un nouveau style au site Web et corrige certaines failles. Cliquez <a href="./update-3.html">ici</a> pour en savoir plus.</p>
+                </article>
                 <article>
                     <h3>Version 2.0.4</h3>
                     <p>Cette mise à jour apporte un nouveau système pour appareil non compatible. Celui-ci enlève la possibilité d'accéder aux pages du site si l'appareil fait moins de 768 pixels.</p>
@@ -98,5 +111,6 @@
         <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
     </footer>
     <script src="../assets/js/mobileCheck.js"></script>
+    <script src="../assets/js/logout.js"></script>
 </body>
 </html>

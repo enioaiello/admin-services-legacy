@@ -13,22 +13,28 @@
     <header>
         <nav>
             <ul>
-                <li>
-                    <a href="./admin.html">Accueil</a>
+                <li class="brand">
+                    <img src="../assets/img/logo.png" alt="Logo" height="30px"> Admin Services
                 </li>
-                <li>
-                    <a href="./settings.html">Paramètres</a>
-                </li>
-                <li>
-                    <a href="./services.html">Services</a>
-                </li>
-                <li>
-                    <a href="../support/main.html">Support</a>
-                </li>
-                <li>
-                    <a onclick="logout()">Déconnexion</a>
-                </li>
+                <div class="items">
+                    <li>
+                        <a href="./admin.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="./settings.html">Paramètres</a>
+                    </li>
+                    <li>
+                        <a href="./services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="../support/main.html">Support</a>
+                    </li>
+                    <li>
+                        <a onclick="logout()">Déconnexion</a>
+                    </li>
+                </div>
             </ul>
+            <div class="clear"></div>
         </nav>
     </header>
     <main>
@@ -39,8 +45,26 @@
         </div>
         <div class="container">
             <h2>Services</h2>
+            <h3>Services recommandés</h3>
             <div class="articleContain">
-                <h3>Aucuns services pour l'instant</h3>
+                <article>
+                    <h3>Enio Aiello</h3>
+                    <p>Site Web officiel d'<strong>Enio Aiello</strong>, créateur d'<strong>Admin Services</strong>.</p>
+                    <p><a href="https://enioaiello.github.io/" class="button">Accéder</a></p>
+                </article>
+                <article>
+                    <h3>Background-library</h3>
+                    <p>Un site qui répertorie les meilleurs fonds d'écrans du site <strong>Pexels</strong>.</p>
+                    <p><a href="https://enioaiello.github.io/background-library/" class="button">Accéder</a></p>
+                </article>
+            </div>
+            <h3>Service non maintenus</h3>
+            <div class="articleContain">
+                <article>
+                    <h3>Google Fake Admin Panel</h3>
+                    <p>L'ancêtre d'<strong>Admin Services</strong>. Créé à l'origine lui aussi comme exerice et surtout comme "blague".</p>
+                    <p>Date de fin de service : 22/04/2023 à 14h.</p>
+                </article>
             </div>
         </div>
     </main>

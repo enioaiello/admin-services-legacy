@@ -12,8 +12,7 @@ a {
 }
 
 header {
-    background-color: #ffffffca;
-    /*border-bottom: 1px solid gray;*/
+    background-color: #2a2b2a;
     position: sticky;
     top: 0;
 }
@@ -21,6 +20,8 @@ header {
 header nav {
     width: 80%;
     margin: 0 auto;
+    padding: 0.5%;
+    overflow: hidden;
 }
 
 header nav ul {
@@ -28,17 +29,48 @@ header nav ul {
     padding: 0;
 }
 
-header nav ul li {
+.items {
+    float: right;
+}
+
+header nav ul .items li {
     display: inline-block;
     margin: 1%;
 }
 
-header nav ul li a {
-    color: black;
+.brand {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    margin-right: 10px;
+}
+
+header nav ul .brand {
+    color: white;
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+}
+
+header nav ul .items {
+    float: right;
+    text-align: right;
+    width: 65%;
+}
+
+.items li {
+    margin-right: 20px;
+}
+
+header nav ul .items li a {
+    color: white;
     text-decoration: none;
 }
 
-header nav ul li a:hover {
+header nav ul .items li a:hover {
     color: gray;
     text-decoration: none;
 }

@@ -13,22 +13,28 @@
     <header>
         <nav>
             <ul>
-                <li>
-                    <a href="./admin.html">Accueil</a>
+                <li class="brand">
+                    <img src="../assets/img/logo.png" alt="Logo" height="30px"> Admin Services
                 </li>
-                <li>
-                    <a href="./settings.html">Paramètres</a>
-                </li>
-                <li>
-                    <a href="./services.html">Services</a>
-                </li>
-                <li>
-                    <a href="../support/main.html">Support</a>
-                </li>
-                <li>
-                    <a onclick="logout()">Déconnexion</a>
-                </li>
+                <div class="items">
+                    <li>
+                        <a href="./admin.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="./settings.html">Paramètres</a>
+                    </li>
+                    <li>
+                        <a href="./services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="../support/main.html">Support</a>
+                    </li>
+                    <li>
+                        <a onclick="logout()">Déconnexion</a>
+                    </li>
+                </div>
             </ul>
+            <div class="clear"></div>
         </nav>
     </header>
     <main>
@@ -38,7 +44,7 @@
             <p>Merci de signaler le bug aux <a href="mailto:aielloenio@icloud.com">développeurs</a>.</p>
         </div>
         <div class="container">
-            <h2 id="welcomeText">Bienvenue</h2>
+            <h2 id="welcomeText">Données non renseignées</h2>
             <h3>Que souhaitez-vous faire aujourd'hui ?</h3>
             <ul>
                 <li>
@@ -48,6 +54,9 @@
                     <a href="./services.html">Services</a>
                 </li>
                 <li>
+                    <a href="../support/app.html">Obtenir l'application officielle</a>
+                </li>
+                <li>
                     <a href="../support/main.html">Obtenir de l'aide</a>
                 </li>
                 <li>
@@ -55,7 +64,7 @@
                 </li>
             </ul>
             <p>Vous pouvez également naviguer à travers le site avec la barre de navigation.</p>
-            <p>Voir désirez en savoir plus sur cette version ? <a href="../support/update.html">Consultez le centre de mises à jours</a>.</p>
+            <p>Vous désirez en savoir plus sur cette version ? <a href="../support/update.html">Consultez le centre de mises à jour</a>.</p>
             <h2>Mise à jour</h2>
             <p>Une nouvelle mise à jour en fonction du design et des fonctionnalités est à venir. Pour en savoir plus, cliquez <a href="../support/update-3.html">ici</a>.</p>
         </div>
@@ -64,7 +73,7 @@
         <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
     </footer>
     <script src="../assets/js/logout.js"></script>
-    <!-- <script src="../assets/js/logCheck.js"></script> -->
+    <script src="../assets/js/logCheck.js"></script>
     <script src="../assets/js/mobileCheck.js"></script>
 </body>
 </html>

@@ -13,19 +13,28 @@
     <header>
         <nav>
             <ul>
-                <li>
-                    <a href="../views/admin.html">Accueil</a>
+                <li class="brand">
+                    <img src="../assets/img/logo.png" alt="Logo" height="30px"> Admin Services
                 </li>
-                <li>
-                    <a href="../views/settings.html">Paramètres</a>
-                </li>
-                <li>
-                    <a href="../views/services.html">Services</a>
-                </li>
-                <li>
-                    <a href="./main.html">Support</a>
-                </li>
+                <div class="items">
+                    <li>
+                        <a href="../views/admin.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../views/settings.html">Paramètres</a>
+                    </li>
+                    <li>
+                        <a href="../views/services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="./main.html">Support</a>
+                    </li>
+                    <li>
+                        <a onclick="logout()">Déconnexion</a>
+                    </li>
+                </div>
             </ul>
+            <div class="clear"></div>
         </nav>
     </header>
     <main>
@@ -57,5 +66,6 @@
         <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
     </footer>
     <script src="../assets/js/mobileCheck.js"></script>
+    <script src="../assets/js/logout.js"></script>
 </body>
 </html>
