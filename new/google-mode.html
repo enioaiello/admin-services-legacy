@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin Services - Support</title>
+    <title>Admin Services - Paramètres</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/support.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="icon" href="../assets/img/logo.png">
 </head>
 <body>
+    <p><strong>Admin Services Preview est actif. Cliquez <a href="../new/main.html">ici</a> pour désactiver.</strong></p>
     <header>
         <nav>
             <ul>
@@ -18,16 +19,16 @@
                 </li>
                 <div class="items">
                     <li>
-                        <a href="../views/admin.html">Accueil</a>
+                        <a href="./admin.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="../views/settings.html">Paramètres</a>
+                        <a href="./settings.html">Paramètres</a>
                     </li>
                     <li>
-                        <a href="../views/services.html">Services</a>
+                        <a href="./services.html">Services</a>
                     </li>
                     <li>
-                        <a href="./main.html">Support</a>
+                        <a href="../support/main.html">Support</a>
                     </li>
                     <li>
                         <a onclick="logout()">Déconnexion</a>
@@ -40,27 +41,19 @@
     <main>
         <div id="mobileError">
             <h2>Information</h2>
-            <p>Il semblerait que vous essayez d'afficher la page avec un appareil mobile.</p>
-            <p>Malheureusement, les téléphones ne sont pas supportés.</p>
+            <p>Il semblerait que vous avez réussi à accéder à <strong>Admin Services</strong> sur un appareil non supporté.</p>
+            <p>Merci de signaler le bug aux <a href="mailto:aielloenio@icloud.com">développeurs</a>.</p>
         </div>
         <div class="container">
-            <h2>Admin Services Previw</h2>
-            <p>Testez les dernières fonctionnalités gratuitement. Ces versions sont en phase <strong>bêta</strong> mais sont cependant plus ou moins fonctionnel.</p>
-            <p>Note : Vous devrez attendre quelques mises à jours avant de pouvoir accéder aux versions Previews.</p>
-            <ul>
-                <li>
-                    <a href="../new/main.html">Activer la version preview</a>
-                </li>
-                <li>
-                    <a href="">Désactiver la version previews</a>
-                </li>
-            </ul>
+            <h2>Google Mode</h2>
+            <p>Retourner facilement et gratuitement sur <strong>Google Fake Admin Panel</strong> <a href="../google-mode/welcome.html">ici</a>.</p>
         </div>
     </main>
     <footer>
         <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
     </footer>
-    <script src="../assets/js/mobileCheck.js"></script>
     <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/logCheck.js"></script>
+    <script src="../assets/js/mobileCheck.js"></script>
 </body>
 </html>
