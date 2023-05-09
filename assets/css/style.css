@@ -5,6 +5,11 @@
     transition: 200ms;
 }
 
+::selection {
+    background-color: #55828b;
+    color: white;
+}
+
 body {
     margin: 0;
     padding: 0;

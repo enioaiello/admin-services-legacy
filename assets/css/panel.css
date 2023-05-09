@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 85vh;
+    flex-wrap: wrap;
+}
+
+.home {
+    width: 45%;
+}
+
+.informations {
+    width: 45%;
+}
+
+@media (max-width: 576px) { 
+    .home {
+        display: none;
+    }
+
+    .informations {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) { 
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: 85vh;
+        flex-wrap: wrap;
+    }
+
+    .home {
+        width: 100%;
+    }
+
+    .informations {
+        width: 100%;
+    }
+}
