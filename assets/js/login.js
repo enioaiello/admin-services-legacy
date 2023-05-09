@@ -15,6 +15,8 @@ let user = [
 
 const redirect = () => {
     window.location.href = "./views/admin.html";
+    const audio = new Audio("./assets/sounds/login.mp3");
+    audio.play();
 }
 
 const verifyToken = () => {

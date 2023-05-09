@@ -60,6 +60,7 @@ hr {
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 article {
@@ -67,7 +68,7 @@ article {
     background-color: lightgray;
     border-radius: 5px;
     padding: 1%;
-    margin: 1%;
+    margin: 1% 0;
 }
 
 .denied {

@@ -12,6 +12,11 @@ let user = [
         password: "toor",
         token: "5665d6zd46da465z465d4b57"
     },
+    {
+        user: "maintenance",
+        password: "maintenance__access",
+        token: "maintenance"
+    },
 ]
 
 const redirect = () => {
@@ -33,7 +38,7 @@ const login = (loginParameters) => {
     loginParameters.preventDefault();
     for(const i of user){
         if(usernameInput.value === i.user && passwordInput.value === i.password){
-            redirect()
+            redirect();
             localStorage.setItem('token', i.token);
             break;
         }else{
