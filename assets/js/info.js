@@ -12,13 +12,13 @@ xhr.onreadystatechange = function() {
   if (this.readyState === this.HEADERS_RECEIVED) {
     startTime = new Date().getTime();
   }
-  console.log(endTime);
+//   console.log(endTime);
   if (this.readyState === this.COMPLETE) {
     endTime = new Date().getTime();
 
     pingTime = endTime - startTime;
 
-    console.log(`Ping vers ${url} : ${pingTime}ms`);
+    // console.log(`Ping vers ${url} : ${pingTime}ms`);
     pingInfo.innerText = `Ping vers ${url} : ${pingTime}ms`;
   }
 };
