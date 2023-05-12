@@ -10,6 +10,7 @@ function logout() {
         alert("Vous n'êtes pas connectés !");
         console.error("L'utilisateur n'est pas connecté. Impossible de se déconnecter.");
     } else {
+        localStorage.removeItem("group");
         localStorage.removeItem("token");
         localStorage.removeItem("username");
         window.location.assign("../index.html");
