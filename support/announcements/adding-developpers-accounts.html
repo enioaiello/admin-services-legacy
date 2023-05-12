@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Services - Annonces</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/support.css">
+    <link rel="icon" href="../../assets/img/logo.png">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="brand">
+                <img src="../../assets/img/logo.png" alt="Logo" height="30px"> Admin Services
+            </li>
+            <div class="items">
+                <li>
+                    <a href="../../views/admin.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="../../views/settings.html">Paramètres</a>
+                </li>
+                <li>
+                    <a href="../../views/services.html">Services</a>
+                </li>
+                <li>
+                    <a href="./../main.html">Support</a>
+                </li>
+                <li>
+                    <a onclick="logout()">Déconnexion</a>
+                </li>
+            </div>
+        </ul>
+        <div class="clear"></div>
+    </nav>
+</header>
+<main>
+    <div id="mobileError">
+        <h2>Information</h2>
+        <p>Il semblerait que vous essayez d'afficher la page avec un appareil mobile.</p>
+        <p>Malheureusement, les téléphones ne sont pas supportés.</p>
+    </div>
+    <div class="container">
+        <h2>Ajout de comptes développeurs</h2>
+        <p>Bonjour tout le monde !</p>
+        <p>Grande nouvelle pour les <strong>développeurs</strong> de <strong>Corundum</strong> et d'<strong>Admin Services</strong> ! Les comptes développeurs devraient arrivés prochainement avec une mise à jour ajoutant des <strong>grades</strong> pour les différents comptes.</p>
+        <h3>Comment ça marche ?</h3>
+        <p>Pour le moment, comme vous ne pouvez pas créés de comptes, il existera deux groupes de comptes :</p>
+        <ul>
+            <li>
+                Le compte par défaut (le compte universel)
+            </li>
+            <li>
+                Les comptes développeurs
+            </li>
+        </ul>
+        <p>Chacuns auront un groupe différents, par exemple pour le <strong>compte universel</strong>, ce compte aura le grade (ou le groupe) <strong>Basique</strong>, tandis que les comptes <strong>développeurs</strong>, comme le compte par défaut des développeurs, auront le grade <strong>Développeurs</strong>. Le grade développeur sera important car il permet de prouver que le compte travail sur un projet du réseau <strong>Corundum</strong>.</p>
+    </div>
+</main>
+<footer>
+    <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a></p>
+</footer>
+<script src="../../assets/js/mobileCheck.js"></script>
+<script src="../../assets/js/logout.js"></script>
+</body>
+</html>

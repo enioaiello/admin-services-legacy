@@ -9,7 +9,15 @@ let user = [
         username: "root",
         email: "root@admin-services.com",
         password: "toor",
-        token: "4555d6zd46da465z465d4c58"
+        token: "4555d6zd46da465z465d4c58",
+        group: "basic"
+    },
+    {
+        username: "default__user__0",
+        email: "maintenance",
+        password: "J5Q8GOPR",
+        token: "maintenance__access",
+        group: "developper"
     },
 ]
 
@@ -40,6 +48,7 @@ const login = (loginParameters) => {
         if (usernameInput.value === i.email && passwordInput.value === i.password) {
             redirect()
             localStorage.setItem('token', i.token);
+            localStorage.setItem('group', i.group);
             localStorage.setItem('username', i.username);
             break;
         } else {
@@ -48,6 +57,7 @@ const login = (loginParameters) => {
         }
     }
 }
+
 function hideErrorText() {
     passwordError.classList.add("none");
 }

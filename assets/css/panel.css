@@ -13,6 +13,11 @@
     width: 45%;
 }
 
+.separator {
+    display: block;
+    height: 85vh;
+}
+
 @media (max-width: 576px) { 
     .home {
         display: none;
