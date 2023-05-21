@@ -33,6 +33,14 @@ Adresse e-mail : root@admin-services.com
 Mot de passe : toor
 ```
 Vous ne pouvez pas accéder aux **paramètres** de compte et à certains **services**.
+
+## Compte développeur
+Ce compte est utile pour les développeurs de **Corundum**, ces comptes permettent de tester l'ensemble des fonctionnalités d'**Admin Services**, d'accéder à certains paramètres. Veuillez noter que ce compte est utile pour prouver que vous êtes un développeur certifié. Lors de l'ajout de la base de données (durée indéterminée) cela servira de groupe.
+```
+Adresse e-mail : maintenance
+Mot de passe : J5Q8GOPR
+```
+
 ## Application de bureau
 Vous pouvez la télécharger gratuitement depuis [cette page](https://github.com/enioaiello/admin-services/releases/latest). Une fois téléchargée, excéutez simplement l'exécutable.\
 Attention, le programme est uniquement compatible sous les ordinateurs ayant pour systèmes d'exploitations Windows. Notez qu'il y a plusieurs documents à lire et à approuver (rien de vraiment méchant).
