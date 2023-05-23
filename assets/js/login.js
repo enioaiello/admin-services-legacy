@@ -14,7 +14,7 @@ let user = [
     },
     {
         username: "default__user__0",
-        email: "maintenance",
+        email: "maintenance@admin-services.com",
         password: "J5Q8GOPR",
         token: "maintenance__access",
         group: "developper"
