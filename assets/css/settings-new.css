@@ -1,0 +1,42 @@
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+#profilePicture {
+    width: 25%;
+}
+
+#profileInformation {
+    width: 73%;
+}
+
+.profilePicture {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pictureProfile {
+    border-radius: 50%;
+    width: 65%;
+}
+
+input {
+    padding: 1%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    margin: 1% 0;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+input[type=email] {
+    width: 50%;
+}
+
+input[type=password] {
+    width: 50%;
+}
