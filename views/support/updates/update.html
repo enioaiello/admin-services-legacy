@@ -1,50 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin Services - Support</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/support.css">
-    <link rel="icon" href="../assets/img/logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Services version 4.0.1">
+    <title>Admin Services</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/panel.css">
+    <link rel="stylesheet" href="../../../assets/img/logo.png">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li class="brand">
-                    <img src="../assets/img/logo.png" alt="Logo" height="30px"> Admin Services
+                <li id="brand">
+                    <img src="../../../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
                 </li>
-                <div class="items">
+                <ul id="navItems">
                     <li>
-                        <a href="../views/admin.html">Accueil</a>
+                        <a href="../../panel.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="../views/settings.html">Paramètres</a>
+                        <a href="../../settings.html">Paramètres</a>
                     </li>
                     <li>
-                        <a href="../views/services.html">Services</a>
+                        <a href="../../support/support.html">Support</a>
                     </li>
                     <li>
-                        <a href="./main.html">Support</a>
+                        <a href="#" id="logout">Déconnexion</a>
                     </li>
-                    <li>
-                        <a onclick="logout()">Déconnexion</a>
-                    </li>
-                </div>
+                </ul>
             </ul>
-            <div class="clear"></div>
         </nav>
     </header>
     <main>
         <div class="container">
             <h2>Centre de mises à jour</h2>
-            <p>Les mises à jour sont automatiques et ne nécessitent aucunes mises à jour de votre côté.</p>
-            <p>Note : Vous pouvez consulter les mises à jour <strong>alpha</strong>, dites instables, <a href="../new/main.html">ici</a>.</p>
+            <h3>Dernières mises à jour</h3>
             <div class="articleContain">
                 <article>
-                    <h3>Version 4.0.</h3>
+                    <h3>Version 4.0.1</h3>
+                    <p>Cette version réorganise les fichiers, les fonctionnalités du site et apporte un nouveau design simpliste.</p>
+                    <p><a href="./4.0.1.html" class="button">Consulter</a></p>
+                </article>
+            </div>
+            <h3>Anciennes mises à jour</h3>
+            <div class="articleContain">
+                <article>
+                    <h3>Version 4.0.0</h3>
                     <p>Cette mise à jour donne un nouveau design pour Admin Services.</p>
                 </article>
                 <article>
@@ -56,10 +60,6 @@
                     <p>Suppression des annonces, suppressions des informations de versions de la version 3, suppression du google-mode, suppression de l'écran de bienvenue.</p>
                 </article>
                 <article>
-                    <h3>Version 3.0.3b</h3>
-                    <p>Cette mise à jour prépare le fichier de bienvenue</p>
-                </article>
-                <article>
                     <h3>Version 3.0.2</h3>
                     <p>Cette mise à jour re-design le support et apporte des nouvelles fonctionnalités.</p>
                 </article>
@@ -68,20 +68,12 @@
                     <p>Cette mise à jour améliore et corrige des failles sur le <strong>Google Mode</strong>.</p>
                 </article>
                 <article>
-                    <h3>Version 3.0.1b</h3>
-                    <p>Cette mise à jour re-intègre le <strong>Google Mode</strong>.</p>
-                </article>
-                <article>
                     <h3>Version 3.0.0</h3>
                     <p>Cette mise à jour apporte un nouveau style au site Web et corrige certaines failles. Cliquez <a href="./update-3.html">ici</a> pour en savoir plus.</p>
                 </article>
                 <article>
                     <h3>Version 2.0.4</h3>
                     <p>Cette mise à jour apporte un nouveau système pour appareil non compatible. Celui-ci enlève la possibilité d'accéder aux pages du site si l'appareil fait moins de 768 pixels.</p>
-                </article>
-                <article>
-                    <h3>Version inconnue</h3>
-                    <p>Préparation au passage sur base de données : création d'une page de création de compte, mise à jour général de la page admin.</p>
                 </article>
                 <article>
                     <h3>Version 2.0.3</h3>
@@ -103,17 +95,13 @@
                     <h3>Version 1.0.0</h3>
                     <p>Cette version donne un aspect général équivalent au reste du site. Ajout d'un nouveau service</p>
                 </article>
-                <article>
-                    <h3>Version 1.0.0b</h3>
-                    <p>Cette mise à jour apporte le panneau de connexion, le compte universel, les paramètres, le support ainsi que la page 404.</p>
-                </article>
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy;2023, Admin Services. By <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a> & <strong>Corundum</strong></p>
+        <p><small>&copy;2023, <a href="https://corundum-os.github.io/">Corundum Team</a> and <a href="https://enioaiello.github.io/">Enio Aiello</a>. All right reserved.</small></p>
     </footer>
-    <script src="../assets/js/mobileCheck.js"></script>
-    <script src="../assets/js/logout.js"></script>
+    <script src="../../../assets/js/logout-settings.js"></script>
+    <script src="../../../assets/js/account-information.js"></script>
 </body>
 </html>

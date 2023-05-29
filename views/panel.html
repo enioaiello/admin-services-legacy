@@ -36,27 +36,34 @@
     </header>
     <main>
         <div class="container">
-            <h2>Paramètres</h2>
-            <div class="articleContain">
-                <article>
-                    <h3>Paramètres de comptes</h3>
-                    <p><a href="./settings/account.html" class="button">Accéder</a></p>
-                </article>
-                <article>
-                    <h3>Mode sombre (beta)</h3>
-                    <p><a href="#" id="toggleTheme" class="button">Activer/désactiver le mode sombre</a></p>
-                </article>
-                <article>
-                    <h3>Bien plus prochainement !</h3>
-                    <p><a href="#" class="button denied">Accéder</a></p>
-                </article>
+            <div id="quickActions">
+                <h2>Accueil</h2>
+                <h3 id="welcomeText">null</h3>
+                <div class="articleContain">
+                    <article>
+                        <h3>Paramètres</h3>
+                        <p>Changez les paramètres d'<strong>Admin Services</strong> et accédez à certaines informations.</p>
+                        <p><a href="./settings.html" class="button">Accéder</a></p>
+                    </article>
+                    <article>
+                        <h3>Support</h3>
+                        <p>Obtenez tout le support nécessaire sur l'utilisation d'<strong>Admin Services</strong> et ses fonctions.</p>
+                        <p><a href="./support/support.html" class="button">Accéder</a></p>
+                    </article>
+                </div>
             </div>
+            <div id="adminInformation">
+                <h3>Information</h3>
+                <img src="../assets/img/logo.png" alt="Logo Admin Services" id="adminLogo">
+                <p id="information"><small></small></p>
+            </div>
+            <div class="clear"></div>
         </div>
     </main>
     <footer>
         <p><small>&copy;2023, <a href="https://corundum-os.github.io/">Corundum Team</a> and <a href="https://enioaiello.github.io/">Enio Aiello</a>. All right reserved.</small></p>
     </footer>
+    <script src="../assets/js/panel.js"></script>
     <script src="../assets/js/logout.js"></script>
-    <script src="../assets/js/dark-mode.js"></script>
 </body>
 </html>

@@ -1,46 +1,153 @@
-.container {
+header {
+    background-color: black;
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+#brand {
+    margin-right: 20px;
+}
+
+#brandIcon {
+    height: 30px;
+    overflow: hidden;
+    margin: 1%;
+}
+
+#navItems {
+    text-align: right;
+    width: 40%;
+}
+
+#navItems li {
+    display: inline-block;
+    padding: 1%;
+}
+
+#navItems li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navItems li a:hover {
+    color: gray;
+}
+
+main {
+    width: 80%;
+    margin: 1% auto;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+#quickActions {
+    width: 74%;
+    float: left;
+}
+
+#adminInformation {
+    width: 24%;
+    float: right;
+    text-align: right;
+}
+
+#adminInformation h3 {
+    margin: 1vh 0;
+}
+
+#adminLogo {
+    width: 35%;
+}
+
+.articleContain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article {
+    width: 49%;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1% 0;
+}
+
+.button {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    padding: 2% 5%;
+    margin: 0.5vh 0;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+}
+
+footer p {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
     padding: 1% 0;
 }
 
-.home {
-    width: 45%;
+footer p small a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+} 
+
+footer p small a:hover {
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+} 
+
+code {
+    margin: 3vh 0;
+    padding: 0.5%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: lightgray;
 }
 
-.informations {
-    width: 45%;
-}
-
-.separator {
+.empty {
     display: block;
-    height: 85vh;
+    margin: 1%;
 }
 
-@media (max-width: 576px) { 
-    .home {
-        display: none;
-    }
-
-    .informations {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) { 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        height: 85vh;
-        flex-wrap: wrap;
-    }
-
-    .home {
-        width: 100%;
-    }
-
-    .informations {
-        width: 100%;
-    }
+.clear {
+    clear: both;
 }

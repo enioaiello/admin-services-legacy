@@ -1,41 +1,37 @@
+'use strict'
+
 let loginButton = document.querySelector("input[type=submit]");
-let passwordError = document.querySelector(".error");
 let usernameInput = document.querySelector("input[type=email]");
 let passwordInput = document.querySelector("input[type=password]");
-let informationRedirect = document.querySelector(".information");
+let passwordError = document.querySelector(".loginError");
 
 let user = [
     {
-        username: "root",
-        email: "root@admin-services.com",
-        password: "toor",
-        token: "4555d6zd46da465z465d4c58",
-        group: "basic"
+        username: "Enio Aiello",
+        email: "aielloenio@icloud.com",
+        password: "EnioAiello1",
+        token: "4555d6zd46da465z465d4c58"
     },
     {
-        username: "default__user__0",
-        email: "maintenance@admin-services.com",
-        password: "J5Q8GOPR",
-        token: "maintenance__access",
-        group: "developper"
+        username: "Compte universel",
+        email: "root@admin-services.com",
+        password: "toor",
+        token: "8535d6zd46db565z465d4a57"
     },
 ]
 
 const redirect = () => {
-    window.location.href = "./views/admin.html";
-    const audio = new Audio("./assets/sounds/login.mp3");
-    audio.play();
+    window.location.href = "./views/panel.html";
 }
 
 const verifyToken = () => {
     const token = localStorage.getItem("token");
-    for(const i of user){
-        if(i.token === token){
-            informationRedirect.classList.remove("none");
+    for (const i of user) {
+        if (i.token === token) {
             loginButton.disabled = true;
             usernameInput.disabled = true;
             passwordInput.disabled = true;
-            setTimeout(redirect, 3500);
+            setTimeout(redirect, 100);
         }
     }
 }
@@ -48,7 +44,6 @@ const login = (loginParameters) => {
         if (usernameInput.value === i.email && passwordInput.value === i.password) {
             redirect()
             localStorage.setItem('token', i.token);
-            localStorage.setItem('group', i.group);
             localStorage.setItem('username', i.username);
             break;
         } else {

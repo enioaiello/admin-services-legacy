@@ -1,36 +1,30 @@
-<!doctype html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin Services - Connexion</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Services version 4.0.1">
+    <title>Admin Services</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="icon" href="./assets/img/logo.png">
 </head>
 <body>
-    <div id="mobileError">
-        <h2>Format mobile non supporté</h2>
-        <p>Il semblerait que vous essayez d'accéder à <strong>Admin Services</strong> en utilisant un appareil non supporté.</p>
-        <p>Pour utiliser l'ensemble des fonctionnalités du site, revenez sur tablette ou sur un ordinateur de taille correcte. Si vous pensez qu'il s'agit d'une erreur,
-            <a href="mailto:aielloenio@icloud.com">contactez le développeur du site</a>.</p>
-        <p><a href="./index.html" class="button">Rafraîchir la page</a></p>
-    </div>
     <div class="container">
-        <img src="./assets/img/logo.png" alt="Admin Services Logo">
+        <img src="./assets/img/logo.png" alt="Logo d'Admin Services">
         <h1>Admin Services</h1>
         <h2>Bienvenue, connectez-vous pour commencer</h2>
-        <p class="information none">Vous allez être redigiré vers l'accueil</p>
         <form>
-            <input type="email" placeholder="Votre adresse mail">
-            <input type="password" placeholder="Votre mot de passe">
-            <input type="submit" value="Se connecter">
-            <p class="none error">Adresse e-mail ou mot de passe incorrect !</p>
+            <input type="email" id="email" placeholder="Entrez votre adresse email">
+            <input type="password" id="password" placeholder="Entrez votre mot de passe">
+            <input type="submit" id="login" value="Se connecter">
         </form>
-        <p>Vous n'avez pas de session ? Cliquez <a href="./support/login.html" target="_blank" title="Obtenir de l'aide">ici</a></p>
+        <div class="loginError none">
+            <p>Votre adresse email ou votre mot de passe est incorrect !</p>
+        </div>
     </div>
+    <!-- <script src="./assets/js/script.js"></script> -->
     <script src="./assets/js/login.js"></script>
-    <script src="./assets/js/mobileCheck.js"></script>
 </body>
 </html>

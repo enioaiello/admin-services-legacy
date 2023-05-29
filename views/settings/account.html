@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Admin Services version 4.0.1">
     <title>Admin Services</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/panel.css">
-    <link rel="stylesheet" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/panel.css">
+    <link rel="stylesheet" href="../../assets/img/logo.png">
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li id="brand">
-                    <img src="../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
+                    <img src="../../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
                 </li>
                 <ul id="navItems">
                     <li>
-                        <a href="./panel.html">Accueil</a>
+                        <a href="../panel.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="./settings.html">Paramètres</a>
+                        <a href="../settings.html">Paramètres</a>
                     </li>
                     <li>
-                        <a href="./support/support.html">Support</a>
+                        <a href="../support/support.html">Support</a>
                     </li>
                     <li>
                         <a href="#" id="logout">Déconnexion</a>
@@ -36,27 +36,27 @@
     </header>
     <main>
         <div class="container">
-            <h2>Paramètres</h2>
+            <h2>Informations de comptes</h2>
             <div class="articleContain">
                 <article>
-                    <h3>Paramètres de comptes</h3>
-                    <p><a href="./settings/account.html" class="button">Accéder</a></p>
+                    <h3>Remarque</h3>
+                    <p>Vous ne pouvez pas modifier certains paramètres.</p>
                 </article>
                 <article>
-                    <h3>Mode sombre (beta)</h3>
-                    <p><a href="#" id="toggleTheme" class="button">Activer/désactiver le mode sombre</a></p>
+                    <h3>Nom de compte</h3>
+                    <p id="usernameInformation">Impossible de charger cette information !</p>
                 </article>
-                <article>
-                    <h3>Bien plus prochainement !</h3>
-                    <p><a href="#" class="button denied">Accéder</a></p>
-                </article>
+            </div>
+            <div class="accountInformation">
+                <h3>Encore en bêta</h3>
+                <p>Désolé, mais vous essayez d'accéder à des fonctionnalités qui ne sont pour le moment pas disponible.</p>
             </div>
         </div>
     </main>
     <footer>
         <p><small>&copy;2023, <a href="https://corundum-os.github.io/">Corundum Team</a> and <a href="https://enioaiello.github.io/">Enio Aiello</a>. All right reserved.</small></p>
     </footer>
-    <script src="../assets/js/logout.js"></script>
-    <script src="../assets/js/dark-mode.js"></script>
+    <script src="../../assets/js/logout-settings.js"></script>
+    <script src="../../assets/js/account-information.js"></script>
 </body>
 </html>
