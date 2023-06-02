@@ -1,7 +1,7 @@
 # Fake Google Admin Panel
 A simple check password in HTML, CSS and JavaScript
-# Notification of closure
-As of April 22, 2023 at 2 p.m., you will no longer be able to use this service. This service will be replaced by [Admin Services](https://enioaiello.github.io/admin-services). You will no longer be able to log in and access the panel. However, if you want to keep the project alive, you can host this site on your GitHub profile (feel free to mention me to support me).
+# Recreate for Admin Services
+Use **Google Fake Admin Panel** through **Admin Services** again, quickly and easily!
 # Usage
 To use this page, access the official page [here](https://enioaiello.github.io/google-fake-admin-panel/) or clone the project via Git or GitHub Desktop via the directory of your choice.
 ## Git

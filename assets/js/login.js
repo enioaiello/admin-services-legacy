@@ -45,6 +45,8 @@ const login = (loginParameters) => {
             redirect()
             localStorage.setItem('token', i.token);
             localStorage.setItem('username', i.username);
+            localStorage.setItem('email', i.email);
+            localStorage.setItem('password', i.password);
             break;
         } else {
             passwordError.classList.remove("none");
