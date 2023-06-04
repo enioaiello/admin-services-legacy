@@ -46,3 +46,17 @@ form {
 #login:hover {
     background-color: gray;
 }
+
+@media (max-width: 576px) {
+    .container {
+        text-align: center;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    input {
+        width: 100%;
+    }
+}

@@ -162,6 +162,29 @@ code {
     margin: 1%;
 }
 
+@media (max-width: 576px) {
+    nav {
+        width: 100%;
+    }
+
+    #navItems {
+        width: 95%;
+    }
+
+    #quickActions {
+        width: 100%;
+    }
+
+    #adminInformation {
+        width: 100%;
+        text-align: center;
+    }
+
+    article {
+        width: 100%;
+    }
+}
+
 .clear {
     clear: both;
 }

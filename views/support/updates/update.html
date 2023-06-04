@@ -41,7 +41,12 @@
         <div class="container">
             <h2>Centre de mises à jour</h2>
             <h3>Dernières mises à jour</h3>
+            <p id="latestVersion"></p>
             <div class="articleContain">
+                <article>
+                    <h3>Version 4.0.4</h3>
+                    <p>Cette nouvelle mise à jour apporte la prise en charge des appareils mobiles. Elle déplace également les paramètres de thèmes sombres dans une nouvelle page.</p>
+                </article>
                 <article>
                     <h3>Version 4.0.3</h3>
                     <p>Mise à jour mineure apportant quelques corrections</p>
@@ -116,5 +121,10 @@
     </footer>
     <script src="../../../assets/js/logout-settings.js"></script>
     <script src="../../../assets/js/account-information.js"></script>
+    <script>
+        let localVersion = localStorage.getItem("version");
+        let latestVersion = document.querySelector("#latestVersion");
+        latestVersion.innerHTML = "<strong>Version actuelle :</strong> " + localVersion;
+    </script>
 </body>
 </html>
