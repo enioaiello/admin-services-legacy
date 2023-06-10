@@ -1,7 +1,7 @@
 'use strict'
 
 const information = document.querySelector("#information");
-const version = "4.0.4";
+const version = "4.0.5";
 let localVersion = localStorage.setItem("version", version);
 const username = localStorage.getItem("username");
 const welcomeText = document.querySelector("#welcomeText");
