@@ -55,7 +55,7 @@
             </article>
             <article>
                 <h3>Fonds d'écrans</h3>
-                <p>Non disponible pour le moment</p>
+                <p><a href="#" class="button" id="wallpaperAction">Définir</a></p>
             </article>
         </div>
     </div>
@@ -68,6 +68,23 @@
     let localVersion = localStorage.getItem("version");
     let latestVersion = document.querySelector("#latestVersion");
     latestVersion.innerHTML = "<strong>Version :</strong> " + localVersion;
+</script>
+<script>
+    let wallpaperAction = document.querySelector("#wallpaperAction");
+
+    function changerFondEcran() {
+      let url = prompt("Entrez l'URL de l'image :");
+      if (url) {
+        localStorage.setItem("backgroundURL", url);
+        document.body.style.backgroundImage = "url('" + url + "')";
+      } else {
+        localStorage.removeItem("backgroundURL");
+        document.body.style.backgroundImage = "none";
+        document.body.style.backgroundColor = "white";
+      }
+    }
+
+    wallpaperAction.addEventListener("click", changerFondEcran);
 </script>
 </body>
 </html>
