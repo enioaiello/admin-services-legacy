@@ -1,28 +1,20 @@
 'use strict';
 
-let registrationForm = document.getElementById("registrationForm");
+const registrationForm = document.querySelector("#registrationForm");
+const emailInput = document.querySelector("input[type=email]");
+const submitButton = document.querySelector("input[type=submit]");
 
-registrationForm.addEventListener("submit", function (event) {
+submitButton.addEventListener("click", function (event) {
     event.preventDefault();
 
-    let emailInput = document.getElementById("email");
-    let password = prompt("Veuillez entrer votre mot de passe :");
-    let confirmPassword = prompt("Veuillez confirmer votre mot de passe :");
+    const token = generateToken();
+    const username = generateUsername();
 
-    if (emailInput.value.includes("@") && password && password === confirmPassword) {
-        let user = {
-            username: "",
-            email: emailInput.value,
-            password: password,
-            token: generateToken()
-        };
+    localStorage.setItem("token", token);
+    localStorage.setItem("username", username);
+    localStorage.setItem("createdAccount", "true");
 
-        saveUser(user);
-        redirect();
-    } else {
-        passwordError.classList.remove("none");
-        setTimeout(hideErrorText, 3500);
-    }
+    redirect();
 });
 
 function generateToken() {
@@ -34,22 +26,15 @@ function generateToken() {
     return token;
 }
 
-function saveUser(user) {
-    let users = localStorage.getItem("users");
-    if (!users) {
-        users = [];
-    } else {
-        users = JSON.parse(users);
+function generateUsername() {
+    const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let username = "";
+    for (let i = 0; i < 8; i++) {
+        username += characters.charAt(Math.floor(Math.random() * characters.length));
     }
-
-    users.push(user);
-    localStorage.setItem("users", JSON.stringify(users));
+    return username;
 }
 
 function redirect() {
-    window.location.href = "../admin.html";
-}
-
-function hideErrorText() {
-    passwordError.classList.add("none");
+    window.location.href = "../panel.html";
 }

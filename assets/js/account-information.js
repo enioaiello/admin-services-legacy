@@ -6,6 +6,7 @@ const email = localStorage.getItem("email");
 const password = localStorage.getItem("password");
 const group = localStorage.getItem("group");
 let sessionShopei = localStorage.getItem("session");
+let createdSession = localStorage.getItem("createdAccount");
 const usernameLabel = document.querySelector("#usernameInformation");
 const tokenLabel = document.querySelector("#tokenInformation");
 const emailLabel = document.querySelector("#emailInformation");
@@ -14,6 +15,7 @@ const groupLabel = document.querySelector("#groupInformation");
 const groupArticle = document.querySelector("#groupArticle");
 const sessionInformation = document.querySelector("#shopeiInformation");
 const sessionArticle = document.querySelector("#sessionArticle");
+const createdArticle = document.querySelector("#createdArticle");
 
 if (username) {
     usernameLabel.textContent = username;
@@ -43,4 +45,8 @@ if (group) {
 if (sessionShopei) {
     sessionInformation.textContent = sessionShopei;
     sessionArticle.classList.remove("none");
+}
+
+if (createdSession) {
+    createdArticle.textContent("Compte enregistré sur l'appareil");
 }
