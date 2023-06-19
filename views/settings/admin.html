@@ -57,6 +57,10 @@
                 <h3>Fonds d'écrans</h3>
                 <p><a href="#" class="button" id="wallpaperAction">Définir</a></p>
             </article>
+            <article>
+                <h3>Réinitailiser Admin Services</h3>
+                <p><a href="#" class="button" id="resetAction">Réinitailiser</a></p>
+            </article>
         </div>
     </div>
 </main>
@@ -85,6 +89,22 @@
     }
 
     wallpaperAction.addEventListener("click", changerFondEcran);
+</script>
+<script>
+    let resetAction = document.querySelector("#resetAction");
+    let username = localStorage.getItem("username");
+
+    function confirmReset() {
+        alert("Vous êtes sur le point de réinitailiser Admin Services");
+        alert("Si vous continuez vos informations de connexion et la connexion à d'autre services vont être interrompus");
+        let confirmation = confirm("Êtes-vous sûr ?");
+        if (confirmation) {
+            let deleteConfirmation = prompt("Entrez votre nom d'utilisateur pour procéder à la réinitailisation d'Admin Services. Indice : " + username);
+            if (deleteConfirmation === username) {
+                
+            }
+        }
+    }
 </script>
 </body>
 </html>

@@ -8,6 +8,9 @@ function logout() {
     if (confirmLogout) {
         localStorage.removeItem("token");
         localStorage.removeItem("username");
+        localStorage.removeItem("email");
+        localStorage.removeItem("passsword");
+        localStorage.removeItem("group");
         window.location.href = "../../index.html";
     }
 }
