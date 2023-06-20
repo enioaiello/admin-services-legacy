@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez Admin Services, un projet d'étudiant géré par la team Corundum">
+    <title>Admin Services</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/panel.css">
+    <link rel="icon" href="../assets/img/logo.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="brand">
+                    <img src="../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
+                </li>
+                <ul id="navItems">
+                    <li>
+                        <a href="./panel.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="./settings.html">Paramètres</a>
+                    </li>
+                    <li>
+                        <a href="./support/support.html">Support</a>
+                    </li>
+                    <li>
+                        <a href="./services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" id="logout">Déconnexion</a>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Admin Services Plus</h2>
+            <div class="enabled none">
+                <h3>Actif</h3>
+                <p><strong>Admin Services Plus</strong> est actif et disponible pour votre compte.</p>
+                <p id="date">Information impossible à chargée</p>
+            </div>
+            <div class="disabled">
+                <h3>Non actif</h3>
+                <p>Votre compte n'a pas <strong>Admin Services Plus</strong> ou n'est pas compatible.</p>
+                <p><a href="#" onclick="activatePlus()">Activez-le</a>, c'est gratuit !</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><small>&copy;2023, <a href="https://corundum-os.github.io/">Corundum Team</a> and <a href="https://enioaiello.github.io/">Enio Aiello</a>. All right reserved.</small></p>
+    </footer>
+    <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/wallpaper.js"></script>
+    <script>
+        let plusAccount = localStorage.getItem("group");
+        let enabledDiv = document.querySelector(".enabled");
+        let disabledDiv = document.querySelector(".disabled");
+        let date = document.querySelector("#date");
+        let dateMaintenant = new Date();
+        let dateEtHeure = dateMaintenant.toLocaleString();
+
+        function activatePlus() {
+            localStorage.setItem("group", "plus");
+            localStorage.setItem("plusEnabled", dateEtHeure);
+        }
+
+        if (plusAccount === "plus") {
+            enabledDiv.classList.remove("none");
+            disabledDiv.classList.add("none");
+            let dateActivated = localStorage.getItem("plusEnabled");
+            date.innerHTML = "Activé le " + dateActivated;
+        }
+    </script>
+</body>
+</html>

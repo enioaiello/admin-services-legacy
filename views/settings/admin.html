@@ -101,7 +101,12 @@
         if (confirmation) {
             let deleteConfirmation = prompt("Entrez votre nom d'utilisateur pour procéder à la réinitailisation d'Admin Services. Indice : " + username);
             if (deleteConfirmation === username) {
-                
+                localStorage.removeItem("token");
+                localStorage.removeItem("username");
+                localStorage.removeItem("email");
+                localStorage.removeItem("passsword");
+                localStorage.removeItem("group");
+                localStorage.removeItem("backgroundURL");
             }
         }
     }

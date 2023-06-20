@@ -48,5 +48,7 @@ if (sessionShopei) {
 }
 
 if (createdSession) {
-    createdArticle.textContent("Compte enregistré sur l'appareil");
+    createdArticle.textContent("Ce compte est enregistré sur l'appareil");
+} else if (!createdSession) {
+    createdArticle.textContent("Ce compte est stocké sur Admin Services");
 }

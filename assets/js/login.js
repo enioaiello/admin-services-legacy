@@ -10,13 +10,15 @@ let user = [
         username: "Enio Aiello",
         email: "aielloenio@icloud.com",
         password: "EnioAiello1",
-        token: "4555d6zd46da465z465d4c58"
+        token: "4555d6zd46da465z465d4c58",
+        group: "plus"
     },
     {
         username: "Compte universel",
         email: "root@admin-services.com",
         password: "toor",
-        token: "8535d6zd46db565z465d4a57"
+        token: "null",
+        group: "null"
     },
 ]
 

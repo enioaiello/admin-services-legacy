@@ -12,7 +12,8 @@ submitButton.addEventListener("click", function (event) {
 
     localStorage.setItem("token", token);
     localStorage.setItem("username", username);
-    localStorage.setItem("createdAccount", "true");
+    localStorage.setItem("createdAccount", true);
+    localStorage.setItem("group", "basic");
 
     redirect();
 });
