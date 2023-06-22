@@ -1,5 +1,5 @@
 header {
-    background-color: black;
+    background-color: #40798c;
 }
 
 nav {
@@ -114,20 +114,20 @@ article:hover {
     text-align: center;
     padding: 2% 5%;
     margin: 0.5vh 0;
-    background-color: black;
+    background-color: #40798c;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .button:hover {
-    background-color: gray;
+    background-color: #40795a;
     color: white;
     text-decoration: none;
 }
 
 footer {
-    background-color: black;
+    background-color: #40798c;
 }
 
 footer p {

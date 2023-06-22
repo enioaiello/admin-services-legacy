@@ -42,7 +42,7 @@
             <h2>Admin Services Plus</h2>
             <div class="enabled none">
                 <h3>Actif</h3>
-                <p><strong>Admin Services Plus</strong> est actif et disponible pour votre compte.</p>
+                <p><strong>Admin Services Plus</strong> est actif et est disponible pour votre compte.</p>
                 <p id="date">Information impossible à chargée</p>
             </div>
             <div class="disabled">
@@ -75,6 +75,10 @@
             disabledDiv.classList.add("none");
             let dateActivated = localStorage.getItem("plusEnabled");
             date.innerHTML = "Activé le " + dateActivated;
+        }
+
+        if (plusAccount === "") {
+            alert("Données d'Admin Services Plus corrompues. Confirmez la réinitialisation d'Admin Services");
         }
     </script>
 </body>

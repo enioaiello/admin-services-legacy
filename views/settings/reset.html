@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Services</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <h2>Réinitailisation d'Admin Services</h2>
+    <p>Votre compte <strong>Admin Services</strong> et ses fonctionnalités sont en court de réinitialisation.</p>
+    <p>Voici les informations qui seront effacés :</p>
+    <ul>
+        <li>
+            Admin Services Plus
+        </li>
+        <li>
+            Informations de connexion
+        </li>
+        <li>
+            Fonds d'écran actif
+        </li>
+        <li>
+            Paramètres de comptes SHOPEI (nom d'utilisateur)
+        </li>
+    </ul>
+    <p>Si la réinitailisation à lieu, contactez <a href="mailto:aielloenio@icloud.com">l'équipe de développeurs</a></p>
+    <p id="resetTimer">Démarrage</p>
+    <script>
+        // Généré par ChatGPT - GPT 3
+
+        // Fonction pour effacer les cookies
+        function eraseCookie(name) {
+            document.cookie = name + '=; Max-Age=-99999999;';
+        }
+
+        // Fonction pour rediriger vers la page de connexion
+        function redirectToLoginPage() {
+            window.location.href = '../../index.html';
+        }
+
+        // Fonction principale pour le compte à rebours
+        function startTimer(duration, display) {
+            var timer = duration;
+            var countdown = setInterval(function () {
+                display.textContent = 'Réinitilisation dans ' + timer + ' secondes';
+
+                if (timer <= 0) {
+                    // Effacer les cookies
+                    eraseCookie('username');
+                    eraseCookie('token');
+                    eraseCookie('email');
+                    eraseCookie('password');
+                    eraseCookie('group');
+                    eraseCookie('backgroundURL');
+                    eraseCookie('plusEnabled');
+
+                    // Rediriger vers la page de connexion
+                    redirectToLoginPage();
+
+                    clearInterval(countdown);
+                }
+
+                timer--;
+            }, 1000);
+        }
+
+        // Fonction d'initialisation lors du chargement de la page
+        window.onload = function () {
+            var resetTimer = document.getElementById('resetTimer');
+
+            if (resetTimer) {
+                var duration = 15; // Durée du compte à rebours en secondes
+
+                // Lancer le compte à rebours
+                startTimer(duration, resetTimer);
+            }
+        };
+
+    </script>
+</body>
+
+</html>
