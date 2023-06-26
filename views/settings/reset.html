@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Services</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
@@ -28,7 +27,11 @@
     </ul>
     <p>Si la réinitailisation à lieu, contactez <a href="mailto:aielloenio@icloud.com">l'équipe de développeurs</a></p>
     <p id="resetTimer">Démarrage</p>
+    <div id="console">
+
+    </div>
     <script>
+        let console = document.querySelector("#console");
         // Généré par ChatGPT - GPT 3
 
         // Fonction pour effacer les cookies
@@ -50,15 +53,27 @@
                 if (timer <= 0) {
                     // Effacer les cookies
                     eraseCookie('username');
+                    console.innerHTML += "Nom d'utilisateur supprimé avec succès<br>";
                     eraseCookie('token');
+                    console.innerHTML += "Token supprimé avec succès<br>";
                     eraseCookie('email');
+                    console.innerHTML += "Email supprimé avec succès<br>";
                     eraseCookie('password');
+                    console.innerHTML += "Mot de passe supprimé avec succès<br>";
                     eraseCookie('group');
+                    console.innerHTML += "Groupe supprimé avec succès<br>";
                     eraseCookie('backgroundURL');
+                    console.innerHTML += "Fond d'écran supprimé avec succès<br>";
                     eraseCookie('plusEnabled');
+                    console.innerHTML += "Compte plus supprimé avec succès<br>";
 
-                    // Rediriger vers la page de connexion
-                    redirectToLoginPage();
+                    console.innerHTML += "Terminé, redirection dans 3 secondes";
+
+                    setTimeout(() => {
+                        // Rediriger vers la page de connexion
+                        redirectToLoginPage();
+                    }, 3000);
+
 
                     clearInterval(countdown);
                 }

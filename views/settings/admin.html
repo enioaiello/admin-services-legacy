@@ -46,6 +46,10 @@
                 <h3>Version d'Admin Services</h3>
                 <p id="latestVersion"></p>
             </article>
+            <article>
+                <h3>État d'Admin Services Plus</h3>
+                <p id="plusEnabled"></p>
+            </article>
         </div>
         <h3>Paramètres</h3>
         <div class="articleContain">
@@ -59,7 +63,7 @@
             </article>
             <article>
                 <h3>Réinitailiser Admin Services</h3>
-                <p><a href="#" class="button" id="resetAction">Réinitailiser</a></p>
+                <p><a href="./reset.html" class="button" id="resetAction">Réinitailiser</a></p>
             </article>
         </div>
     </div>
@@ -71,6 +75,13 @@
 <script>
     let localVersion = localStorage.getItem("version");
     let latestVersion = document.querySelector("#latestVersion");
+    let plusEnabled = document.querySelector("#plusEnabled");
+    let plus = localStorage.getItem("group");
+    if (plus === "plus") {
+        plusEnabled.textContent = "Admin Services Plus est actif";
+    } else {
+        plusEnabled.textContent = "Admin Services Plus n'est pas actif"
+    }
     latestVersion.innerHTML = "<strong>Version :</strong> " + localVersion;
 </script>
 <script>
@@ -89,27 +100,6 @@
     }
 
     wallpaperAction.addEventListener("click", changerFondEcran);
-</script>
-<script>
-    let resetAction = document.querySelector("#resetAction");
-    let username = localStorage.getItem("username");
-
-    function confirmReset() {
-        alert("Vous êtes sur le point de réinitailiser Admin Services");
-        alert("Si vous continuez vos informations de connexion et la connexion à d'autre services vont être interrompus");
-        let confirmation = confirm("Êtes-vous sûr ?");
-        if (confirmation) {
-            let deleteConfirmation = prompt("Entrez votre nom d'utilisateur pour procéder à la réinitailisation d'Admin Services. Indice : " + username);
-            if (deleteConfirmation === username) {
-                localStorage.removeItem("token");
-                localStorage.removeItem("username");
-                localStorage.removeItem("email");
-                localStorage.removeItem("passsword");
-                localStorage.removeItem("group");
-                localStorage.removeItem("backgroundURL");
-            }
-        }
-    }
 </script>
 </body>
 </html>
