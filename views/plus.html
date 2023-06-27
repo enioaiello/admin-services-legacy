@@ -44,6 +44,7 @@
                 <h3>Actif</h3>
                 <p><strong>Admin Services Plus</strong> est actif et est disponible pour votre compte.</p>
                 <p id="date">Information impossible à chargée</p>
+                <p><a href="#"onclick="desactivatePlus()">Résilier Admin Services Plus</a></p>
             </div>
             <div class="disabled">
                 <h3>Non actif</h3>
@@ -68,6 +69,14 @@
         function activatePlus() {
             localStorage.setItem("group", "plus");
             localStorage.setItem("plusEnabled", dateEtHeure);
+        }
+
+        function desactivatePlus() {
+            let avertissement = confirm("Si vous continuez, vous perdrez l'accès à Admin Services Plus.");
+            if (avertissement) {
+                localStorage.setItem("group", "basic");
+                localStorage.removeItem("plusEnabled");
+            }
         }
 
         if (plusAccount === "plus") {
