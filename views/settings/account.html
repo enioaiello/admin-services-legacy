@@ -39,7 +39,9 @@
     </header>
     <main>
         <div class="container">
+            <img src="" alt="Photo de profil" id="profilePicture">
             <h2>Informations de compte</h2>
+            <p><small>La modification des paramètres sera bientôt disponible pour le publique et est pour l'instant toujours en bêta privée.</small></p>
             <div class="articleContain">
                 <article>
                     <h3>Nom de compte</h3>
@@ -62,12 +64,16 @@
                     <p id="groupInformation">Impossible de charger cette information !</p>
                 </article>
                 <article id="sessionArticle" class="none">
-                    <h3>Nom d'utilisateur SHOEPi</h3>
+                    <h3>Nom d'utilisateur SHOPEI</h3>
                     <p id="shopeiInformation">Impossible de charger cette information !</p>
                 </article>
                 <article id="createdArticle">
                     <h3>Compte inscrit</h3>
                     <p id="createdInformation">Impossible de charger cette information !</p>
+                </article>
+                <article>
+                    <h3>Photo de profil</h3>
+                    <p><a href="#" id="pdpChange" class="button">Modifier</a></p>
                 </article>
             </div>
         </div>
@@ -77,5 +83,16 @@
     </footer>
     <script src="../../assets/js/logout-settings.js"></script>
     <script src="../../assets/js/account-information.js"></script>
+    <script src="../../assets/js/pdpChange.js"></script>
+    <script>
+        let pdp = localStorage.getItem("pdp");
+        let profilePicture = document.querySelector("#profilePicture");
+
+        if (pdp === undefined || pdp === null) {
+            profilePicture.src = "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg";
+        } else {
+            profilePicture.src = pdp;
+        }
+    </script>
 </body>
 </html>

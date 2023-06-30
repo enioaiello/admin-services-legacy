@@ -185,6 +185,11 @@ code {
     }
 }
 
+#profilePicture {
+    width: 15%;
+    border-radius: 50%;
+}
+
 .clear {
     clear: both;
 }

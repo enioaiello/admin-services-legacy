@@ -34,11 +34,11 @@ form {
     color: black;
 }
 
-#email, #password, #login {
+#email, #password, #login, #username {
     width: 75%;
 }
 
-#email, #password {
+#email, #password, #username {
     border: 1px solid black;
     border-radius: 5px;
 }
