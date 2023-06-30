@@ -57,5 +57,5 @@ function generateUsername() {
 }
 
 function redirect() {
-    window.location.href = "../panel.html";
+    window.location.href = "./loginAnimation.html";
 }

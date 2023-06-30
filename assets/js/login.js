@@ -23,7 +23,7 @@ let user = [
 ]
 
 const redirect = () => {
-    window.location.href = "./views/panel.html";
+    window.location.href = "./views/login/loginAnimation.html";
 }
 
 const verifyToken = () => {
