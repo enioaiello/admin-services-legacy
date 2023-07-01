@@ -41,12 +41,17 @@
     let pdp = document.querySelector("#pdp");
     let username = localStorage.getItem("username");
     let welcomeText = document.querySelector("#welcomeText");
+    let group = localStorage.getItem("group");
     if (pdp === undefined || pdp === null) {
         pdp.src = "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg";
     } else {
         pdp.src = pdpCookies;
     }
-    welcomeText.textContent = "Bienvenue " + username;
+    if (group === "plus") {
+        welcomeText.textContent = "Bienvenue " + username + " sur Plus !";
+    } else {
+        welcomeText.textContent = "Bienvenue " + username;
+    }
     setTimeout(() => {
         window.location.href = "../panel.html";
     }, 1500)

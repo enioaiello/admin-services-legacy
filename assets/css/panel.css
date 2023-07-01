@@ -186,8 +186,24 @@ code {
 }
 
 #profilePicture {
-    width: 15%;
+    width: 75%;
     border-radius: 50%;
+}
+
+#settingsDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#profilePictureContain {
+    text-align: center;
+}
+
+#profilePictureContain #pdpChange {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .clear {
