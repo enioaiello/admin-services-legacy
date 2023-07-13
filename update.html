@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Services</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            scroll-behavior: smooth;
+            transition: 200ms;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container * {
+            margin: 1vh 0;
+        }
+
+        .container #logo {
+            width: 10%;
+        }
+
+        .container h2 {
+            font-size: 1.6rem;
+        }
+
+        .container h3 {
+            font-size: 1.2rem;
+        }
+
+        .container #updateInfo {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/img/logo-1.png" alt="Mise à jour" id="logo">
+        <h2>Admin Services</h2>
+        <h3>Mise à jour en cours</h3>
+        <p id="updateInfo">
+            <small>Vous retrouverez les informations de mises à jour dans le support d'Admin Services.</small>
+        </p>
+    </div>
+</body>
+</html>
