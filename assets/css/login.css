@@ -71,6 +71,12 @@ a {
     font-weight: bold;
 }
 
+.container #loginInfo {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+}
+
 @media (max-width: 576px) {
     .container {
         text-align: center;

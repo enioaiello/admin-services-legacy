@@ -1,1 +1,1 @@
-window.location.href = "./update.html";
+window.location.href = "./views/support/update.html";
