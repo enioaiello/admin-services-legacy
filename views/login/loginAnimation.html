@@ -42,7 +42,7 @@
     let username = localStorage.getItem("username");
     let welcomeText = document.querySelector("#welcomeText");
     let group = localStorage.getItem("group");
-    if (pdp === undefined || pdp === null) {
+    if (pdp === undefined || pdp === null || pdp === "") {
         pdp.src = "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg";
     } else {
         pdp.src = pdpCookies;
