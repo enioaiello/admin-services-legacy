@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,9 @@
             cursor: none;
         }
 
-        #welcomeText, #info small, #info small strong {
+        #welcomeText,
+        #info small,
+        #info small strong {
             color: black;
         }
 
@@ -29,32 +32,30 @@
         }
     </style>
 </head>
+
 <body>
-<div class="container">
-    <img src="" alt="Photo de profil" id="pdp">
-    <h2 id="welcomeText">null</h2>
-    <img src="https://enioaiello.github.io/shopei/assets/img/loading.gif" alt="Loading" id="loading">
-    <p id="info"><small>Veuillez patienter, nous nous connectons à <strong>Admin Services</strong>.</small></p>
-</div>
-<script>
-    let pdpCookies = localStorage.getItem("pdp");
-    let pdp = document.querySelector("#pdp");
-    let username = localStorage.getItem("username");
-    let welcomeText = document.querySelector("#welcomeText");
-    let group = localStorage.getItem("group");
-    if (pdp === undefined || pdp === null || pdp === "") {
-        pdp.src = "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg";
-    } else {
-        pdp.src = pdpCookies;
-    }
-    if (group === "plus") {
-        welcomeText.textContent = "Bienvenue " + username + " sur Plus !";
-    } else {
+    <div class="container">
+        <img src="" alt="Photo de profil" id="pdp">
+        <h2 id="welcomeText">null</h2>
+        <img src="https://enioaiello.github.io/shopei/assets/img/loading.gif" alt="Loading" id="loading">
+        <p id="info"><small>Veuillez patienter, nous nous connectons à <strong>Admin Services</strong>.</small></p>
+    </div>
+    <script>
+        let pdpCookies = localStorage.getItem("pdp");
+        let pdp = document.querySelector("#pdp");
+        let username = localStorage.getItem("username");
+        let welcomeText = document.querySelector("#welcomeText");
+        let group = localStorage.getItem("group");
+        if (pdpCookies === undefined || pdpCookies === null || pdpCookies === "") {
+            pdp.src = "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg";
+        } else {
+            pdp.src = pdpCookies;
+        }
         welcomeText.textContent = "Bienvenue " + username;
-    }
-    setTimeout(() => {
-        window.location.href = "../panel.html";
-    }, 1500)
-</script>
+        setTimeout(() => {
+            window.location.href = "../panel.html";
+        }, 1500)
+    </script>
 </body>
+
 </html>

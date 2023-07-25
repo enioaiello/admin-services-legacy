@@ -5,16 +5,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("../img/background/background-8.jpg") no-repeat;
-    background-attachment: fixed;
+    /* background: url("../img/background/background-8.jpg") no-repeat; */
+    /* background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(5px);
+    background-position: center; */
+    /* backdrop-filter: blur(5px); */
 }
 
 .container * {
     margin: 1vh 0;
-    color: white;
+    /* color: white; */
 }
 
 .container img {
@@ -51,7 +51,7 @@ form {
 }
 
 #login:hover {
-    background-color: #40795a;
+    background-color: #40798caa;
 }
 
 .loginError {

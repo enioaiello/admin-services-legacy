@@ -1,12 +1,10 @@
 'use strict';
 
 const information = document.querySelector("#information");
-const version = "4.2.3";
+const version = "5.0.0";
 let localVersion = localStorage.setItem("version", version);
 const username = localStorage.getItem("username");
 const welcomeText = document.querySelector("#welcomeText");
-let plus = document.querySelector(".plus");
-let plusEnabled = localStorage.getItem("plusEnabled");
 
 information.innerHTML = "<strong>Admin Services</strong> " + version;
 
@@ -21,7 +19,3 @@ function userNameDisplay() {
 localVersion;
 
 userNameDisplay();
-
-if (plusEnabled) {
-    plus.classList.remove("none");
-}
