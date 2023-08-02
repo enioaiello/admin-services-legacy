@@ -5,16 +5,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background: url("../img/background/background-8.jpg") no-repeat; */
-    /* background-attachment: fixed;
-    background-size: cover;
-    background-position: center; */
-    /* backdrop-filter: blur(5px); */
 }
 
 .container * {
     margin: 1vh 0;
-    /* color: white; */
 }
 
 .container img {
@@ -29,13 +23,17 @@ form {
 }
 
 .container input {
-    padding: 1%;
+    padding: 2%;
     outline: none;
     color: black;
 }
 
 #email, #password, #login, #username {
     width: 75%;
+}
+
+#email:focus, #password:focus, #login:focus, #username:focus {
+    border: 1px solid #40797a;
 }
 
 #email, #password, #username {
