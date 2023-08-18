@@ -1,39 +1,51 @@
 header {
     background-color: #40798c;
+    top: 0;
+    position: sticky;
+    width: 100%;
+    z-index: 999999999999999999999;
 }
 
 nav {
     width: 80%;
     margin: 0 auto;
-    z-index: 999999999999999999999;
-}
-
-nav ul {
-    list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 0;
+    padding: 2% 0;
 }
 
 #brand {
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 #brandIcon {
     height: 30px;
     overflow: hidden;
-    margin: 1%;
+    margin-right: 10px;
+}
+
+#brandIcon:hover {
+    transform: scale(1.2);
+}
+
+#brand p {
+    color: white;
+    font-weight: bold;
 }
 
 #navItems {
-    text-align: right;
-    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 #navItems li {
-    display: inline-block;
-    padding: 1%;
+    margin: 0 10px;
 }
 
 #navItems li a {
@@ -44,6 +56,23 @@ nav ul {
 
 #navItems li a:hover {
     color: gray;
+}
+
+#logoutChamp {
+    display: flex;
+    align-items: center;
+}
+
+#pfpLogout {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+#pfpLogout:hover {
+    transform: scale(1.2);
 }
 
 main {
@@ -62,12 +91,12 @@ a:hover {
 }
 
 #quickActions {
-    width: 74%;
+    width: 80%;
     float: left;
 }
 
 #adminInformation {
-    width: 24%;
+    width: 15%;
     float: right;
     text-align: right;
 }
@@ -157,6 +186,27 @@ code {
     background-color: lightgray;
 }
 
+#modifyArticle {
+    width: 100%;
+}
+
+#selectElements {
+    padding: 2%;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+#selectElements:hover {
+    transform: scale(1.05);
+}
+
+#selectElements form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .empty {
     display: block;
     margin: 1%;
@@ -204,6 +254,55 @@ code {
     color: black;
     text-decoration: underline;
     cursor: pointer;
+}
+
+#dock {
+    background-color: lightgray;
+    padding: 0.5% 2%;
+    margin: 1vh 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#dock:hover {
+    transform: scale(1.05);
+}
+
+#dock a {
+    display: flex;
+}
+
+#dock a img {
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    width: 70%;
+}
+
+#applicationsTitle {
+    margin: 1vh 0;
+}
+
+#applications {
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin: 1vh 0;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#applications:hover {
+    transform: scale(1.05);
+}
+
+#applications section {
+    width: 50%;
 }
 
 .clear {

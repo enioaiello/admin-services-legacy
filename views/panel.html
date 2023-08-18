@@ -11,37 +11,41 @@
     <link rel="icon" href="../assets/img/logo.png">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li id="brand">
-                    <img src="../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
-                </li>
-                <ul id="navItems">
-                    <li>
-                        <a href="./panel.html">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="./settings.html">Paramètres</a>
-                    </li>
-                    <li>
-                        <a href="./support/support.html">Support</a>
-                    </li>
-                    <li>
-                        <a href="./services.html">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" id="logout">Déconnexion</a>
-                    </li>
-                </ul>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div id="quickActions">
-                <h2>Accueil</h2>
-                <h3 id="welcomeText">null</h3>
+<header>
+    <nav>
+        <div id="brand">
+            <img src="../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
+            <p>Admin Services</p>
+        </div>
+        <ul id="navItems">
+            <li>
+                <a href="./panel.html">Accueil</a>
+            </li>
+            <li>
+                <a href="./settings.html">Paramètres</a>
+            </li>
+            <li>
+                <a href="./support/support.html">Support</a>
+            </li>
+            <li>
+                <a href="./services.html">Services</a>
+            </li>
+            <li>
+                <div id="logoutChamp">
+                    <a href="#" id="logout">
+                        <img src="#" alt="Photo de profil" id="pfpLogout">
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <div id="quickActions">
+            <h2>Accueil</h2>
+            <h3 id="welcomeText">null</h3>
+            <div id="recommandes">
                 <p><strong>Recommandés</strong></p>
                 <div class="articleContain">
                     <article>
@@ -51,7 +55,8 @@
                     </article>
                     <article>
                         <h3>Support</h3>
-                        <p>Obtenez tout le support nécessaire sur l'utilisation d'<strong>Admin Services</strong> et ses fonctions.</p>
+                        <p>Obtenez tout le support nécessaire sur l'utilisation d'<strong>Admin Services</strong> et ses
+                            fonctions.</p>
                         <p><a href="./support/support.html" class="button">Accéder</a></p>
                     </article>
                     <article>
@@ -65,6 +70,8 @@
                         <p><a href="./security.html" class="button">Accéder</a></p>
                     </article>
                 </div>
+            </div>
+            <div id="services">
                 <p><strong>Services</strong></p>
                 <div class="articleContain">
                     <article>
@@ -72,6 +79,8 @@
                         <a href="https://enioaiello.github.io/shopei" class="button">Accéder</a>
                     </article>
                 </div>
+            </div>
+            <div id="support">
                 <p><strong>Support</strong></p>
                 <div class="articleContain">
                     <article>
@@ -79,30 +88,69 @@
                         <p><a href="./support/google-mode.html" class="button">Découvrir</a></p>
                     </article>
                 </div>
+            </div>
+            <div id="annonces">
                 <p><strong>Annonces</strong></p>
                 <div class="articleContain">
                     <article>
+                        <h3>Ajout des applications internes</h3>
+                        <p>En savoir plus sur la nouvelle fonctionnalité d'application interne d'<strong>Admin Services</strong>.</p>
+                        <p><a href="./announcements/in-app.html" class="button">Lire</a></p>
+                    </article>
+                    <article>
                         <h3>Fin d'Admin Services Plus</h3>
-                        <p>En savoir plus sur les pertes d'<strong>Admin Services Plus</strong> et de ses fonctionnalités.</p>
+                        <p>En savoir plus sur les pertes d'<strong>Admin Services Plus</strong> et de ses fonctionnalités.
+                        </p>
                         <p><a href="./announcements/eol-plus.html" class="button">Lire</a></p>
                     </article>
                 </div>
             </div>
-            <div id="adminInformation">
-                <h3>Information</h3>
-                <img src="../assets/img/logo.png" alt="Logo Admin Services" id="adminLogo">
-                <p id="information"><small></small></p>
-                <h3>Rester à jour</h3>
-                <p>Consultez les mises à jour <a href="./support/updates/update.html">ici</a>.</p>
+            <div id="selectElements">
+                <form>
+                    <label>
+                        <input type="checkbox" class="checkbox" data-target="recommandes" checked> Recommandés
+                    </label>
+                    <label>
+                        <input type="checkbox" class="checkbox" data-target="services" checked> Services
+                    </label>
+                    <label>
+                        <input type="checkbox" class="checkbox" data-target="annonces" checked> Annonces
+                    </label>
+                    <label>
+                        <input type="checkbox" class="checkbox" data-target="support" checked> Support
+                    </label>
+                </form>
             </div>
-            <div class="clear"></div>
+            <p id="applicationsTitle"><strong>Applications</strong></p>
+            <div id="applications">
+                <section>
+                    <h3>Vador</h3>
+                    <a href="./vador.html" class="button">Accéder</a>
+                </section>
+                <section>
+                    <h3>Toutes les applications</h3>
+                    <a href="./apps.html" class="button">Accéder</a>
+                </section>
+            </div>
         </div>
-    </main>
-    <footer>
-        <p><small>&copy;2023, <a href="https://corundum-os.github.io/">Corundum Team</a> and <a href="https://enioaiello.github.io/">Enio Aiello</a>. All right reserved.</small></p>
-    </footer>
-    <script src="../assets/js/panel.js"></script>
-    <script src="../assets/js/logout.js"></script>
-    <script src="../assets/js/wallpaper.js"></script>
+        <div id="adminInformation">
+            <h3>Information</h3>
+            <img src="../assets/img/logo.png" alt="Logo Admin Services" id="adminLogo">
+            <p id="information"><small></small></p>
+            <h3>Rester à jour</h3>
+            <p>Consultez les mises à jour <a href="./support/updates/update.html">ici</a>.</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</main>
+<footer>
+    <p><small>&copy;2023, <a href="https://corundum-os.github.io/">Corundum Team</a> and <a
+            href="https://enioaiello.github.io/">Enio Aiello</a>. All right reserved.</small></p>
+</footer>
+<script src="../assets/js/panel.js"></script>
+<script src="../assets/js/logout.js"></script>
+<script src="../assets/js/wallpaper.js"></script>
+<script src="../assets/js/load-pfp.js"></script>
+<script src="../assets/js/account.js"></script>
 </body>
 </html>

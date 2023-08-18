@@ -13,27 +13,30 @@
 <body>
 <header>
     <nav>
-        <ul>
-            <li id="brand">
-                <img src="../../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
+        <div id="brand">
+            <img src="../../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
+            <p>Admin Services</p>
+        </div>
+        <ul id="navItems">
+            <li>
+                <a href="../panel.html">Accueil</a>
             </li>
-            <ul id="navItems">
-                <li>
-                    <a href="../panel.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="../settings.html">Paramètres</a>
-                </li>
-                <li>
-                    <a href="../support/support.html">Support</a>
-                </li>
-                <li>
-                    <a href="../services.html">Services</a>
-                </li>
-                <li>
-                    <a href="#" id="logout">Déconnexion</a>
-                </li>
-            </ul>
+            <li>
+                <a href="../settings.html">Paramètres</a>
+            </li>
+            <li>
+                <a href="../support/support.html">Support</a>
+            </li>
+            <li>
+                <a href="../services.html">Services</a>
+            </li>
+            <li>
+                <div id="logoutChamp">
+                    <a href="#" id="logout">
+                        <img src="#" alt="Photo de profil" id="pfpLogout">
+                    </a>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
@@ -48,7 +51,7 @@
             </article>
             <article>
                 <h3>État d'Admin Services Plus</h3>
-                <p id="plusEnabled"></p>
+                <p>Admin Services Plus n'est plus disponible</p>
             </article>
         </div>
         <h3>Paramètres</h3>
@@ -63,7 +66,7 @@
             </article>
             <article>
                 <h3>Réinitailiser Admin Services</h3>
-                <p><a href="./reset.html" class="button" id="resetAction">Réinitailiser</a></p>
+                <p><a href="#" class="button" id="resetAction">Réinitailiser</a></p>
             </article>
         </div>
     </div>
@@ -75,17 +78,11 @@
 <script>
     let localVersion = localStorage.getItem("version");
     let latestVersion = document.querySelector("#latestVersion");
-    let plusEnabled = document.querySelector("#plusEnabled");
-    let plus = localStorage.getItem("group");
-    if (plus === "plus") {
-        plusEnabled.textContent = "Admin Services Plus est actif";
-    } else {
-        plusEnabled.textContent = "Admin Services Plus n'est pas actif"
-    }
     latestVersion.innerHTML = "<strong>Version :</strong> " + localVersion;
 </script>
 <script>
     let wallpaperAction = document.querySelector("#wallpaperAction");
+    let resetAction = document.querySelector("#resetAction");
 
     function changerFondEcran() {
       let url = prompt("Entrez l'URL de l'image :");
@@ -99,7 +96,16 @@
       }
     }
 
+    function reset() {
+        let choice = confirm("Réinitialiser Admin Services ? Toutes vos informations seront effacées");
+        if (choice) {
+            window.location.href = "./reset.html";
+        }
+    }
+
+    resetAction.addEventListener("click", reset);
     wallpaperAction.addEventListener("click", changerFondEcran);
 </script>
+<script src="../../assets/js/load-pfp.js"></script>
 </body>
 </html>

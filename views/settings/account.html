@@ -11,32 +11,35 @@
     <link rel="icon" href="../../assets/img/logo.png">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li id="brand">
-                    <img src="../../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
-                </li>
-                <ul id="navItems">
-                    <li>
-                        <a href="../panel.html">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="../settings.html">Paramètres</a>
-                    </li>
-                    <li>
-                        <a href="../support/support.html">Support</a>
-                    </li>
-                    <li>
-                        <a href="../services.html">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" id="logout">Déconnexion</a>
-                    </li>
-                </ul>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div id="brand">
+            <img src="../../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
+            <p>Admin Services</p>
+        </div>
+        <ul id="navItems">
+            <li>
+                <a href="../panel.html">Accueil</a>
+            </li>
+            <li>
+                <a href="../settings.html">Paramètres</a>
+            </li>
+            <li>
+                <a href="../support/support.html">Support</a>
+            </li>
+            <li>
+                <a href="../services.html">Services</a>
+            </li>
+            <li>
+                <div id="logoutChamp">
+                    <a href="#" id="logout">
+                        <img src="#" alt="Photo de profil" id="pfpLogout">
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
     <main>
         <div id="settingsDiv" class="container">
             <div id="profilePictureContain">
@@ -78,6 +81,11 @@
                         <h3>Compte inscrit</h3>
                         <p id="createdInformation">Impossible de charger cette information !</p>
                     </article>
+                    <article id="updateAccount">
+                        <h3>Mise à jour de compte</h3>
+                        <p>Mettez à jour votre compte et ses fonctionnalités.</p>
+                        <p><a href="#" id="updatingAccount">Rechercher et mettre à jour</a></p>
+                    </article>
                 </div>
             </div>
         </div>
@@ -103,6 +111,7 @@
         const emailChange = document.querySelector("#emailChange");
         const passwordChange = document.querySelector("#passwordChange");
         const shopeiChange = document.querySelector("#shopeiChange");
+        const updatingAccount = document.querySelector("#updatingAccount");
 
         function usernameChangeSettings() {
             let result = prompt("Entrez votre nouveau nom d'utilisateur");
@@ -144,10 +153,30 @@
             }
         }
 
+        function updateTheAccount() {
+            let result = confirm("Rechercher et mettre à jour ?");
+            if (result) {
+                if (!localStorage.getItem("status")) {
+                    let choice = confirm("Mise à jour disponible, appliquer cette mise à jour ?");
+                    if (choice) {
+                        localStorage.setItem("status", "logged");
+                        localStorage.setItem("setup", false);
+                        localStorage.setItem("updated", true);
+                        localStorage.removeItem("group");
+                        alert("Mise à jour appliquée !");
+                    }
+                } else {
+                    alert("Aucunes mises à jour disponible !");
+                }
+            }
+        }
+
         usernameChange.addEventListener("click", usernameChangeSettings);
         emailChange.addEventListener("click", emailChangeSettings);
         passwordChange.addEventListener("click", passwordChangeSettings);
         shopeiChange.addEventListener("click", shopeiChangeSettings);
+        updatingAccount.addEventListener("click", updateTheAccount);
     </script>
+    <script src="../../assets/js/load-pfp.js"></script>
 </body>
 </html>
