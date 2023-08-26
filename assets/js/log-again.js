@@ -13,6 +13,8 @@ function logAgain() {
         }
     } else if (username === null) {
         console.log("ok");
+    } else {
+        console.log("Ok");
     }
 }
 

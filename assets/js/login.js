@@ -19,7 +19,7 @@ let user = [
 ]
 
 const redirect = () => {
-    window.location.href = "./views/login/loginAnimation.html";
+    window.location.href = "./views/login/warning.html";
 }
 
 const verifyToken = () => {
