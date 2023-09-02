@@ -6,6 +6,8 @@ if (value === null) {
     window.location.href = "./views/downgrade/5/index.html";
 } else if (value === "custom") {
     alert("Custom version value not available.");
+} else if (value === "default") {
+    console.log("Connected");
 } else {
     window.location.href = "./404.html";
 }

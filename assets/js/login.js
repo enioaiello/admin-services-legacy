@@ -59,11 +59,3 @@ function hideErrorText() {
 }
 
 loginButton.addEventListener("click", login);
-
-// ,
-// {
-//     username: usernameLocal,
-//         email: emailLocal,
-//     password: passwordLocal,
-//     token: tokenLocal
-// }
