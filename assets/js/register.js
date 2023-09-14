@@ -32,8 +32,7 @@ submitButton.addEventListener("click", function (event) {
     localStorage.setItem("token", token);
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
-    localStorage.setItem("createdAccount", true);
-    localStorage.setItem("group", "basic");
+    localStorage.setItem("pdp", "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg");
 
     redirect();
 });

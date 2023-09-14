@@ -14,7 +14,8 @@ let user = [
         username: "Enio Aiello",
         email: "aielloenio@icloud.com",
         password: "Sezfet97",
-        token: "4555d6zd46da465z465d4c58"
+        token: "4555d6zd46da465z465d4c58",
+        pdp: "https://enioaiello.github.io/assets/img/profile.png"
     }
 ]
 
@@ -46,6 +47,7 @@ const login = (loginParameters) => {
             localStorage.setItem('email', i.email);
             localStorage.setItem('password', i.password);
             localStorage.setItem('status', 'logged');
+            localStorage.setItem('pdp', i.pdp);
             break;
         } else {
             passwordError.classList.remove("none");
