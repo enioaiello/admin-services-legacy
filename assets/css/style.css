@@ -41,3 +41,19 @@
 .denied {
     cursor: not-allowed;
 }
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    body {*/
+/*        background-color: black;*/
+/*        color: white;*/
+/*    }*/
+
+/*    * {*/
+/*        color: white;*/
+/*    }*/
+
+/*    article {*/
+/*        background-color: white;*/
+/*        color: black;*/
+/*    }*/
+/*}*/
