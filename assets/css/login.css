@@ -80,11 +80,26 @@ a {
         text-align: center;
     }
 
+    form {
+        width: 100%;
+    }
+
     h2 {
         display: none;
     }
 
     input {
         width: 100%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    #loginInfo small {
+        color: white;
     }
 }

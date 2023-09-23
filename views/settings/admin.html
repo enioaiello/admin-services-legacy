@@ -65,11 +65,11 @@
             </article>
             <article>
                 <h3>Fonds d'écrans</h3>
-                <p><a href="#" class="button" id="wallpaperAction">Définir</a></p>
+                <p>Les fonds d'écrans ont été déplacés.</p>
             </article>
             <article>
-                <h3>Réinitailiser Admin Services</h3>
-                <p><a href="#" class="button" id="resetAction">Réinitailiser</a></p>
+                <h3>Réinitialiser Admin Services</h3>
+                <p><a href="#" class="button" id="resetAction">Réinitialiser</a></p>
             </article>
         </div>
     </div>
@@ -82,32 +82,6 @@
     let localVersion = localStorage.getItem("version");
     let latestVersion = document.querySelector("#latestVersion");
     latestVersion.innerHTML = "<strong>Version :</strong> " + localVersion;
-</script>
-<script>
-    let wallpaperAction = document.querySelector("#wallpaperAction");
-    let resetAction = document.querySelector("#resetAction");
-
-    function changerFondEcran() {
-      let url = prompt("Entrez l'URL de l'image :");
-      if (url) {
-        localStorage.setItem("backgroundURL", url);
-        document.body.style.backgroundImage = "url('" + url + "')";
-      } else {
-        localStorage.removeItem("backgroundURL");
-        document.body.style.backgroundImage = "none";
-        document.body.style.backgroundColor = "white";
-      }
-    }
-
-    function reset() {
-        let choice = confirm("Réinitialiser Admin Services ? Toutes vos informations seront effacées");
-        if (choice) {
-            window.location.href = "./reset.html";
-        }
-    }
-
-    resetAction.addEventListener("click", reset);
-    wallpaperAction.addEventListener("click", changerFondEcran);
 </script>
 <script src="../../assets/js/load-pfp.js"></script>
 </body>
