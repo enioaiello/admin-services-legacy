@@ -5,7 +5,7 @@ let localVersion = localStorage.setItem("version", "7.0.0");
 const username = localStorage.getItem("username");
 const welcomeText = document.querySelector("#welcomeText");
 
-information.innerHTML = "<strong>Admin Services</strong> " + version;
+information.innerHTML = "<strong>Admin Services</strong> " + "7.0.0";
 
 function userNameDisplay() {
     let token = localStorage.getItem("token");
