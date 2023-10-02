@@ -60,7 +60,7 @@ nav {
 }
 
 #navItems li a:hover {
-    color: gray;
+    color: rgb(128, 128, 128);
 }
 
 #logoutChamp {
@@ -178,7 +178,7 @@ footer p small a {
 } 
 
 footer p small a:hover {
-    color: gray;
+    color: rgb(128, 128, 128);
     text-decoration: none;
     font-weight: bold;
 } 
@@ -187,7 +187,7 @@ code {
     display: inline-block;
     padding: 0.5%;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid rgb(128, 128, 128);
     background-color: lightgray;
 }
 
@@ -370,6 +370,10 @@ code {
 
     a:hover {
         color: cornflowerblue;
+    }
+
+    #profilePictureContain #pdpChange {
+        color: white;
     }
 }
 
