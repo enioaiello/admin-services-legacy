@@ -58,6 +58,7 @@
                     </article>
                     <article id="updateAccount">
                         <h3>Mise à jour de compte</h3>
+                        <p id="accountVersion"></p>
                         <p>Mettez à jour votre compte et ses fonctionnalités.</p>
                         <p><a href="#" id="updatingAccount">Rechercher et mettre à jour</a></p>
                     </article>
@@ -120,12 +121,13 @@
         function updateTheAccount() {
             let result = confirm("Rechercher et mettre à jour ?");
             if (result) {
-                if (!localStorage.getItem("status")) {
+                if (!localStorage.getItem("status") || !localStorage.getItem("functionPack")) {
                     let choice = confirm("Mise à jour disponible, appliquer cette mise à jour ?");
                     if (choice) {
                         localStorage.setItem("status", "logged");
                         localStorage.setItem("setup", false);
                         localStorage.setItem("updated", true);
+                        localStorage.setItem("functionPack", true);
                         localStorage.removeItem("group");
                         alert("Mise à jour appliquée !");
                     }
@@ -141,5 +143,9 @@
         updatingAccount.addEventListener("click", updateTheAccount);
     </script>
     <script src="../../assets/js/load-pfp.js"></script>
+    <script>
+        accountVersion = document.querySelector("#accountVersion");
+        accountVersion.innerHTML = "<strong>Version : </strong> " + localStorage.getItem("accountVersion");
+    </script>
 </body>
 </html>
