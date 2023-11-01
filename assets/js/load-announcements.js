@@ -1,10 +1,5 @@
 const articlesData = [
     {
-        titre: "Ajout des functionPack",
-        description: "En savoir plus sur les functionPack et leurs fonctionnalités.",
-        lien: "functions-pack.html"
-    },
-    {
         titre: "Suppression totale d'Admin Services Desktop",
         description: "L'application a été supprimée le 26/09/2023, merci de l'avoir utilisée.",
         lien: "#"

@@ -1,24 +1,24 @@
-'use strict';
+let welcomeText = document.getElementById('welcomeText');
+let actualHour = new Date().getHours();
+let username = localStorage.getItem('username');
+let logoutButton = document.getElementById('logoutButton');
 
-const information = document.querySelector("#information");
-let localVersion = localStorage.setItem("version", "7.1.0");
-const username = localStorage.getItem("username");
-const welcomeText = document.querySelector("#welcomeText");
-let functionPack = localStorage.getItem("functionPack");
+console.log("Bienvenue sur la console !");
+console.log("Nous espérons que vous respecterez la vie privée des autres utilisateurs !");
+console.log("Faites attention aux commandes que vous tapez, elles peuvent être dangereuses !");
 
-information.innerHTML = "<strong>Admin Services</strong> " + "7.0.0";
-
-function userNameDisplay() {
-    let token = localStorage.getItem("token");
-    if (token === null || username === null) {
-        window.location.assign("../../index.html");
-    }
-    welcomeText.innerHTML = "Bienvenue " + username;
+if (actualHour >= 8 && actualHour < 19) {
+    welcomeText.textContent = "Bonjour " + username;
+    console.log("Bonjour " + username);
+} else {
+    welcomeText.textContent = "Bonsoir " + username;
+    console.log("Bonsoir " + username);
 }
 
-localVersion;
-
-userNameDisplay();
+if (username == null) {
+    window.location.href = "./login/options.html";
+    console.error("Vous n'êtes pas connecté !");
+}
 
 // Généré par ChatGPT : GPT-3 (OpenAI)
 document.addEventListener("DOMContentLoaded", function() {
@@ -62,3 +62,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+function logout() {
+    let result = confirm("Êtes-vous sûr de vous déconnecter ?");
+    if (result) {
+        window.location.href = "https://enioaiello.github.io/admin-services/";
+        console.info("Déconnexion réussie");
+    }
+}
+
+function calculateDateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+
+    const dateString = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
+
+    document.getElementById('dateTime').innerHTML = `Date actuelle : ${dateString}, Heure actuelle : ${hours}:${minutes}`;
+}
+
+window.onload = function () {
+    calculateDateTime();
+};
+
+logoutButton.addEventListener("click", logout);

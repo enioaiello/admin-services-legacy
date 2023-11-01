@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    scroll-behavior: smooth;
+    box-sizing: border-box;
     transition: 200ms;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
 }
 
 ::selection {
@@ -14,30 +12,106 @@
     color: white;
 }
 
-.darkMode {
-    background-color: black;
+a {
+    color: #40798c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #40798c;
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 2% 5%;
+    margin: 0.5vh 0;
+    background-color: #40798c;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    outline: none;
+    border: none;
 }
 
-.darkMode .button {
-    background-color: white;
-    color: black;
+.button:hover {
+    background-color: #40798caa;
+    color: white;
+    text-decoration: none;
 }
 
-.darkMode #login {
-    background-color: white;
-    color: black;
+.articleContain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.darkMode ::selection {
-    background-color: white;
-    color: black;
+article {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1% 0;
+    justify-content: center;
+}
+
+article * {
+    margin: 0.25vh 0;
+}
+
+article:hover {
+    transform: scale(1.05);
+}
+
+code {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5%;
+    background: rgb(128, 128, 128);
+    color: white;
+    margin: 1vh 0;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #40798c;
+}
+
+footer p {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    padding: 1% 0;
+}
+
+footer p small a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p small a:hover {
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.denied {
+    cursor: not-allowed;
 }
 
 .none {
     display: none;
 }
 
-.denied {
-    cursor: not-allowed;
+@media (max-width: 768px) {
+    article {
+        width: 100%;
+    }
 }

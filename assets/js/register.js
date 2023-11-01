@@ -1,60 +1,36 @@
-'use strict';
+let usernameInput = document.getElementById('username');
+let emailInput = document.getElementById('email');
+let profilePictureInput = document.getElementById('pfp');
+let passwordInput = document.getElementById('password');
+let submitButton = document.getElementById('submit');
 
-const registrationForm = document.querySelector("#registrationForm");
-const emailInput = document.querySelector("input[type=email]");
-const submitButton = document.querySelector("input[type=submit]");
-const usernameInput = document.querySelector("#username");
-const passwordInput = document.querySelector("#password");
-let accountType = localStorage.getItem("group");
-
-submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const token = generateToken();
-    let username = usernameInput.value.trim();
-    let password = passwordInput.value.trim();
-
-    if (username === "") {
-        username = generateUsername();
-    }
-
-    if (password === "") {
-        alert("Le champ du mot de passe ne peut pas être vide.");
+function registerNewUser(e) {
+    e.preventDefault();
+    let username = usernameInput.value;
+    let email = emailInput.value;
+    let password = passwordInput.value;
+    let profilePicture = profilePictureInput.value;
+    if (username === '' || email === '' || password === '') {
+        alert('Veuillez renseigner tous les champs');
         return;
     }
-
-    const email = emailInput.value.trim();
-    if (email === "") {
-        alert("Le champ de l'adresse email ne peut pas être vide.");
+    if (email.indexOf('@') === -1) {
+        alert('Veuillez renseigner une adresse email valide');
         return;
     }
-
-    localStorage.setItem("token", token);
-    localStorage.setItem("username", username);
-    localStorage.setItem("password", password);
-    localStorage.setItem("pdp", "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg");
-
-    redirect();
-});
-
-function generateToken() {
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    let token = "";
-    for (let i = 0; i < 20; i++) {
-        token += characters.charAt(Math.floor(Math.random() * characters.length));
+    if (password.length < 8) {
+        alert('Veuillez renseigner un mot de passe de 8 caractères minimum');
+        return;
     }
-    return token;
-}
-
-function generateUsername() {
-    const characters = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789";
-    let username = "";
-    for (let i = 0; i <= 16; i++) {
-        username += characters.charAt(Math.floor(Math.random() * characters.length));
+    if (profilePicture === '') {
+        localStorage.setItem('pfp', '../../assets/img/profil_vide.jpg');
+    } else {
+        localStorage.setItem('pfp', profilePicture);
     }
-    return username;
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+    window.location.href = '../panel.html';
 }
 
-function redirect() {
-    window.location.href = "./loginAnimation.html";
-}
+submitButton.addEventListener('click', registerNewUser);

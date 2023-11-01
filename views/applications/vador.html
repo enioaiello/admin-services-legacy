@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .heading {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+        }
+
+        .heading img {
+            width: 7.5%;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .results-container {
+            display: none;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        #resultsContainer.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <img src="https://enioaiello.github.io/vador/assets/img/logo.jpg" alt="Logo Vador">
+        <h1>Vador</h1>
+        <p>V2.0</p>
+        <p><small><a href="./apps.html">Retour à Admin Services</a></small></p>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by software name, type, or author">
+        <button id="searchButton">Search</button>
+        <select id="searchType">
+            <option value="name">Name</option>
+            <option value="type">Type</option>
+            <option value="author">Author</option>
+        </select>
+    </div>
+    <div class="results-container" id="resultsContainer">
+
+    </div>
+    <script>
+        const softwareList = [
+            { name: "Firefox", type: "Web Browser", author: "Mozilla", link: "https://www.mozilla.org/en-US/firefox/new/" },
+            { name: "LibreOffice", type: "Office Suite", author: "The Document Foundation", link: "https://www.libreoffice.org/" },
+            { name: "OpenOffice", type: "Office Suite", author: "OpenOffice.org", link: "https://www.openoffice.org/" },
+            { name: "GIMP", type: "Image Editor", author: "GIMP Development Team", link: "https://www.gimp.org/" },
+            { name: "Inkscape", type: "Vector Graphics Editor", author: "Inkscape Project", link: "https://inkscape.org/" },
+            { name: "Blender", type: "3D Graphics", author: "Blender Foundation", link: "https://www.blender.org/" },
+            { name: "Audacity", type: "Audio Editor", author: "Audacity Team", link: "https://www.audacityteam.org/" },
+            { name: "Krita", type: "Digital Painting", author: "Krita Foundation", link: "https://krita.org/" },
+            { name: "VLC Media Player", type: "Media Player", author: "VideoLAN", link: "https://www.videolan.org/vlc/" },
+            { name: "LMMS", type: "Digital Audio Workstation", author: "LMMS Development Team", link: "https://lmms.io/" },
+            { name: "Darktable", type: "Photography Workflow", author: "Darktable Team", link: "https://www.darktable.org/" },
+            { name: "Kdenlive", type: "Video Editor", author: "Kdenlive Team", link: "https://kdenlive.org/" },
+            { name: "HandBrake", type: "Video Transcoder", author: "HandBrake Team", link: "https://handbrake.fr/" },
+            { name: "Natron", type: "Compositing Software", author: "Natron Development Team", link: "https://natrongithub.github.io/" },
+            { name: "Scribus", type: "Desktop Publishing", author: "Scribus Team", link: "https://www.scribus.net/" },
+            { name: "FreeCAD", type: "3D CAD Modeler", author: "FreeCAD Community", link: "https://www.freecadweb.org/" },
+            { name: "Audacious", type: "Audio Player", author: "Audacious Development Team", link: "https://audacious-media-player.org/" },
+            { name: "KeePassXC", type: "Password Manager", author: "KeePassXC Team", link: "https://keepassxc.org/" },
+            { name: "HandyLinux", type: "Distribution", author: "HandyLinux Team", link: "https://handylinux.org/" },
+            { name: "OpenShot", type: "Video Editor", author: "OpenShot Studios", link: "https://www.openshot.org/" },
+            { name: "LMMS", type: "Digital Audio Workstation", author: "LMMS Development Team", link: "https://lmms.io/" }
+        ];
+
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const searchType = document.getElementById('searchType');
+        const resultsContainer = document.getElementById('resultsContainer');
+
+        searchButton.addEventListener('click', performSearch);
+
+        function performSearch() {
+            const searchTerm = searchInput.value.trim();
+            const searchCategory = searchType.value;
+
+            if (searchTerm === '') {
+                console.error('Search term is empty.');
+                alert('Please enter a search term.');
+                return;
+            }
+
+            const filteredResults = softwareList.filter(software => {
+                if (searchCategory === 'name') {
+                    return software.name.toLowerCase().includes(searchTerm.toLowerCase());
+                } else if (searchCategory === 'type') {
+                    return software.type.toLowerCase().includes(searchTerm.toLowerCase());
+                } else if (searchCategory === 'author') {
+                    return software.author.toLowerCase().includes(searchTerm.toLowerCase());
+                }
+            });
+
+            displayResults(filteredResults);
+        }
+
+        function displayResults(results) {
+            resultsContainer.innerHTML = '';
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            const ul = document.createElement('ul');
+            results.forEach(result => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+            <strong>${result.name}</strong> - ${result.type} (${result.author}) <a href="${result.link}" target="_blank" rel="noopener noreferrer">Download</a>
+        `;
+                ul.appendChild(li);
+            });
+            resultsContainer.appendChild(ul);
+            resultsContainer.classList.add('show');
+        }
+
+    </script>
+</body>
+</html>

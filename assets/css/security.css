@@ -1,0 +1,42 @@
+form {
+    margin: 2vh 0;
+}
+
+form label input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+form label input:focus {
+    border: 2px solid #40797a;
+}
+
+form input[type=submit] {
+    width: 100%;
+    margin: 1vh 0;
+    padding: 2%;
+    border: 2px solid #40798c;
+    background: #40798c;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+form input[type=submit]:hover {
+    background: #40797caa;
+    border: 2px solid #40797caa;
+}
+
+#erase {
+    margin: 5vh 0;
+    background-color: red;
+}
+
+#erase:hover {
+    background-color: darkred;
+}

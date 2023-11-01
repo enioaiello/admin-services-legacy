@@ -1,63 +1,72 @@
-'use strict'
-
-let usernameInput = document.querySelector("input[type=email]");
-let loginButton = document.querySelector("input[type=submit]");
-let passwordInput = document.querySelector("input[type=password]");
-let passwordError = document.querySelector(".loginError");
-let usernameLocal = localStorage.getItem("username");
-let passwordLocal = localStorage.getItem("password");
-let tokenLocal = localStorage.getItem("token");
-let emailLocal = localStorage.getItem("email");
-
-let user = [
+let emailInput = document.getElementById('email');
+let passwordInput = document.getElementById('password');
+let submit = document.getElementById('submit');
+let users = [
     {
-        username: "Enio Aiello",
-        email: "aielloenio@icloud.com",
-        password: "Sezfet97",
-        token: "4555d6zd46da465z465d4c58",
-        pdp: "https://enioaiello.github.io/assets/img/profile.png"
+        email: 'aielloenio@icloud.com',
+        password: 'Sezfet97',
+        pfp: 'https://enioaiello.github.io/assets/img/profile.png',
+        username: 'Enio Aiello'
     }
-]
+];
+let username = localStorage.getItem('username');
+let pfp = localStorage.getItem('pfp');
+let email = localStorage.getItem('email');
+let password = localStorage.getItem('password');
 
-const redirect = () => {
-    window.location.href = "./views/login/loginAnimation.html";
-}
+function login(e) {
+    e.preventDefault();
 
-const verifyToken = () => {
-    const token = localStorage.getItem("token");
-    for (const i of user) {
-        if (i.token === token) {
-            loginButton.disabled = true;
-            usernameInput.disabled = true;
-            passwordInput.disabled = true;
-            setTimeout(redirect, 100);
+    if (email !== null && password !== null) {
+        if (emailInput.value === '' || passwordInput.value === '') {
+            alert('Veuillez remplir tous les champs');
+            console.error('Veuillez remplir tous les champs');
+            return;
+        }
+    } else if (email !== null) {
+        if (passwordInput.value === '') {
+            alert('Veuillez remplir tous les champs');
+            console.error('Veuillez remplir tous les champs');
+            return;
         }
     }
-}
 
-verifyToken();
-
-const login = (loginParameters) => {
-    loginParameters.preventDefault();
-    for (const i of user) {
-        if (usernameInput.value === i.email && passwordInput.value === i.password) {
-            redirect();
-            localStorage.setItem('token', i.token);
-            localStorage.setItem('username', i.username);
-            localStorage.setItem('email', i.email);
-            localStorage.setItem('password', i.password);
-            localStorage.setItem('status', 'logged');
-            localStorage.setItem('pdp', i.pdp);
-            break;
+    if (email !== null && password !== null) {
+        if (emailInput.value === email && passwordInput.value === password) {
+            window.location.href = "../panel.html";
+            return;
         } else {
-            passwordError.classList.remove("none");
-            setTimeout(hideErrorText, 3500);
+            alert('Mot de passe incorrect');
+            console.error('Mot de passe incorrect');
+            return;
         }
     }
+
+    for (let i = 0; i < users.length; i++) {
+        if (emailInput.value === users[i].email && passwordInput.value === users[i].password) {
+            localStorage.setItem('username', users[i].username);
+            console.log("Nom d'utilisateur défini");
+            localStorage.setItem('pfp', users[i].pfp);
+            console.log("Photo de profil définie");
+            localStorage.setItem('email', users[i].email);
+            console.log("Adresse email défini");
+            localStorage.setItem('password', users[i].password);
+            console.log("Mot de passe défini");
+
+            window.location.href = "../panel.html";
+            return;
+        }
+    }
+
+    alert('Mot de passe incorrect');
+    console.error('Mot de passe incorrect');
 }
 
-function hideErrorText() {
-    passwordError.classList.add("none");
+
+if (email !== null && password !== null) {
+    emailInput.disabled = true;
+    emailInput.value = email;
+    console.info("Compte déjà enregistré !");
 }
 
-loginButton.addEventListener("click", login);
+submit.addEventListener('click', login);

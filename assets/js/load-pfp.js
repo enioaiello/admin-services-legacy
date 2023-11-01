@@ -1,13 +1,17 @@
-
-const pfpLogout = document.querySelector("#pfpLogout");
-const pfp = localStorage.getItem("pdp")
+let pfpLogout = document.querySelector("#pfpLogout");
+let pfp = localStorage.getItem("pfp");
 
 function loadImage() {
-    if (pfp !== null || pfp !== "") {
-        pfpLogout.src = pfp;
-    } else {
-        pfpLogout.src = "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg";
+    pfpLogout.src = pfp;
+}
+
+function logout() {
+    let result = confirm("Êtes-vous sûr de vous déconnecter ?");
+    if (result) {
+        window.location.href = "https://enioaiello.github.io/admin-services/";
     }
 }
 
 loadImage();
+
+pfpLogout.addEventListener("click", logout);

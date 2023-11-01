@@ -15,9 +15,11 @@
     <nav>
         <div id="brand">
             <img src="../../assets/img/logo.png" alt="Admin Services Logo" id="brandIcon">
-            <p>Admin Services</p>
         </div>
         <ul id="navItems">
+            <li>
+                <a href="../panel.html">Retourner à l'accueil</a>
+            </li>
             <li>
                 <div id="logoutChamp">
                     <a href="#" id="logout">
@@ -43,24 +45,13 @@
                         <p><a href="#" id="usernameChange">Modifier cette information</a></p>
                     </article>
                     <article>
-                        <h3>Token de compte</h3>
-                        <p id="tokenInformation">Impossible de charger cette information !</p>
-                    </article>
-                    <article>
                         <h3>Email</h3>
                         <p id="emailInformation">Impossible de charger cette information !</p>
                         <p><a href="#" id="emailChange">Modifier cette information</a></p>
                     </article>
                     <article>
                         <h3>Mot de passe</h3>
-                        <p id="passwordInformation">Impossible de charger cette information !</p>
-                        <p><a href="#" id="passwordChange">Modifier cette information</a></p>
-                    </article>
-                    <article id="updateAccount">
-                        <h3>Mise à jour de compte</h3>
-                        <p id="accountVersion"></p>
-                        <p>Mettez à jour votre compte et ses fonctionnalités.</p>
-                        <p><a href="#" id="updatingAccount">Rechercher et mettre à jour</a></p>
+                        <a href="../security/password.html" class="button">Modifier</a>
                     </article>
                 </div>
             </div>
@@ -69,83 +60,9 @@
     <footer>
         <p><small>&copy;2023, <a href="https://corundum-os.github.io/">Corundum Team</a> and <a href="https://enioaiello.github.io/">Enio Aiello</a>. All right reserved.</small></p>
     </footer>
-    <script src="../../assets/js/logout-settings.js"></script>
     <script src="../../assets/js/account-information.js"></script>
-    <script src="../../assets/js/pdpChange.js"></script>
-    <script>
-        let pdp = localStorage.getItem("pdp");
-        let profilePicture = document.querySelector("#profilePicture");
-
-        if (pdp === undefined || pdp === null) {
-            profilePicture.src = "https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg";
-        } else {
-            profilePicture.src = pdp;
-        }
-    </script>
-    <script>
-        const usernameChange = document.querySelector("#usernameChange");
-        const emailChange = document.querySelector("#emailChange");
-        const passwordChange = document.querySelector("#passwordChange");
-        const updatingAccount = document.querySelector("#updatingAccount");
-
-        function usernameChangeSettings() {
-            let result = prompt("Entrez votre nouveau nom d'utilisateur");
-            if (result === undefined || result === null || result === "") {
-                usernameChangeSettings();
-            } else {
-                localStorage.setItem("username", result);
-                window.location.reload();
-            }
-        }
-
-        function emailChangeSettings() {
-            let result = prompt("Entrez votre nouvelle adresse email");
-            if (result === undefined || result === null || result === "") {
-                emailChangeSettings();
-            } else {
-                localStorage.setItem("email", result);
-                window.location.reload();
-            }
-        }
-
-        function passwordChangeSettings() {
-            let result = prompt("Entrez votre nouveau mot de passe");
-            if (result === undefined || result === null || result === "") {
-                passwordChangeSettings();
-            } else {
-                localStorage.setItem("password", result);
-                window.location.reload();
-            }
-        }
-
-        function updateTheAccount() {
-            let result = confirm("Rechercher et mettre à jour ?");
-            if (result) {
-                if (!localStorage.getItem("status") || !localStorage.getItem("functionPack")) {
-                    let choice = confirm("Mise à jour disponible, appliquer cette mise à jour ?");
-                    if (choice) {
-                        localStorage.setItem("status", "logged");
-                        localStorage.setItem("setup", false);
-                        localStorage.setItem("updated", true);
-                        localStorage.setItem("functionPack", true);
-                        localStorage.removeItem("group");
-                        alert("Mise à jour appliquée !");
-                    }
-                } else {
-                    alert("Aucunes mises à jour disponible !");
-                }
-            }
-        }
-
-        usernameChange.addEventListener("click", usernameChangeSettings);
-        emailChange.addEventListener("click", emailChangeSettings);
-        passwordChange.addEventListener("click", passwordChangeSettings);
-        updatingAccount.addEventListener("click", updateTheAccount);
-    </script>
+    <script src="../../assets/js/pdp-change.js"></script>
+    <script src="../../assets/js/change-settings.js"></script>
     <script src="../../assets/js/load-pfp.js"></script>
-    <script>
-        accountVersion = document.querySelector("#accountVersion");
-        accountVersion.innerHTML = "<strong>Version : </strong> " + localStorage.getItem("accountVersion");
-    </script>
 </body>
 </html>
