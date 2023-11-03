@@ -1,4 +1,5 @@
 let pdpChange = document.querySelector("#pdpChange");
+let profilePicture = document.querySelector("#profilePicture");
 
 function changePdp() {
     let userPdp = prompt("Entrez le lien de votre image");
@@ -13,4 +14,9 @@ function changePdp() {
     }
 }
 
+function loadPdp() {
+    profilePicture.src = localStorage.getItem("pdp");
+}
+
+loadPdp();
 pdpChange.addEventListener("click", changePdp);

@@ -23,7 +23,7 @@ function registerNewUser(e) {
         return;
     }
     if (profilePicture === '') {
-        localStorage.setItem('pfp', '../../assets/img/profil_vide.jpg');
+        localStorage.setItem('pfp', 'https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg');
     } else {
         localStorage.setItem('pfp', profilePicture);
     }
