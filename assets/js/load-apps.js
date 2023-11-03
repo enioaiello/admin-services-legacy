@@ -3,36 +3,42 @@ let apps = [
         "name": "Vador",
         "description": "Découvrez des applications FOSS et gratuites !",
         "link": "./vador.html",
+        "author": "Enio Aiello",
         "type": "external"
     },
     {
         "name": "PassSearch",
         "description": "Recherchez de l'information via Google !",
         "link": "./passsearch.html",
+        "author": "Enio Aiello",
         "type": "external"
     },
     {
         "name": "Paramètres",
         "description": "Gérez vos paramètres de compte !",
         "link": "./settings.html",
+        "author": "Admin Services",
         "type": "internal"
     },
     {
         "name": "Support",
         "description": "Obtenez de l'aide à travers le support !",
         "link": "../support/support.html",
+        "author": "Admin Services",
         "type": "internal"
     },
     {
         "name": "Services",
         "description": "Découvrez les services disponibles !",
         "link": "./services.html",
+        "author": "Admin Services",
         "type": "internal"
     },
     {
         "name": "Centre de sécurité",
         "description": "Gérez la sécurité de votre compte !",
         "link": "./security.html",
+        "author": "Admin Services",
         "type": "internal"
     }
 ];
@@ -44,6 +50,7 @@ apps.forEach(app => {
     let article = document.createElement("article");
     article.innerHTML = `
         <h3>${app.name}</h3>
+        <p><small>${app.author}</small></p>
         <p>${app.description}</p>
         <a href="${app.link}" class="button">Démarrer</a>
     `;
