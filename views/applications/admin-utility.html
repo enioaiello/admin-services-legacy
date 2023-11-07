@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Découvrez Admin Utility, une application Admin Services !">
+    <title>Admin Utility</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: black;
+            color: white;
+            transition: 200ms;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 1%;
+        }
+
+        h1, #version {
+            text-align: center;
+            margin: 1vh 0;
+        }
+
+        hr {
+            width: 25%;
+            margin: 1vh auto;
+        }
+
+        button {
+            margin: 2vh 0;
+            outline: none;
+            border: 1px solid white;
+            padding: 1% 4%;
+        }
+
+        #welcome, #tools {
+            margin: 0 1vw;
+        }
+
+        #tools {
+            display: none;
+        }
+
+        #tools #alert {
+            color: darkred;
+        }
+
+        #tools hr {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Utility</h1>
+    <p id="version"><small>Version 1.0</small></p>
+    <hr>
+    <div id="welcome">
+        <h2>Bienvenue</h2>
+        <p>Cette application est réservée aux développeurs pour Admin Services.</p>
+        <p>Elle permet à tous de modifier Admin Services et ses composants.</p>
+        <p>En continuant, vous acceptez le risque de perdre vos données ou de modifier des informations sensibles pour Admin Services.</p>
+        <button id="start">Commencer</button>
+    </div>
+    <div id="tools">
+        <h2>Outils</h2>
+        <p id="alert">Tout changement peut endommager Admin Services !</p>
+        <button id="quit">Quitter</button>
+        <hr>
+        <h3>Informations de compte</h3>
+        <p><button id="username">Changer le nom d'utilisateur</button></p>
+        <p><button id="password">Changer le mot de passe</button></p>
+        <p><button id="token">Définir un token</button></p>
+        <p><small>Les tokens sont réservés aux anciennes versions d'Admin Services.</small></p>
+        <p><small>Si un token a déjà été enregistré, il ne peut pas être modifié à nouveau.</small></p>
+        <p><button id="pdp">Changer la photo de profil</button></p>
+        <hr>
+        <h2>Paramètres d'Admin Services</h2>
+        <p><button id="reset">Réinitialiser</button></p>
+        <p><small>Réinitialiser effacera toutes vos informations.</small></p>
+        <p><button id="dev-mode">Basculer le mode développeur</button></p>
+        <p><small>Permet d'avoir accès à certaines informations supplémentaires ou à des fonctionnalités pour développeurs.</small></p>
+    </div>
+    <script>
+        let welcome = document.getElementById("welcome");
+        let startButton = document.getElementById("start");
+        let quitButton = document.getElementById("quit");
+        let usernameButton = document.getElementById("username");
+        let passwordButton = document.getElementById("password");
+        let tokenButton = document.getElementById("token");
+        let pdpButton = document.getElementById("pdp");
+        let resetButton = document.getElementById("reset");
+        let devModeButton = document.getElementById("dev-mode");
+        let tools = document.getElementById("tools");
+
+        function start() {
+            welcome.style.display = "none";
+            tools.style.display = "block";
+        }
+
+        function changeUsername() {
+            let newUsername = prompt("Entrez un nouveau nom d'utilisateur");
+            if (newUsername !== null) {
+                localStorage.setItem("username", newUsername);
+                alert("Le nom d'utilisateur a été changé avec succès !");
+            }
+        }
+
+        function changePassword() {
+            let newPassword = prompt("Entrez un nouveau mot de passe");
+            if (newPassword !== null) {
+                localStorage.setItem("password", newPassword);
+                alert("Le mot de passe a été changé avec succès !");
+            }
+        }
+
+        function changeToken() {
+            let newToken = prompt("Entrez un nouveau token");
+            if (newToken !== null && localStorage.getItem("token") === null) {
+                localStorage.setItem("token", newToken);
+                alert("Le token a été changé avec succès !");
+            } else {
+                alert("Un token a déjà été enregistré !");
+            }
+        }
+
+        function changePdp() {
+            let newPdp = prompt("Entrez une nouvelle photo de profil");
+            if (newPdp !== null) {
+                localStorage.setItem("pdp", newPdp);
+                alert("La photo de profil a été changée avec succès !");
+            }
+        }
+
+        function reset() {
+            localStorage.clear();
+            alert("Admin Services a été réinitialisé !");
+        }
+
+        function devMode() {
+            if (localStorage.getItem("dev-mode") === "true") {
+                localStorage.setItem("dev-mode", "false");
+                alert("Le mode développeur a été désactivé !");
+            } else {
+                localStorage.setItem("dev-mode", "true");
+                alert("Le mode développeur a été activé !");
+            }
+        }
+
+        function quit() {
+            window.location.href = "https://enioaiello.github.io/admin-services/views/applications/apps.html";
+        }
+
+        startButton.addEventListener("click", start);
+        usernameButton.addEventListener("click", changeUsername);
+        passwordButton.addEventListener("click", changePassword);
+        tokenButton.addEventListener("click", changeToken);
+        pdpButton.addEventListener("click", changePdp);
+        resetButton.addEventListener("click", reset);
+        devModeButton.addEventListener("click", devMode);
+        quitButton.addEventListener("click", quit);
+    </script>
+</body>
+</html>
