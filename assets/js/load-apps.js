@@ -14,6 +14,13 @@ let apps = [
         "type": "external"
     },
     {
+        "name": "Admin Utility",
+        "description": "L'outil ultime pour Admin Services",
+        "link": "./admin-utility.html",
+        "author": "Enio Aiello",
+        "type": "external"
+    },
+    {
         "name": "Paramètres",
         "description": "Gérez vos paramètres de compte !",
         "link": "./settings.html",
