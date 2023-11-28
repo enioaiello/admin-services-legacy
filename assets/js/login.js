@@ -4,7 +4,7 @@ let submit = document.getElementById('submit');
 let users = [
     {
         email: 'aielloenio@icloud.com',
-        password: 'Sezfet97',
+        password: '1234567890',
         pfp: 'https://enioaiello.github.io/assets/img/profile.png',
         username: 'Enio Aiello'
     }
