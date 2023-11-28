@@ -44,3 +44,25 @@ form label input {
     border: 2px solid black;
     border-radius: 5px;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #000000;
+    }
+
+    .container {
+        background: #2f2e2e;
+    }
+
+    form label input {
+        color: black;
+    }
+
+    #email, #password, #login, #username, #pfp {
+        border: 2px solid white;
+    }
+
+    #email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus  {
+        border: 2px solid #40797a;
+    }
+}

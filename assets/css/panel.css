@@ -93,7 +93,7 @@ main {
     align-items: flex-start;
 }
 
-#recommandes, #services, #annonces, #support, #applications, #developers, #internal, #external, #actions, #widgets {
+#recommandes, #services, #annonces, #support, #applications, #developers, #internal, #external, #actions, #widgets, #hints {
     width: 100%;
 }
 
@@ -113,4 +113,30 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+#profilePicture {
+    width: 15%;
+    border-radius: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+    header, footer {
+        background-color: #000000;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .articleContain article, #selectElements {
+        background-color: #2f2e2e;
+        color: #ffffff;
+    }
 }

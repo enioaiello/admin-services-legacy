@@ -7,13 +7,6 @@ let apps = [
         "type": "external"
     },
     {
-        "name": "PassSearch",
-        "description": "Recherchez de l'information via Google !",
-        "link": "./passsearch.html",
-        "author": "Enio Aiello",
-        "type": "external"
-    },
-    {
         "name": "Admin Utility",
         "description": "L'outil ultime pour Admin Services",
         "link": "./admin-utility.html",

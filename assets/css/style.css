@@ -115,3 +115,24 @@ footer p small a:hover {
         width: 100%;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    header, footer {
+        background-color: #000000;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}

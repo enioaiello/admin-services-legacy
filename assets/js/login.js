@@ -13,6 +13,7 @@ let username = localStorage.getItem('username');
 let pfp = localStorage.getItem('pfp');
 let email = localStorage.getItem('email');
 let password = localStorage.getItem('password');
+let reset = document.getElementById('reset');
 
 function login(e) {
     e.preventDefault();
@@ -69,4 +70,31 @@ if (email !== null && password !== null) {
     console.info("Compte déjà enregistré !");
 }
 
+function resetPassword() {
+    if (localStorage.getItem('username') === null) {
+        alert("Une erreur est survenue, veuillez réessayer plus tard. Si le problème persiste contactez le support. Pour plus d'informations, consultez la console.");
+        if (localStorage.getItem('username') === null && localStorage.getItem('password') !== null) {
+            console.error("Votre compte est corrompu, veuillez le supprimer et en créer un nouveau. Pour plus d'informations, contactez le support.");
+        }
+        if (localStorage.getItem('username') === null && localStorage.getItem('password') === null) {
+            console.error("Aucune donnée n'a été trouvée, veuillez créer un compte. Pour plus d'informations, contactez le support.");
+        }
+    } else if (localStorage.getItem('username') !== null) {
+        let usernameConfirm = prompt("Entrez votre nom d'utilisateur (s'affiche sur la page d'accueil)");
+    if (usernameConfirm === localStorage.getItem('username')) {
+        let newPassword = prompt("Entrez un nouveau mot de passe (il sera appliqué à partir de maintenant)");
+        if (newPassword < 8) {
+            localStorage.setItem("password", newPassword);
+        } else {
+            alert("Le mot de passe doit contenir au moins 8 caractères");
+            resetPassword();
+        }
+    } else {
+        alert("Nom d'utilisateur incorrect");
+        resetPassword();
+    }
+    }
+}
+
+reset.addEventListener("click", resetPassword);
 submit.addEventListener('click', login);

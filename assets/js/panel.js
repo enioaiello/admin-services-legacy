@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 targetSection.style.display = 'none';
             }
 
-            // Sauvegarde de l'état des cases à cocher dans le localStorage
             const checkboxStates = {};
             checkboxes.forEach(checkbox => {
                 checkboxStates[checkbox.getAttribute('data-target')] = checkbox.checked;
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Récupération et application des états des cases à cocher depuis le localStorage
     const savedCheckboxStates = JSON.parse(localStorage.getItem('checkboxStates'));
     if (savedCheckboxStates) {
         for (const targetId in savedCheckboxStates) {
@@ -61,7 +59,23 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
+
+    const panelDivs = ['recommandes', 'services', 'annonces', 'support', 'actions', 'widgets', 'hints'];
+
+    panelDivs.forEach(divId => {
+        const div = document.getElementById(divId);
+        const checkbox = document.querySelector(`[data-target="${divId}"]`);
+
+        if (div && checkbox) {
+            if (checkbox.checked) {
+                div.style.display = 'block';
+            } else {
+                div.style.display = 'none';
+            }
+        }
+    });
 });
+
 
 function logout() {
     let result = confirm("Êtes-vous sûr de vous déconnecter ?");
