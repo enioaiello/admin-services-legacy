@@ -20,7 +20,6 @@ if (username == null) {
     console.error("Vous n'êtes pas connecté !");
 }
 
-// Généré par ChatGPT : GPT-3 (OpenAI)
 document.addEventListener("DOMContentLoaded", function() {
     const checkboxes = document.querySelectorAll('.checkbox');
 
