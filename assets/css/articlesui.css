@@ -30,7 +30,7 @@ article {
     display: flex;
     flex-direction: column;
     width: 49%;
-    background-color: lightgray;
+    background-color: #505050b2;
     border-radius: 5px;
     padding: 1%;
     margin: 1% 0;

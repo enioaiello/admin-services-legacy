@@ -45,6 +45,26 @@ form label input {
     border-radius: 5px;
 }
 
+#submit {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 2% 5%;
+    margin: 0.5vh 0;
+    background-color: #40798c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+#submit:hover {
+    background-color: #40798caa;
+    color: white;
+    text-decoration: none;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: #000000;
@@ -64,5 +84,15 @@ form label input {
 
     #email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus  {
         border: 2px solid #40797a;
+    }
+
+    #email:disabled {
+        background: #ffffff55;
+        border: 1px solid #ffffff55;
+    }
+
+    article {
+        background-color: #505050b2;
+
     }
 }
