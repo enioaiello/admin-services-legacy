@@ -1,12 +1,5 @@
 let apps = [
     {
-        "name": "Vador",
-        "description": "Découvrez des applications FOSS et gratuites !",
-        "link": "./vador.html",
-        "author": "Enio Aiello",
-        "type": "external"
-    },
-    {
         "name": "Admin Utility",
         "description": "L'outil ultime pour Admin Services",
         "link": "./admin-utility.html",
@@ -40,11 +33,16 @@ let apps = [
         "link": "./security.html",
         "author": "Admin Services",
         "type": "internal"
+    },
+    {
+        "name": "Astuces",
+        "description": "Découvrez des astuces pour mieux utiliser Admin Services !",
+        "link": "./tips.html",
     }
 ];
 
-let internalDiv = document.getElementById("internal");
-let externalDiv = document.getElementById("external");
+let internalDiv = document.querySelector("#internal");
+let externalDiv = document.querySelector("#external");
 
 apps.forEach(app => {
     let article = document.createElement("article");

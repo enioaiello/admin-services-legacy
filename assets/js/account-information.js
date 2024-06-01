@@ -1,5 +1,3 @@
-'use strict';
-
 const username = localStorage.getItem("username");
 const email = localStorage.getItem("email");
 const password = localStorage.getItem("password");
@@ -13,8 +11,4 @@ if (username) {
 
 if (email) {
     emailLabel.textContent = email;
-}
-
-if (password) {
-    passwordLabel.textContent = password;
 }

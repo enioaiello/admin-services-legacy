@@ -10,12 +10,18 @@
     border-radius: 5px;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .button:hover {
     background-color: #40798caa;
     color: white;
     text-decoration: none;
+}
+
+.button.denied {
+    background-color: gray;
+    cursor: not-allowed;
 }
 
 .articleContain {
@@ -30,11 +36,12 @@ article {
     display: flex;
     flex-direction: column;
     width: 49%;
-    background-color: #505050b2;
+    background-color: lightgray;
     border-radius: 5px;
     padding: 1%;
     margin: 1% 0;
     justify-content: center;
+    overflow: hidden;
 }
 
 article * {
@@ -43,4 +50,18 @@ article * {
 
 article:hover {
     transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    article {
+        background-color: #505050b2;
+    }
+}
+
+#content h2,
+#content h3,
+#content p, 
+#content .button {
+    margin: 0;
 }

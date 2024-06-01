@@ -1,0 +1,22 @@
+::selection {
+    background-color: transparent;
+}
+
+body {
+    background: #000000;
+    font-family: sans-serif;
+    color: white;
+}
+
+#resetProfileSection,
+#updateProfileSection,
+#resetAdminServicesSection,
+#resetStartupSection,
+#startAdminUtilitySection,
+#updateAdminServicesSection {
+    display: none;
+}
+
+ul li {
+    cursor: pointer;
+}

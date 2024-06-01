@@ -1,6 +1,6 @@
-let emailInput = document.getElementById('email');
-let passwordInput = document.getElementById('password');
-let submit = document.getElementById('submit');
+let emailInput = document.querySelector('#email'); // Récupère l'élément input avec l'id 'email'
+let passwordInput = document.querySelector('#password'); // Récupère l'élément input avec l'id 'password'
+let submit = document.querySelector('#submit'); // Récupère l'élément avec l'id 'submit'
 let users = [
     {
         email: 'aielloenio@icloud.com',
@@ -9,36 +9,36 @@ let users = [
         username: 'Enio Aiello'
     }
 ];
-let username = localStorage.getItem('username');
-let pfp = localStorage.getItem('pfp');
-let email = localStorage.getItem('email');
-let password = localStorage.getItem('password');
-let reset = document.getElementById('reset');
+let username = localStorage.getItem('username'); // Récupère la valeur de 'username' depuis le stockage local
+let pfp = localStorage.getItem('pfp'); // Récupère la valeur de 'pfp' depuis le stockage local
+let email = localStorage.getItem('email'); // Récupère la valeur de 'email' depuis le stockage local
+let password = localStorage.getItem('password'); // Récupère la valeur de 'password' depuis le stockage local
+let reset = document.querySelector('#reset'); // Récupère l'élément avec l'id 'reset'
 
 function login(e) {
-    e.preventDefault();
+    e.preventDefault(); // Empêche le comportement par défaut du formulaire
 
     if (email !== null && password !== null) {
         if (emailInput.value === '' || passwordInput.value === '') {
-            alert('Veuillez remplir tous les champs');
-            console.error('Veuillez remplir tous les champs');
+            alert('Veuillez remplir tous les champs'); // Affiche une alerte si les champs sont vides
+            console.error('Veuillez remplir tous les champs'); // Affiche une erreur dans la console
             return;
         }
     } else if (email !== null) {
         if (passwordInput.value === '') {
-            alert('Veuillez remplir tous les champs');
-            console.error('Veuillez remplir tous les champs');
+            alert('Veuillez remplir tous les champs'); // Affiche une alerte si le champ du mot de passe est vide
+            console.error('Veuillez remplir tous les champs'); // Affiche une erreur dans la console
             return;
         }
     }
 
     if (email !== null && password !== null) {
         if (emailInput.value === email && passwordInput.value === password) {
-            window.location.href = "../panel.html";
+            window.location.href = "../panel.html"; // Redirige vers la page 'panel.html' si les identifiants sont corrects
             return;
         } else {
-            alert('Mot de passe incorrect');
-            console.error('Mot de passe incorrect');
+            alert('Mot de passe incorrect'); // Affiche une alerte si les identifiants sont incorrects
+            console.error('Mot de passe incorrect'); // Affiche une erreur dans la console
             return;
         }
     }
@@ -46,28 +46,28 @@ function login(e) {
     for (let i = 0; i < users.length; i++) {
         if (emailInput.value === users[i].email && passwordInput.value === users[i].password) {
             localStorage.setItem('username', users[i].username);
-            console.log("Nom d'utilisateur défini");
+            console.log("Nom d'utilisateur défini"); // Affiche un message dans la console
             localStorage.setItem('pfp', users[i].pfp);
-            console.log("Photo de profil définie");
+            console.log("Photo de profil définie"); // Affiche un message dans la console
             localStorage.setItem('email', users[i].email);
-            console.log("Adresse email défini");
+            console.log("Adresse email défini"); // Affiche un message dans la console
             localStorage.setItem('password', users[i].password);
-            console.log("Mot de passe défini");
+            console.log("Mot de passe défini"); // Affiche un message dans la console
 
-            window.location.href = "../panel.html";
+            window.location.href = "../panel.html"; // Redirige vers la page 'panel.html' si les identifiants sont corrects
             return;
         }
     }
 
-    alert('Mot de passe incorrect');
-    console.error('Mot de passe incorrect');
+    alert('Mot de passe incorrect'); // Affiche une alerte si les identifiants sont incorrects
+    console.error('Mot de passe incorrect'); // Affiche une erreur dans la console
 }
 
 
 if (email !== null && password !== null) {
-    emailInput.disabled = true;
-    emailInput.value = email;
-    console.info("Compte déjà enregistré !");
+    emailInput.disabled = true; // Désactive l'input de l'email
+    emailInput.value = email; // Remplit l'input de l'email avec la valeur du stockage local
+    console.info("Compte déjà enregistré !"); // Affiche une information dans la console
 }
 
 function resetPassword() {
@@ -81,20 +81,20 @@ function resetPassword() {
         }
     } else if (localStorage.getItem('username') !== null) {
         let usernameConfirm = prompt("Entrez votre nom d'utilisateur (s'affiche sur la page d'accueil)");
-    if (usernameConfirm === localStorage.getItem('username')) {
-        let newPassword = prompt("Entrez un nouveau mot de passe (il sera appliqué à partir de maintenant)");
-        if (newPassword < 8) {
-            localStorage.setItem("password", newPassword);
+        if (usernameConfirm === localStorage.getItem('username')) {
+            let newPassword = prompt("Entrez un nouveau mot de passe (il sera appliqué à partir de maintenant)");
+            if (newPassword < 8) {
+                localStorage.setItem("password", newPassword);
+            } else {
+                alert("Le mot de passe doit contenir au moins 8 caractères"); // Affiche une alerte si le mot de passe est trop court
+                resetPassword();
+            }
         } else {
-            alert("Le mot de passe doit contenir au moins 8 caractères");
+            alert("Nom d'utilisateur incorrect"); // Affiche une alerte si le nom d'utilisateur est incorrect
             resetPassword();
         }
-    } else {
-        alert("Nom d'utilisateur incorrect");
-        resetPassword();
-    }
     }
 }
 
-reset.addEventListener("click", resetPassword);
-submit.addEventListener('click', login);
+reset.addEventListener("click", resetPassword); // Ajoute un écouteur d'événement pour le clic sur le bouton 'reset'
+submit.addEventListener('click', login); // Ajoute un écouteur d'événement pour le clic sur le bouton 'submit'

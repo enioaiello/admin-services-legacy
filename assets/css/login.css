@@ -21,13 +21,13 @@ form {
     margin: 0 auto;
 }
 
-form label input {
+form label input, #pfp {
     padding: 2%;
     outline: none;
     color: black;
 }
 
-#email, #password, #login, #username, #pfp {
+#email, #password, #login, #username, #pfp, #passwordRepeat {
     width: 100%;
     margin: 1vh 0;
 }
@@ -36,11 +36,11 @@ form label input {
     font-size: 1.1rem;
 }
 
-#email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus  {
+#email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus, #passwordRepeat:focus  {
     border: 2px solid #40797a;
 }
 
-#email, #password, #username, #pfp {
+#email, #password, #username, #pfp, #passwordRepeat {
     border: 2px solid black;
     border-radius: 5px;
 }

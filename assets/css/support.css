@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#sidebar {
+    width: 15%;
+    list-style: none;
+}
+
+#sidebar li {
+    margin: 1vh 0;
+}
+
+#content {
+    width: 85%;
+}
+
+#content * {
+    margin: 1vh 0;
+}
+
+#content h2,
+#content h3 {
+    margin: 2vh 0;
+}

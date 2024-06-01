@@ -1,32 +1,17 @@
 const articlesData = [
     {
-        titre: "Suppression totale d'Admin Services Desktop",
-        description: "L'application a été supprimée le 26/09/2023, merci de l'avoir utilisée.",
-        lien: "#"
+        titre: "Nouveau support",
+        description: "Obtenez plus d'informations sur notre nouveau support.",
+        lien: "new-support.html"
     },
     {
-        titre: "Passage à la 7.0.0",
-        description: "Obtenez des informations sur la future mise à niveau majeure.",
-        lien: "7.0.0.html"
+        titre: "Présentation d'Admin Services 10",
+        description: "Admin Services 10 est enfin disponible ! Découvrez les nouvelles fonctionnalités et modifications apportées au service !",
+        lien: "version-ten.html"
     },
-    {
-        titre: "Mises à jour des comptes",
-        description: "Obtenez des mises à jour pour les anciens comptes directement sur Admin Services.",
-        lien: "update-account.html"
-    },
-    {
-        titre: "Ajout des applications internes",
-        description: "En savoir plus sur la nouvelle fonctionnalité d'application interne d'<strong>Admin Services</strong>.",
-        lien: "in-app.html"
-    },
-    {
-        titre: "Fin d'Admin Services Plus",
-        description: "En savoir plus sur les pertes d'<strong>Admin Services Plus</strong> et de ses fonctionnalités.",
-        lien: "eol-plus.html"
-    }
 ];
 
-const announcementsDiv = document.getElementById("announcements");
+const announcementsDiv = document.querySelector("#announcements");
 
 articlesData.forEach(article => {
     const articleElement = document.createElement("article");

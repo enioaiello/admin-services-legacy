@@ -59,7 +59,7 @@ body {
 .container form input[type=submit] {
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #40798c;
     border-radius: 5px;
     background: #40798c;
     color: white;
@@ -69,6 +69,12 @@ body {
 
 .container form input[type=submit]:hover {
     background: #40798caa;
+    border: 1px solid #40798c;
+}
+
+.container #resetPassword {
+    margin: 20px 0;
+    text-align: center;
 }
 
 .container #bottomText {

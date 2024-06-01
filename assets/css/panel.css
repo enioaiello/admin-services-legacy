@@ -1,17 +1,24 @@
+/* Body */
 body {
-    background-size: cover;
     background: no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
+/* Header */
 header {
-    background-color: #40798c;
-    top: 0;
     position: sticky;
+    top: 0;
     width: 100%;
+    background-color: #40798c;
     z-index: 999999999999999999999;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-nav {
+header nav {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -78,11 +85,14 @@ nav {
 
 #pfpLogout:hover {
     transform: scale(1.2);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+/* Main */
 main {
     width: 80%;
     margin: 2vh auto;
+    flex: 1;
 }
 
 #panel {
@@ -93,7 +103,17 @@ main {
     align-items: flex-start;
 }
 
-#recommandes, #services, #annonces, #support, #applications, #developers, #internal, #external, #actions, #widgets, #hints {
+#recommandes,
+#services,
+#annonces,
+#support,
+#applications,
+#developers,
+#internal,
+#external,
+#actions,
+#widgets,
+#hints {
     width: 100%;
 }
 
@@ -120,8 +140,17 @@ main {
     border-radius: 50%;
 }
 
+footer {
+    width: 100%;
+    background-color: #40798c;
+    padding: 2%;
+}
+
+
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    header, footer {
+    header,
+    footer {
         background-color: #000000;
     }
 
@@ -135,7 +164,8 @@ main {
         color: #ffffff;
     }
 
-    .articleContain article, #selectElements {
+    .articleContain article,
+    #selectElements {
         background-color: #2f2e2e;
         color: #ffffff;
     }

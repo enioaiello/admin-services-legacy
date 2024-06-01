@@ -1,12 +1,25 @@
-let welcomeText = document.getElementById('welcomeText');
+// Sélectionne l'élément avec l'ID 'welcomeText'
+let welcomeText = document.querySelector('#welcomeText');
+
+// Récupère l'heure actuelle
 let actualHour = new Date().getHours();
+
+// Récupère la valeur de 'username' depuis le stockage local
 let username = localStorage.getItem('username');
-let logoutButton = document.getElementById('logoutButton');
+
+// Sélectionne l'élément avec l'ID 'logoutButton'
+let logoutButton = document.querySelector('#logoutButton');
+
+// Sélectionne l'élément avec l'ID 'devMode'
+let devMode = document.querySelector("#devMode");
+
+// Sélectionne l'élément avec l'ID 'refreshDate'
+let refreshDate = document.querySelector("#refreshDate");
 
 console.log("Bienvenue sur la console !");
-console.log("Nous espérons que vous respecterez la vie privée des autres utilisateurs !");
 console.log("Faites attention aux commandes que vous tapez, elles peuvent être dangereuses !");
 
+// Vérifie si l'heure actuelle est entre 8h et 19h
 if (actualHour >= 8 && actualHour < 19) {
     welcomeText.textContent = "Bonjour " + username;
     console.log("Bonjour " + username);
@@ -15,18 +28,27 @@ if (actualHour >= 8 && actualHour < 19) {
     console.log("Bonsoir " + username);
 }
 
+// Vérifie si le mode développeur est activé dans le stockage local
+if (localStorage.getItem("dev-mode") === "true") {
+    console.log("Mode développeur activé !");
+    console.warn("Attention, le mode développeur est activé !");
+    devMode.style.display = "block";
+}
+
+// Vérifie si 'username' est null et redirige vers la page de connexion si c'est le cas
 if (username == null) {
     window.location.href = "./login/options.html";
     console.error("Vous n'êtes pas connecté !");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+// Attend que le DOM soit chargé
+document.addEventListener("DOMContentLoaded", function () {
     const checkboxes = document.querySelectorAll('.checkbox');
 
     checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
+        checkbox.addEventListener('change', function () {
             const targetId = this.getAttribute('data-target');
-            const targetSection = document.getElementById(targetId);
+            const targetSection = document.querySelector(`#${targetId}`);
 
             if (this.checked) {
                 targetSection.style.display = 'block';
@@ -45,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const savedCheckboxStates = JSON.parse(localStorage.getItem('checkboxStates'));
     if (savedCheckboxStates) {
         for (const targetId in savedCheckboxStates) {
-            const targetSection = document.getElementById(targetId);
+            const targetSection = document.querySelector(`#${targetId}`);
             const checkbox = document.querySelector(`[data-target="${targetId}"]`);
             if (targetSection && checkbox) {
                 if (savedCheckboxStates[targetId]) {
@@ -62,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const panelDivs = ['recommandes', 'services', 'annonces', 'support', 'actions', 'widgets', 'hints'];
 
     panelDivs.forEach(divId => {
-        const div = document.getElementById(divId);
+        const div = document.querySelector(`#${divId}`);
         const checkbox = document.querySelector(`[data-target="${divId}"]`);
 
         if (div && checkbox) {
@@ -75,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+// Fonction de déconnexion
 function logout() {
     let result = confirm("Êtes-vous sûr de vous déconnecter ?");
     if (result) {
@@ -84,6 +106,7 @@ function logout() {
     }
 }
 
+// Fonction pour calculer la date et l'heure actuelles
 function calculateDateTime() {
     const now = new Date();
     const hours = now.getHours();
@@ -92,13 +115,19 @@ function calculateDateTime() {
     const month = now.getMonth() + 1;
     const day = now.getDate();
 
+    // Ajoute un zéro devant les minutes si nécessaire
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+
+    // Ajoute un zéro devant le mois et le jour si nécessaire
     const dateString = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
 
-    document.getElementById('dateTime').innerHTML = `Date actuelle : ${dateString}, Heure actuelle : ${hours}:${minutes}`;
+    document.querySelector('#dateTime').innerHTML = `Date actuelle : ${dateString}, Heure actuelle : ${hours}:${formattedMinutes}`;
 }
 
+// Appelle la fonction calculateDateTime lorsque la fenêtre est chargée
 window.onload = function () {
     calculateDateTime();
 };
 
-logoutButton.addEventListener("click", logout);
+// Ajoute un écouteur d'événement pour recalculer la date et l'heure lorsque le bouton 'refreshDate' est cliqué
+document.querySelector('#refreshDate').addEventListener("click", calculateDateTime);
