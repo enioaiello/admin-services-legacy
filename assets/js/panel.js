@@ -129,5 +129,12 @@ window.onload = function () {
     calculateDateTime();
 };
 
+// Vérifie sur le mode développeur est actif
+if (localStorage.getItem("dev-mode") === "true") {
+    console.warn("Attention, le mode développeur est activé !");
+    // Affiche les options de développeurs
+    devMode.style.display = "block";
+}
+
 // Ajoute un écouteur d'événement pour recalculer la date et l'heure lorsque le bouton 'refreshDate' est cliqué
 document.querySelector('#refreshDate').addEventListener("click", calculateDateTime);

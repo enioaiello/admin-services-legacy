@@ -2,6 +2,8 @@
 let username = localStorage.getItem('username');
 // Récupère l'adresse email depuis le stockage local
 let email = localStorage.getItem('email');
+// Défini le bouton pour afficher les bordures
+let showBordersButton = document.querySelector("#showBorders");
 
 // Fonction pour vérifier si l'utilisateur est connecté
 function logged() {
@@ -30,6 +32,15 @@ function loadBrowserInfo() {
     document.querySelector("#browserInfo").textContent = browserInfo;
 }
 
+// Fonction pour afficher les bordures des éléments
+function showBorders() {
+    // Sélectionne tous les éléments avec la classe "border"
+    let element = document.querySelector("*");
+    // Défini la bordure de chaque élément à 1px solide rouge
+    element.style.border = "1px solid red";
+}
+
 // Appelle les fonctions pour charger les informations de l'utilisateur et du navigateur
 loadUserInfo();
 loadBrowserInfo();
+showBordersButton.addEventListener("click", showBorders);

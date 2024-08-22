@@ -38,6 +38,15 @@ let apps = [
         "name": "Astuces",
         "description": "Découvrez des astuces pour mieux utiliser Admin Services !",
         "link": "./tips.html",
+        "author": "Admin Services",
+        "type": "internal"
+    },
+    {
+        "name": "Éditeur de texte",
+        "description": "Éditez des textes simples au format <strong>txt</strong>. Vous pouvez les modifier, les charger et les sauvegarder localement.",
+        "link": "./text/app.html",
+        "author": "Enio Aiello",
+        "type": "external"
     }
 ];
 

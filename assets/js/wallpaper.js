@@ -17,6 +17,15 @@ window.addEventListener("DOMContentLoaded", function () {
         if (backgroundType === "night") {
             // Appliquez la couleur blanche au texte de l'élément body
             document.body.style.color = "#ffffff";
+            // Appliquez la couleur noire au texte des éléments de tous les articles
+            document.querySelectorAll("article").forEach(article => {
+                // Vérifier si le thème sombre du navigateur est actif, si c'est le cas, appliquer la couleur blanche
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    article.style.color = "#ffffff";
+                } else {
+                    article.style.color = "#000000";
+                }
+            });
         }
     }
 });

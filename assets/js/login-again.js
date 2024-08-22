@@ -3,6 +3,9 @@ let username = localStorage.getItem('username');
 let password = localStorage.getItem('password');
 let pfp = localStorage.getItem('pfp');
 
+// Récupérer l'erreur
+let error = document.querySelector('#error');
+
 // Vérifier si les valeurs existent dans le localStorage
 function check() {
     if (!username || !password || !pfp) {
@@ -24,8 +27,11 @@ function login(e) {
         window.location.href = '../panel.html';
     } else {
         // Afficher une alerte et un message d'erreur si le mot de passe est incorrect
-        alert('Mot de passe incorrect');
+        error.style.display = 'block';
         console.error('Mot de passe incorrect');
+        setTimeout(() => {
+            error.style.display = 'none';
+        }, 5000);
     }
 }
 

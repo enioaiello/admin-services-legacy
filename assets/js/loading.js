@@ -54,14 +54,17 @@ checkUserchange();
 console.log("Chargement des fichiers de démarrage...");
 
 function loader() {
-    if (localStorage.getItem("gfap") === "true") {
-        window.location.href = "./views/google-mode/index.html";
-    } else {
-        console.log("Chargement du site...");
-        if (localStorage.getItem("username") === null) {
-            window.location.href = "./views/login/options.html";
+    console.info("Prêt !");
+    setTimeout(() => {
+        if (localStorage.getItem("gfap") === "true") {
+            window.location.href = "./views/google-mode/index.html";
         } else {
-            window.location.href = "./views/login/password.html";
+            console.log("Chargement du site...");
+            if (localStorage.getItem("username") === null) {
+                window.location.href = "./views/login/options.html";
+            } else {
+                window.location.href = "./views/login/password.html";
+            }
         }
-    }
+    }, 5000);
 }

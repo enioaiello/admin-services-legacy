@@ -50,6 +50,7 @@ function redirect(imageName) {
 // Fonction pour supprimer l'image de fond active
 function removeActiveBackground() {
     localStorage.removeItem("backgroundURL");
+    localStorage.removeItem("backgroundType");
 }
 
 // Ajouter un écouteur d'événement pour supprimer l'image de fond active lors du clic sur le bouton "remove"
