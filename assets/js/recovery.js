@@ -50,7 +50,7 @@ function resetProfile() {
     localStorage.removeItem("email"); // Supprimer l'e-mail du stockage local
     localStorage.removeItem("password"); // Supprimer le mot de passe du stockage local
     localStorage.removeItem("pfp"); // Supprimer l'image de profil du stockage local
-    localStorage.removeItem("dev-mode"); // Supprimer le mode développeur du stockage local
+    localStorage.removeItem("developer-mode"); // Supprimer le mode développeur du stockage local
     returnToHome(); // Revenir à la page d'accueil
 }
 

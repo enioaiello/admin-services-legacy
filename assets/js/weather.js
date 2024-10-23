@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const apiKey = '6271124950ad3a11168970847a769525';
     const weatherDiv = document.getElementById('weather');
-    const refreshWeather = document.getElementById('refreshWeather');
 
     // Fonction pour obtenir la position de l'utilisateur
     function getLocation() {
@@ -28,8 +27,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (data.weather && data.weather.length > 0) {
                     const city = data.name;
                     const weatherDescription = data.weather[0].description;
-                    const temperature = data.main.temp;
-                    weatherDiv.innerHTML = `La météo actuelle à ${city} est : ${weatherDescription} avec une température de ${temperature}°C.`;
+                    const temperature = data.main.temp.toFixed(1);
+                    weatherDiv.innerHTML = `${city} : ${weatherDescription}, température de ${temperature}°C.`;
                 } else {
                     weatherDiv.innerHTML = "Impossible de récupérer les données météo.";
                 }
@@ -61,5 +60,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Appel de la fonction pour obtenir la localisation
     getLocation();
 
-    refreshWeather.addEventListener('click', getLocation);
+    // refreshWeather.addEventListener('click', getLocation);
+    setTimeout(getLocation, 60000);
 });

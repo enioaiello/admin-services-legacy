@@ -118,3 +118,6 @@ articles.forEach(articleData => {
 
     topicsDiv.appendChild(article);
 });
+
+let update = document.querySelector("#update");
+update.innerHTML = localStorage.getItem("version");

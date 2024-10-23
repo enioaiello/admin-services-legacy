@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/panel.css">
     <link rel="stylesheet" href="../assets/css/articlesui.css">
     <link rel="icon" href="../assets/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,6 +21,9 @@
                 <img src="../assets/img/logo.png" alt="Logo Admin Services" id="brandIcon">
             </div>
             <ul id="navItems">
+                <li>
+                    <a href="#" title="Retour" id="backPage"><i class="ri-arrow-left-line"></i></a>
+                </li>
                 <li>
                     <div id="logoutChamp">
                         <a href="#" id="logout">
@@ -38,7 +42,7 @@
                 <div class="articleContain">
                     <article>
                         <h3>Paramètres de l'accueil</h3>
-                        <p>Changez les paramètres de l'accueil d'<strong>Admin Services</strong>.</p>
+                        <p>Changez les paramètres de l'accueil.</p>
                         <p><a href="../views/settings/panel.html" class="button">Consulter</a></p>
                     </article>
                     <article>
@@ -68,14 +72,13 @@
                 <div class="articleContain">
                     <article>
                         <h3>Paramètres</h3>
-                        <p>Changez les paramètres d'<strong>Admin Services</strong> et accédez à certaines informations.
+                        <p>Changez les paramètres et accédez à certaines informations.
                         </p>
                         <p><a href="applications/settings.html" class="button">Consulter</a></p>
                     </article>
                     <article>
                         <h3>Support</h3>
-                        <p>Obtenez tout le support nécessaire sur l'utilisation d'<strong>Admin Services</strong> et ses
-                            fonctions.</p>
+                        <p>Obtenez tout le support nécessaire.</p>
                         <p><a href="support/support.html" class="button">Consulter</a></p>
                     </article>
                     <article>
@@ -83,20 +86,20 @@
                         <p>Consultez les suggestions de sécurité pour votre compte.</p>
                         <p><a href="applications/security.html" class="button">Consulter</a></p>
                     </article>
-                    <article id="devMode">
-                        <h3>Panneau de développement</h3>
-                        <p>Obtenez l'accès aux outils de développement pour vos applications et bien d'autres !</p>
-                        <a href="applications/developer.html" class="button">Consulter</a>
-                    </article>
                     <article>
                         <h3>Astuces</h3>
-                        <p>Apprenez à utiliser <strong>Admin Services</strong> et découvrez-en plus !</p>
+                        <p>Apprenez à utiliser le service.</p>
                         <a href="applications/hints.html" class="button">Consulter</a>
                     </article>
                     <article>
                         <h3>Toutes les applications</h3>
                         <p>Accédez à la bibliothèque d'applications.</p>
                         <a href="applications/apps.html" class="button">Consulter</a>
+                    </article>
+                    <article id="devMode">
+                        <h3>Panneau de développement</h3>
+                        <p>Obtenez l'accès aux outils de développement pour vos applications et bien d'autres !</p>
+                        <a href="applications/developer.html" class="button">Consulter</a>
                     </article>
                 </div>
             </div>
@@ -107,24 +110,19 @@
                 <article>
                     <h3>Calendrier</h3>
                     <p id="dateTime"></p>
-                    <span id="refreshDate" class="button">Actualiser</span>
                 </article>
                 <article>
                     <h3>Météo</h3>
                     <div id="weather">
-
+                        Patientez...
                     </div>
-                    <span id="refreshWeather" class="button">Actualiser</span>
                 </article>
                 <article>
                     <h3>Notifications</h3>
                     <ul id="notificationList">
                         <p>Aucunes notifications pour l'instant.</p>
                     </ul>
-                    <div class="buttons">
-                        <span id="refreshNotifications" class="button semi">Actualiser</span>
-                        <a href="#" id="moreNotifications" class="button semi second">Toutes les notifications</a>
-                    </div>
+                    <a href="./notifications.html" id="moreNotifications" class="button second">Toutes les notifications</a>
                 </article>
             </div>
         </div>
@@ -227,14 +225,14 @@
         </div>
     </main>
     <footer>
-        <p><small>&copy; 2024, <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a>. All rights
-                reserved.</small></p>
+        <p>&copy;2025, <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a>. All rights
+                reserved.</p>
     </footer>
     <script type="text/javascript" src="../assets/js/panel.js"></script>
     <script type="text/javascript" src="../assets/js/load-pfp.js"></script>
     <script type="text/javascript" src="../assets/js/wallpaper.js"></script>
     <script type="text/javascript" src="../assets/js/weather.js"></script>
-    <script src="https://kit.fontawesome.com/127f7eda6e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/back.js"></script>
 </body>
 
 </html>

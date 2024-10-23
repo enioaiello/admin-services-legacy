@@ -1,0 +1,17 @@
+article {
+    display: flex;
+    flex-direction: row;
+}
+
+.notificationIcon {
+    width: 15%;
+    margin: 0 10px 0 0;
+}
+
+.information {
+    width: 84%;
+}
+
+.hidden {
+    display: none;
+}

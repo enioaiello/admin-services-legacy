@@ -11,9 +11,8 @@ body {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin-top: 20px;
     width: 75%;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
 }
 
 .container #profilePicture {
@@ -27,7 +26,7 @@ body {
 
 .container #username {
     margin: 20px 0;
-    color: black;
+    color: var(--black);
     text-align: center;
 }
 
@@ -47,21 +46,21 @@ body {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--lightgray-bg);
     border-radius: 5px;
 }
 
 .container form label input:focus {
     outline: none;
-    border: 1px solid #40798c;
+    border: 1px solid var(--default);
 }
 
 .container form input[type=submit] {
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #40798c;
+    border: 1px solid var(--default);
     border-radius: 5px;
-    background: #40798c;
+    background: var(--default);
     color: white;
     cursor: pointer;
     width: 15%;
@@ -79,7 +78,7 @@ body {
 
 .container #bottomText {
     width: 100%;
-    color: gray;
+    color: var(--gray);
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -89,6 +88,14 @@ body {
 .container #error {
     display: none;
     margin-right: 10px;
+}
+
+#logo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -105,14 +112,13 @@ body {
         background: rgba(0, 0, 0, 0.8);
         border-radius: 10px;
         padding: 20px;
-        margin-top: 20px;
         width: 75%;
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
     }
 
     .container #username {
         margin: 20px 0;
-        color: white;
+        color: var(--white);
         text-align: center;
     }
 }

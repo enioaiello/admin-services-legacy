@@ -13,9 +13,9 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #40798c;
+    background-color: var(--default);
     z-index: 999999999999999999999;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--box-shadow);
 }
 
 header nav {
@@ -33,7 +33,7 @@ header nav {
 }
 
 #brandIcon {
-    height: 30px;
+    height: 45px;
     overflow: hidden;
     margin-right: 10px;
 }
@@ -43,7 +43,7 @@ header nav {
 }
 
 #brand p {
-    color: white;
+    color: var(--white);
     font-weight: bold;
 }
 
@@ -61,13 +61,14 @@ header nav {
 }
 
 #navItems li a {
-    color: white;
+    color: var(--white);
+    font-size: 1.2em;
     text-decoration: none;
     font-weight: bold;
 }
 
 #navItems li a:hover {
-    color: rgb(128, 128, 128);
+    color: var(--gray-bg);;
 }
 
 #logoutChamp {
@@ -76,23 +77,22 @@ header nav {
 }
 
 #pfpLogout {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 40px;
+    max-height: 40px;
 }
 
 #pfpLogout:hover {
     transform: scale(1.2);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--box-shadow);
 }
 
 /* Main */
 main {
     width: 80%;
     margin: 2vh auto;
-    flex: 1;
 }
 
 #panel {
@@ -124,7 +124,7 @@ main {
 #selectElements {
     padding: 2%;
     text-align: center;
-    background-color: lightgray;
+    background-color: var(--lightgray);
     border-radius: 5px;
     width: 100%;
 }
@@ -146,7 +146,7 @@ main {
 
 footer {
     width: 100%;
-    background-color: #40798c;
+    background-color: var(--default);
     padding: 2%;
 }
 
@@ -155,22 +155,22 @@ footer {
 @media (prefers-color-scheme: dark) {
     header,
     footer {
-        background-color: #000000;
+        background-color: var(--black);
     }
 
     header nav ul li a {
         text-decoration: none;
-        color: #ffffff;
+        color: var(--white);
     }
 
     body {
-        background-color: #000000;
-        color: #ffffff;
+        background-color: var(--black-bg);
+        color: var(--white);
     }
 
     .articleContain article,
     #selectElements {
-        background-color: #2f2e2e;
-        color: #ffffff;
+        background-color: var(--black);
+        color: var(--white);
     }
 }

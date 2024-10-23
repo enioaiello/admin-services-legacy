@@ -1,11 +1,21 @@
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
 .container img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+.container progress {
+    display: none;
+    margin: 3vh 0;
+}
+
+.container #message {
+    display: none;
 }

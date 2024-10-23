@@ -13,32 +13,30 @@ let logoutButton = document.querySelector('#logoutButton');
 // Sélectionne l'élément avec l'ID 'devMode'
 let devMode = document.querySelector("#devMode");
 
-// Sélectionne l'élément avec l'ID 'refreshDate'
-let refreshDate = document.querySelector("#refreshDate");
-
-console.log("Bienvenue sur la console !");
-console.log("Faites attention aux commandes que vous tapez, elles peuvent être dangereuses !");
-
 // Vérifie si l'heure actuelle est entre 8h et 19h
-if (actualHour >= 8 && actualHour < 19) {
-    welcomeText.textContent = "Bonjour " + username;
-    console.log("Bonjour " + username);
-} else {
-    welcomeText.textContent = "Bonsoir " + username;
-    console.log("Bonsoir " + username);
+function welcomeMessage() {
+    if (actualHour >= 8 && actualHour < 12) {
+        welcomeText.textContent = "Bonjour " + username;
+        console.log("Dashboard: Message d'accueil mis à jour avec succès !");
+    } else if (actualHour >= 12 && actualHour < 18) {
+        welcomeText.textContent = "Bon après-midi " + username;
+        console.log("Dashboard: Message d'accueil mis à jour avec succès !");
+    } else {
+        welcomeText.textContent = "Bonsoir " + username;
+        console.log("Dashboard: Message d'accueil mis à jour avec succès !");
+    }
 }
 
 // Vérifie si le mode développeur est activé dans le stockage local
-if (localStorage.getItem("dev-mode") === "true") {
-    console.log("Mode développeur activé !");
-    console.warn("Attention, le mode développeur est activé !");
+if (localStorage.getItem("devMode") === "true") {
+    console.warn("Admin-Services: Attention, le mode développeur est activé !");
     devMode.style.display = "block";
 }
 
 // Vérifie si 'username' est null et redirige vers la page de connexion si c'est le cas
 if (username == null) {
     window.location.href = "./login/options.html";
-    console.error("Vous n'êtes pas connecté !");
+    console.error("Dashboard: Vous n'êtes pas connecté !");
 }
 
 // Attend que le DOM soit chargé
@@ -101,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function logout() {
     let result = confirm("Êtes-vous sûr de vous déconnecter ?");
     if (result) {
-        window.location.href = "https://enioaiello.github.io/admin-services/";
-        console.info("Déconnexion réussie");
+        window.location.href = "../login/password.html";
+        console.info("Admin-Services: Déconnexion réussie");
     }
 }
 
@@ -119,13 +117,17 @@ function calculateDateTime() {
     const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
 
     // Ajoute un zéro devant le mois et le jour si nécessaire
-    const dateString = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
+    // const dateString = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
+    const dateString = `${day < 10 ? '0' : ''}${day}/${month < 10 ? '0' : ''}${month}/${year.toString().slice(-2)}`;
 
-    document.querySelector('#dateTime').innerHTML = `Date actuelle : ${dateString}, Heure actuelle : ${hours}:${formattedMinutes}`;
+    document.querySelector('#dateTime').innerHTML = `Date actuelle : ${dateString}. Heure actuelle : ${hours}:${formattedMinutes}`;
+
+    setTimeout(calculateDateTime, 1000);
 }
 
 // Appelle la fonction calculateDateTime lorsque la fenêtre est chargée
 window.onload = function () {
+    console.log("Admin-Services: Date et heure mises à jour avec succès !");
     calculateDateTime();
 };
 
@@ -136,5 +138,4 @@ if (localStorage.getItem("dev-mode") === "true") {
     devMode.style.display = "block";
 }
 
-// Ajoute un écouteur d'événement pour recalculer la date et l'heure lorsque le bouton 'refreshDate' est cliqué
-document.querySelector('#refreshDate').addEventListener("click", calculateDateTime);
+setInterval(welcomeMessage, 3600000);

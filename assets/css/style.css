@@ -1,56 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: 200ms;
     scroll-behavior: smooth;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --default: #40798c;
+    --selected: #40798caa;
+    --white: #F8F9FA;
+    --white-bg: #E9ECEF;
+    --black: #212529;
+    --black-bg: #343A40;
+    --gray: #808080FF;
+    --gray-bg: rgb(128, 128, 128);
+    --lightgray: #D3D3D3FF;
+    --box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    --error: #dc3545;
+    --lightgray-bg: #cccccc;
 }
 
 ::selection {
-    background-color: #40798c;
-    color: white;
+    background-color: var(--default);
+    color: var(--white);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body main {
+    flex: 1;
 }
 
 a {
-    color: #40798c;
+    color: var(--default);
     text-decoration: none;
 }
 
 a:hover {
-    color: #40798c;
-    text-decoration: underline;
+    color: var(--selected);
 }
 
 code {
     display: inline-block;
     width: 100%;
     padding: 0.5%;
-    background: rgb(128, 128, 128);
-    color: white;
+    background: var(--gray-bg);
+    color: var(--white);
     margin: 1vh 0;
     border-radius: 5px;
 }
 
 footer {
-    background-color: #40798c;
+    background-color: var(--default);
 }
 
 footer p {
     width: 80%;
     margin: 0 auto;
-    color: white;
+    color: var(--white);
     padding: 1% 0;
 }
 
-footer p small a {
-    color: white;
+footer p a {
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
 }
 
-footer p small a:hover {
-    color: rgb(128, 128, 128);
+footer p a:hover {
+    color: var(--gray-bg);
     text-decoration: none;
     font-weight: bold;
 }
@@ -71,21 +97,21 @@ footer p small a:hover {
 
 @media (prefers-color-scheme: dark) {
     ::selection {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: var(--white);
+        color: var(--black);
     }
 
     header, footer {
-        background-color: #000000;
+        background-color: var(--black-bg);
     }
 
     header nav ul li a {
         text-decoration: none;
-        color: #ffffff;
+        color: var(--white);
     }
 
     body {
-        background-color: #000000;
-        color: #ffffff;
+        background-color: var(--black-bg);
+        color: var(--white);
     }
 }

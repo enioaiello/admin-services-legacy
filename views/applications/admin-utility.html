@@ -58,7 +58,7 @@
 </head>
 <body>
     <h1>Admin Utility</h1>
-    <p id="version"><small>Version 1.0</small></p>
+    <p id="version"><small>Version 2.0</small></p>
     <hr>
     <div id="welcome">
         <h2>Bienvenue</h2>
@@ -85,6 +85,12 @@
         <p><small>Réinitialiser effacera toutes vos informations.</small></p>
         <p><button id="dev-mode">Basculer le mode développeur</button></p>
         <p><small>Permet d'avoir accès à certaines informations supplémentaires ou à des fonctionnalités pour développeurs.</small></p>
+        <hr>
+        <h2>Sécurité intégrée</h2>
+        <p>Cette section est encore en développement et n'est destinée que pour <strong>Admin Services</strong> 10.1.</p>
+        <p>Avant de procéder, effectuez une sauvegarde complète de vos paramètres !</p>
+        <p><button id="enable-security-component">Activer les composants de sécurité système (non recommandé)</button></p>
+        <p><button id="disable-security-component">Désactiver les composants de sécurité système</button></p>
     </div>
     <script>
         let welcome = document.getElementById("welcome");
@@ -97,6 +103,8 @@
         let resetButton = document.getElementById("reset");
         let devModeButton = document.getElementById("dev-mode");
         let tools = document.getElementById("tools");
+        let enableSecurityComponent = document.getElementById("enable-security-component");
+        let disableSecurityComponent = document.getElementById("disable-security-component");
 
         function start() {
             welcome.style.display = "none";
@@ -152,8 +160,16 @@
             }
         }
 
+        function enableSecurityComposant() {
+            localStorage.setItem("as-security-load-component", "true");
+        }
+
+        function disableSecurityComposant() {
+            localStorage.removeItem("as-security-load-component");
+        }
+
         function quit() {
-            window.location.href = "https://enioaiello.github.io/admin-services/views/applications/apps.html";
+            window.location.href = "./apps.html";
         }
 
         startButton.addEventListener("click", start);
@@ -163,6 +179,8 @@
         pdpButton.addEventListener("click", changePdp);
         resetButton.addEventListener("click", reset);
         devModeButton.addEventListener("click", devMode);
+        enableSecurityComponent.addEventListener("click", enableSecurityComposant);
+        disableSecurityComponent.addEventListener("click", disableSecurityComposant);
         quitButton.addEventListener("click", quit);
     </script>
 </body>

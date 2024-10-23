@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Services</title>
+    <meta name="description" content="Découvrez Admin Services : un projet d'étudiant">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/articlesui.css">
+    <link rel="stylesheet" href="../../../assets/css/oobe.css">
+    <link rel="icon" href="../../../assets/img/logo.png">
+</head>
+<body>
+    <div class="container">
+        <div id="head">
+            <h2>Informations utilisateur</h2>
+        </div>
+        <div id="content">
+            <div id="text">
+                <p>Commençons. Pour continuer, vous devez avoir un compte <strong>Admin Services</strong> valide.</p>
+                <p>Pas de panique ! Le processus est simple.</p>
+                <p>Remarque : Toutes les données collectées sont utilisées localement et ne sortent pas de votre navigateur !</p>
+                <p>Toutes les informations présentes sur cette page sont obligatoires.</p>
+            </div>
+            <form>
+                <label>
+                    <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+                </label>
+                <label>
+                    <input type="email" id="email" placeholder="Adresse email" required>
+                </label>
+                <input type="submit" value="Continuer" class="button">
+                <p id="error">Veuillez remplir tous les champs !</p>
+            </form>
+        </div>
+        <div id="state">
+            <progress id="progressState" value="0" max="100"></progress>
+        </div>
+    </div>
+    <script src="../../../assets/js/oobe/user-details.js"></script>
+</body>
+</html>

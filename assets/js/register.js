@@ -8,7 +8,6 @@ let submitButton = document.querySelector('#submit');
 // Fonction pour enregistrer un nouvel utilisateur
 function registerNewUser(e) {
     e.preventDefault(); // Empêcher le rechargement de la page lors de la soumission du formulaire
-
     // Récupérer les valeurs des champs du formulaire
     let username = usernameInput.value;
     let email = emailInput.value;

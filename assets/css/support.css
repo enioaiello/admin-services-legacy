@@ -16,6 +16,14 @@
 
 #content {
     width: 85%;
+
+    .articleContain {
+        justify-content: space-between;
+    }
+
+    article {
+        width: 49%;
+    }
 }
 
 #content * {
@@ -25,4 +33,8 @@
 #content h2,
 #content h3 {
     margin: 2vh 0;
+}
+
+article .button {
+    margin: 1vh 0;
 }

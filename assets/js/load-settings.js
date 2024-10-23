@@ -17,6 +17,11 @@ let articles = [
         "title": "Paramètres de l'accueil",
         "description": "Changez le thème ou définissez un fond d'écran à votre page d'accueil",
         "link": "../settings/panel.html"
+    },
+    {
+        "title": "Paramètres de notifications",
+        "description": "Modifiez vos préférences relatives aux notifications reçues sur Admin Services",
+        "link": "../settings/notifications.html"
     }
 ];
 

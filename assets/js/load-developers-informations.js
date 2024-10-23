@@ -5,6 +5,8 @@ let email = localStorage.getItem('email');
 // Défini le bouton pour afficher les bordures
 let showBordersButton = document.querySelector("#showBorders");
 
+document.querySelector("#update").innerHTML = localStorage.getItem('version');
+
 // Fonction pour vérifier si l'utilisateur est connecté
 function logged() {
     if (!username) {
@@ -34,10 +36,10 @@ function loadBrowserInfo() {
 
 // Fonction pour afficher les bordures des éléments
 function showBorders() {
-    // Sélectionne tous les éléments avec la classe "border"
-    let element = document.querySelector("*");
-    // Défini la bordure de chaque élément à 1px solide rouge
-    element.style.border = "1px solid red";
+    let elements = document.querySelectorAll("*");
+    elements.forEach(element => {
+        element.style.border = "1px solid red";
+    });
 }
 
 // Appelle les fonctions pour charger les informations de l'utilisateur et du navigateur

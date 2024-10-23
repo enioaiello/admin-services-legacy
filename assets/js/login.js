@@ -14,20 +14,26 @@ let pfp = localStorage.getItem('pfp'); // Récupère la valeur de 'pfp' depuis l
 let email = localStorage.getItem('email'); // Récupère la valeur de 'email' depuis le stockage local
 let password = localStorage.getItem('password'); // Récupère la valeur de 'password' depuis le stockage local
 let reset = document.querySelector('#reset'); // Récupère l'élément avec l'id 'reset'
+let error = document.querySelector('#error'); // Récupère l'élément avec l'id 'error'
 
 function login(e) {
     e.preventDefault(); // Empêche le comportement par défaut du formulaire
 
     if (email !== null && password !== null) {
         if (emailInput.value === '' || passwordInput.value === '') {
-            alert('Veuillez remplir tous les champs'); // Affiche une alerte si les champs sont vides
+            error.textContent = 'Veuillez remplir tous les champs'; // Affiche une erreur si l'email ou le mot de passe est incorrect
             console.error('Veuillez remplir tous les champs'); // Affiche une erreur dans la console
             return;
         }
     } else if (email !== null) {
         if (passwordInput.value === '') {
-            alert('Veuillez remplir tous les champs'); // Affiche une alerte si le champ du mot de passe est vide
+            error.textContent = 'Veuillez remplir tous les chaînes'; // Affiche une erreur si l'email ou le mot de passe est incorrect
             console.error('Veuillez remplir tous les champs'); // Affiche une erreur dans la console
+            return;
+        }
+        if (passwordInput.value !== localStorage.getItem('password')) {
+            error.textContent = 'Mot de passe incorrect'; // Affiche une erreur si l'email ou le mot de passe est incorrect
+            console.error('Mot de passe incorrect'); // Affiche une erreur dans la console
             return;
         }
     }
@@ -37,7 +43,7 @@ function login(e) {
             window.location.href = "../panel.html"; // Redirige vers la page 'panel.html' si les identifiants sont corrects
             return;
         } else {
-            alert('Mot de passe incorrect'); // Affiche une alerte si les identifiants sont incorrects
+            error.textContent = 'Veuillez remplir tous les chaînes'; // Affiche une erreur si l'email ou le mot de passe est incorrect
             console.error('Mot de passe incorrect'); // Affiche une erreur dans la console
             return;
         }
