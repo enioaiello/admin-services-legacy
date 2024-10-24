@@ -17,7 +17,7 @@ function logout() {
     if (result) {
         if (localStorage.getItem("sound") === "true") {
             // Joue le son de déconnexion
-            let audio = new Audio("../../../assets/sound/logoff.mp3");
+            let audio = new Audio("../../assets/sound/logoff.mp3");
             audio.play();
             setTimeout(() => {
                 audio.pause();
