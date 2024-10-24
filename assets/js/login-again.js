@@ -31,7 +31,7 @@ function login(e) {
         document.getElementById('start').disabled = "true";
         if (localStorage.getItem("sound") === "true") {
             // Joue le son de connexion
-            let audio = new Audio('../../../assets/sound/logon.mp3');
+            let audio = new Audio('../../assets/sound/logon.mp3');
             audio.play();
             setTimeout(() => {
                 audio.pause();
