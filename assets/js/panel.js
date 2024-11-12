@@ -27,6 +27,8 @@ function welcomeMessage() {
     }
 }
 
+welcomeMessage();
+
 // Vérifie si le mode développeur est activé dans le stockage local
 if (localStorage.getItem("devMode") === "true") {
     console.warn("Admin-Services: Attention, le mode développeur est activé !");
@@ -138,4 +140,4 @@ if (localStorage.getItem("dev-mode") === "true") {
     devMode.style.display = "block";
 }
 
-setInterval(welcomeMessage, 3600000);
+setInterval(welcomeMessage, 500);

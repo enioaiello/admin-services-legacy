@@ -30,6 +30,8 @@ function login(e) {
         passwordInput.disabled = "true";
         document.getElementById('start').disabled = "true";
         if (localStorage.getItem("sound") === "true") {
+            document.querySelector("#form").classList.add("none");
+            document.querySelector("#loading").classList.remove("none");
             // Joue le son de connexion
             let audio = new Audio('../../assets/sound/logon.mp3');
             audio.play();
