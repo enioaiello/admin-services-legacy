@@ -41,6 +41,8 @@ function login(e) {
                 window.location.href = '../panel.html';
             }, 5000);
         } else {
+            document.querySelector("#form").classList.add("none");
+            document.querySelector("#loading").classList.remove("none");
             setTimeout(() => {
                 // Rediriger vers la page du panneau de contrôle si le mot de passe est correct
                 window.location.href = '../panel.html';
