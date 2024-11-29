@@ -9,6 +9,11 @@ const articlesData = [
         description: "Admin Services 10 est enfin disponible ! Découvrez les nouvelles fonctionnalités et modifications apportées au service !",
         lien: "version-ten.html"
     },
+    {
+        titre: "Information importante concernant le système d'authentitication",
+        description: "Informations concernant la maintenance du système d'authentification",
+        lien: "oobe.html"
+    }
 ];
 
 const announcementsDiv = document.querySelector("#announcements");

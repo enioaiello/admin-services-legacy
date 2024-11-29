@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../assets/css/panel.css">
     <link rel="stylesheet" href="../../assets/css/articlesui.css">
     <link rel="stylesheet" href="../../assets/css/appinfo.css">
+    <link rel="stylesheet" href="../../assets/css/sdk.css">
     <link rel="icon" href="../../assets/img/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -43,24 +44,17 @@
             <div id="external" class="articleContain">
 
             </div>
-            <h2>Espace développeurs</h2>
+            <h2>Espace développement</h2>
             <div id="developers" class="articleContain">
                 <article>
-                    <h3>Développez votre propre application</h3>
+                    <h3>Développer votre propre application</h3>
                     <p>Téléchargez dès aujourd'hui le <strong>SDK</strong> et développez votre première application !</p>
-                    <a href="../../assets/files/sdk.zip" class="button">Commencer</a>
-                </article>
-            </div>
-            <h2>Prochainement</h2>
-            <p>Ces applications apparaîtront dans <strong>Admin Services 10</strong> !</p>
-            <div id="soon" class="articleContain">
-                <article>
-                    <h3>Lecteur multimédia</h3>
-                    <p>Ouvrez vos fichiers favoris dans votre navigateur ! Lisez de la musique, des vidéos, des images et bien plus !</p>
+                    <a href="../../assets/files/sdk.zip" id="open" class="button">Commencer</a>
                 </article>
                 <article>
-                    <h3>Recherche rapide</h3>
-                    <p>Recherchez rapidement des astuces, applications, paramètres, annonces, mises à jour et bien plus !</p>
+                    <h3>Activer le mode développeur</h3>
+                    <p>Obtenez des outils de développement puissants directement dans <strong>Admin Services</strong>.</p>
+                    <a href="" class="button">Commencer</a>
                 </article>
             </div>
         </div>
@@ -98,6 +92,32 @@
                 </div>
             </div>
         </div>
+        <div id="sdk">
+            <div class="content">
+                <div id="head">
+                    <h2>Merci !</h2>
+                    <p>Le téléchargement du <strong>SDK</strong> a débuté.</p>
+                </div>
+                <h3>Instruction</h3>
+                <p>Une fois le téléchargement effectué :</p>
+                <ol>
+                    <li>
+                        Décompressez le fichier avec votre gestionnaire d'archive préféré
+                    </li>
+                    <li>
+                        Consultez les différents fichiers au format markdown
+                    </li>
+                    <li>
+                        Codez, testez
+                    </li>
+                    <li>
+                        Déployez*
+                    </li>
+                </ol>
+                <p><small>*nécessite une adresse email et une vérification de l'équipe. Le code sera vérifié et seul les langages HTML, CSS et JavaScript sont compatible. Conditions supplémentaires intégrées aux fichiers de base.</small></p>
+                <p id="close" class="button">Compris, fermer cette fenêtre</p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy;2025, <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a>. All rights
@@ -106,6 +126,21 @@
     <script src="../../assets/js/load-apps.js" type="text/javascript"></script>
     <script src="../../assets/js/load-pfp.js" type="text/javascript"></script>
     <script type="text/javascript" src="../../assets/js/back.js"></script>
+    <script>
+        let open = document.querySelector("#open");
+        let close = document.querySelector("#close");
+
+        function openWindow() {
+            sdk.style.display = "flex";
+        }
+
+        function closeWindow() {
+            sdk.style.display = "none";
+        }
+
+        open.addEventListener("click", openWindow);
+        close.addEventListener("click", closeWindow);
+    </script>
 </body>
 
 </html>

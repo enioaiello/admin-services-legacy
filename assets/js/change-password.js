@@ -3,6 +3,7 @@ let oldPassword = document.getElementById("oldPassword");
 let newPassword = document.getElementById("newPassword");
 let repeatPassword = document.getElementById("repeatPassword");
 let confirmPassword = document.getElementById("confirmPassword");
+let errorField = document.querySelector("#error");
 
 // Fonction pour changer le mot de passe
 function changePassword(e) {
@@ -15,21 +16,20 @@ function changePassword(e) {
 
     // Vérification si tous les champs sont remplis
     if (oldPasswordValue === "" || newPasswordValue === "" || repeatPasswordValue === "") {
-        alert("Veuillez remplir tous les champs");
+        errorField.textContent = "Veuillez remplir tous les champs";
     } 
     // Vérification si l'ancien mot de passe est correct
     else if (oldPasswordValue !== localStorage.getItem("password")) {
-        alert("Ancien mot de passe incorrect");
+        errorField.textContent = "Ancien mot de passe incorrect";
     } 
     // Vérification si les nouveaux mots de passe correspondent
     else if (newPasswordValue !== repeatPasswordValue) {
-        alert("Les mots de passe ne correspondent pas");
+        errorField.textContent = "Les mots de passe ne correspondent pas";
     } 
     // Si toutes les vérifications passent, le mot de passe est changé
     else {
         localStorage.setItem("password", newPasswordValue);
-        alert("Mot de passe changé avec succès");
-        window.location.reload(); // Recharge la page
+        window.location.href = "https://enioaiello.github.io/admin-services/views/login/password.html";
     }
 }
 

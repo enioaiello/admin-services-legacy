@@ -4,6 +4,7 @@ let emailInput = document.querySelector('#email');
 let profilePictureInput = document.querySelector('#pfp');
 let passwordInput = document.querySelector('#password');
 let submitButton = document.querySelector('#submit');
+let errorField = document.querySelector("#error");
 
 // Fonction pour enregistrer un nouvel utilisateur
 function registerNewUser(e) {
@@ -16,19 +17,19 @@ function registerNewUser(e) {
 
     // Vérifier si les champs obligatoires sont vides
     if (username === '' || email === '' || password === '') {
-        alert('Veuillez renseigner tous les champs');
+        errorField.textContent = "Veuillez renseigner tous les champs";
         return;
     }
 
     // Vérifier si l'adresse email est valide
     if (email.indexOf('@') === -1) {
-        alert('Veuillez renseigner une adresse email valide');
+        errorField.textContent = "Veuillez renseigner une adresse email valide";
         return;
     }
 
     // Vérifier si le mot de passe a au moins 8 caractères
     if (password.length < 8) {
-        alert('Veuillez renseigner un mot de passe de 8 caractères minimum');
+        errorField.textContent = "Veuillez renseigner un mot de passe de 8 caractères minimum";
         return;
     }
 

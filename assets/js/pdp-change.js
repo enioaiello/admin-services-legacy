@@ -11,23 +11,16 @@ function changePdp() {
 
     // Vérifie si l'utilisateur a annulé la saisie ou n'a rien saisi
     if (userPdp === null || userPdp === undefined || userPdp === "") {
-        // Affiche une alerte indiquant que la photo de profil a été retirée avec succès
-        alert("Photo de profil retirée avec succès !");
-        
         // Stocke une URL par défaut dans le stockage local
         localStorage.setItem("pfp", "https://enioaiello.github.io/admin-services/assets/img/users/empty.jpg");
-        
-        // Recharge la page
-        window.location.reload();
+        profilePicture.src = localStorage.getItem("pfp");
     } else {
         // Stocke l'URL de la photo de profil saisie par l'utilisateur dans le stockage local
         localStorage.setItem("pfp", userPdp);
+        profilePicture.src = localStorage.getItem("pfp");
         
         // Affiche un message dans la console indiquant que la photo de profil a été modifiée avec succès
         console.log("Photo de profil modifiée avec succès !");
-        
-        // Recharge la page
-        window.location.reload();
     }
 }
 

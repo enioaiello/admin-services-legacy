@@ -10,6 +10,8 @@ const images = [
     { name: "Maisons colorées", link: "https://enioaiello.github.io/admin-services/assets/img/background/background-1.jpg", category: "city" }
 ];
 
+const background = document.querySelector("#background");
+
 // Fonction pour afficher les images
 function displayImages() {
     images.forEach(image => {
@@ -41,7 +43,7 @@ function redirect(imageName) {
         // Enregistrer l'URL et la catégorie de l'image sélectionnée dans le stockage local
         localStorage.setItem("backgroundURL", selectedImage.link);
         localStorage.setItem("backgroundType", selectedImage.category);
-        alert(`Nouveau fond d'écran défini sur : ${imageName}`);
+        background.textContent = `Fond d'écran défini sur ${imageName} avec succès !`;
     } else {
         console.error(`Aucune image trouvée avec le nom : ${imageName}`);
     }

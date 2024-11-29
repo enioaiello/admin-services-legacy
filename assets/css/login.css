@@ -14,11 +14,24 @@ body {
     border-radius: 5px;
 }
 
+#register .container {
+    padding: 1%;
+}
+
 form {
     display: inline-block;
     text-align: center;
     width: 100%;
     margin: 1.25vh auto 0;
+}
+
+#register form {
+    margin: 1.25vh auto;
+}
+
+#register form #password,
+#register form #submit {
+    margin: 1vh 0;
 }
 
 form label input, #pfp {

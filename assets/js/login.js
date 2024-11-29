@@ -65,7 +65,7 @@ function login(e) {
         }
     }
 
-    alert('Mot de passe incorrect'); // Affiche une alerte si les identifiants sont incorrects
+    error.textContent = "Le mot de passe est incorrect";
     console.error('Mot de passe incorrect'); // Affiche une erreur dans la console
 }
 
@@ -92,11 +92,11 @@ function resetPassword() {
             if (newPassword < 8) {
                 localStorage.setItem("password", newPassword);
             } else {
-                alert("Le mot de passe doit contenir au moins 8 caractères"); // Affiche une alerte si le mot de passe est trop court
+                error.textContent = "Le mot de passe doit contenir au moins 8 caractères";
                 resetPassword();
             }
         } else {
-            alert("Nom d'utilisateur incorrect"); // Affiche une alerte si le nom d'utilisateur est incorrect
+            error.textContent = "Nom d'utilisateur incorrect";
             resetPassword();
         }
     }
