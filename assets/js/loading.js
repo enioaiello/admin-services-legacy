@@ -1,9 +1,9 @@
-let version = '10.2.0';
+let version = '10.2.1';
 let progressBar = document.querySelector("progress");
 let bootMessage = document.querySelector("#message");
 
 function init() {
-    console.info("Vous exécutez Admin Services en version 10.2.0");
+    console.info("Vous exécutez Admin Services en version 10.2.1");
     console.log("Préparation du chargeur d'Admin Services...");
 
     progressBar.style.display = "block";
