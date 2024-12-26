@@ -150,6 +150,9 @@ footer {
     padding: 2%;
 }
 
+.checkbox {
+    margin-right: 5px;
+}
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {

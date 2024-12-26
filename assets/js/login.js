@@ -5,7 +5,7 @@ let users = [
     {
         email: 'aielloenio@icloud.com',
         password: '1234567890',
-        pfp: 'https://enioaiello.github.io/assets/img/profile.png',
+        pfp: 'https://enioaiello.github.io/assets/images/profile.png',
         username: 'Enio Aiello'
     }
 ];
