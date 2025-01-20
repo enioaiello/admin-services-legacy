@@ -74,12 +74,6 @@ function startAdminUtility() {
     window.location.href = "https://enioaiello.github.io/admin-utility"; // Rediriger vers l'utilitaire d'administration
 }
 
-// Fonctions pour télécharger des fichiers
-function downloadAdminUtility() {
-    window.location.href = "https://github.com/enioaiello/admin-utility/releases/latest/download/admin-utility.html"; // Télécharger l'utilitaire d'administration
-    returnToHome(); // Revenir à la page d'accueil
-}
-
 function downloadUpdate() {
     window.location.href = "https://github.com/enioaiello/admin-services/archive/refs/heads/main.zip"; // Télécharger la mise à jour des services d'administration
     returnToHome(); // Revenir à la page d'accueil
@@ -119,6 +113,5 @@ document.querySelector("#confirmUpdateProfile").addEventListener("click", update
 document.querySelector("#confirmResetAdminServices").addEventListener("click", resetAdminServices); // Confirmation de la réinitialisation des services d'administration
 document.querySelector("#confirmResetStartup").addEventListener("click", resetStartup); // Confirmation de la réinitialisation du démarrage
 document.querySelector("#launchUtility").addEventListener("click", startAdminUtility); // Lancement de l'utilitaire d'administration
-document.querySelector("#downloadUtility").addEventListener("click", downloadAdminUtility); // Téléchargement de l'utilitaire d'administration
 document.querySelector("#startUpdate").addEventListener("click", downloadUpdate); // Téléchargement de la mise à jour des services d'administration
 quitButton.addEventListener("click", quit); // Quitter
