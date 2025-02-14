@@ -1,4 +1,5 @@
 let apps;
+let appContain = document.querySelector("#list");
 
 document.addEventListener("DOMContentLoaded", () => {
     apps = [
@@ -13,18 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "compatibility": "Admin Services 10.1",
             "version": "10.1",
             "source": "https://github.com/enioaiello/admin-services/"
-        },
-        {
-            "name": "Admin Utility",
-            "description": "L'outil ultime pour Admin Services",
-            "link": "./admin-utility.html",
-            "author": "Enio Aiello",
-            "type": "external",
-            "version": "2.0",
-            "compatibility": "Admin Services 1.0",
-            "screen": "../../assets/img/capture/utility.png",
-            "category": "Utilitaire",
-            "source": "https://github.com/enioaiello/admin-utility/"
         },
         {
             "name": "Paramètres",
@@ -99,38 +88,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    let internalDiv = document.querySelector("#internal");
-    let externalDiv = document.querySelector("#external");
-
     apps.forEach((app, index) => {
         let article = document.createElement("article");
         article.innerHTML = `
             <h3>${app.name}</h3>
             <div class="buttons">
                 <a href="${app.link || '#'}" class="button semi" style="width: 84%" title="Démarrer">Démarrer</a>
-                <a href="#" onclick='showInfo(${index})' class="button semi" style="width: 15%;" title="Obtenir les informations"><i class="ri-information-line"></i></a>
+                <a onclick='showInfo(${index})' class="button semi" style="width: 15%;" title="Obtenir les informations"><i class="ri-information-line"></i></a>
             </div>
         `;
-
-        if (app.type === "internal") {
-            internalDiv.appendChild(article);
-        } else if (app.type === "external") {
-            externalDiv.appendChild(article);
-        }
+        appContain.appendChild(article);
     });
 
-    const appList = document.querySelector("#list");
     const appInfo = document.querySelector("#info");
 
     document.querySelector("#back").addEventListener("click", () => {
-        appList.classList.remove("none");
-        appInfo.classList.add("none");
+        appContain.style.display = "flex";
+        appInfo.style.display = "none";
     });
 });
 
-// La fonction showInfo doit être en dehors de DOMContentLoaded
 function showInfo(index) {
-    const app = apps[index]; // apps est maintenant accessible ici
+    const app = apps[index];
 
     const appNameText = document.querySelector("#appName");
     const appDevText = document.querySelector("#appDev");
@@ -140,6 +119,8 @@ function showInfo(index) {
     const appScreen = document.querySelector("#appScreen");
     const appVersion = document.querySelector("#appVersion");
     const appCompatibility = document.querySelector("#appCompatibility");
+    const appInfo = document.querySelector("#info");
+    let appSource = document.querySelector("#appSource");
 
     appNameText.innerHTML = app.name;
     appDevText.innerHTML = app.author;
@@ -159,6 +140,6 @@ function showInfo(index) {
         appSource.innerHTML = "Code source non disponible";
     }
 
-    document.querySelector("#list").classList.add("none");
-    document.querySelector("#info").classList.remove("none");
+    appContain.style.display = "none";
+    appInfo.style.display = "block";
 }

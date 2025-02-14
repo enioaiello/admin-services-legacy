@@ -27,15 +27,15 @@ function registerData(e) {
 
     if (password === "" || passwordRepeat === "") {
         errorDisplay.innerHTML = "Veuillez remplir tous les champs !";
-        return;
+
     } else if (password !== passwordRepeat) {
         errorDisplay.innerHTML = "Les mots de passe ne correspondent pas !";
-        return;
+
     } else {
         localStorage.setItem("password", password);
         formContainer.style.animation = "slide 1s";
         // window.location.href = "security.html";
-        return;
+
     }
 }
 

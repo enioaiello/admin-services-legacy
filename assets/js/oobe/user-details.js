@@ -28,13 +28,13 @@ function registerData(e) {
 
     if (username === "" || email === "") {
         errorDisplay.innerHTML = "Veuillez remplir tous les champs !";
-        return;
+
     } else {
         localStorage.setItem("username", username);
         localStorage.setItem("email", email);
         formContainer.style.animation = "slide 1s";
         window.location.href = "security.html";
-        return;
+
     }
 }
 

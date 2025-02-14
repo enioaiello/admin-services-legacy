@@ -34,9 +34,9 @@ form input[type=submit]:hover {
 
 #erase {
     margin: 5vh 0;
-    background-color: red;
+    background-color: var(--error);
 }
 
 #erase:hover {
-    background-color: darkred;
+    background-color: var(--error-selected);
 }

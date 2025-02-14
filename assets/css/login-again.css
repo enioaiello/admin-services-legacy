@@ -1,5 +1,5 @@
 body {
-    background: url("../img/background/login/login-white.jpg") no-repeat center center fixed;
+    background: url("../img/background/login/white.jpg") no-repeat center center fixed;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,9 +7,35 @@ body {
     justify-content: center;
 }
 
-.container {
+#passwordContainer {
+    display: none;
+}
+
+#timeContainer.container {
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#timeContainer.container #datetime {
+    font-size: 2rem;
+    margin: 2vh 0;
+    text-transform: capitalize;
+}
+
+#timeContainer.container h3 {
+    font-size: 1.5rem;
+}
+
+#passwordContainer.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
     padding: 20px;
     width: 75%;
     margin: 20px auto 0 auto;
@@ -125,7 +151,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: url("../img/background/login/login-dark.jpg") no-repeat center center fixed;
+        background: url("../img/background/login/dark.jpg") no-repeat center center fixed;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -133,7 +159,11 @@ body {
         justify-content: center;    
     }
 
-    .container {
+    #timeContainer.container {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    #passwordContainer.container {
         background: rgba(0, 0, 0, 0.8);
         border-radius: 10px;
         padding: 20px;

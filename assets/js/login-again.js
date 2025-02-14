@@ -6,6 +6,10 @@ let pfp = localStorage.getItem('pfp');
 // Récupérer l'erreur
 let error = document.querySelector('#error');
 
+// Récupérer les éléments de date et time
+const timeElement = document.querySelector("#time");
+const dateElement = document.querySelector("#date");
+
 // Vérifier si les valeurs existent dans le localStorage
 function check() {
     if (!username || !password || !pfp) {
@@ -58,8 +62,49 @@ function login(e) {
     }
 }
 
+function updateDateTime() {
+    const now = new Date(); // Récupère la date et l'heure actuelles
+
+    // Options pour la date
+    const dateOptions = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+
+    // Options pour l'heure
+    const timeOptions = {
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+
+    // Formatter en français
+    const formattedDate = now.toLocaleDateString('fr-FR', dateOptions);
+    const formattedTime = now.toLocaleTimeString('fr-FR', timeOptions);
+
+    // Met à jour le contenu HTML
+    document.querySelector('#date').textContent = formattedDate;
+    document.querySelector('#time').textContent = formattedTime;
+}
+
+function unlock() {
+    document.getElementById("timeContainer").style.display = "none";
+    document.getElementById("passwordContainer").style.display = "block";
+}
+
+// Mettre à jour l'heure chaque seconde
+setInterval(updateDateTime, 1000);
+
+// Met à jour immédiatement au chargement
+updateDateTime();
+
+
 // Ajouter un écouteur d'événement pour le bouton de connexion
 document.getElementById('start').addEventListener('click', login);
+
+// Ajouter un écouteur d'événement sur l'écran de verrouillage
+document.getElementById('timeContainer').addEventListener('click', unlock);
 
 // Appeler la fonction de vérification au chargement de la page
 check();

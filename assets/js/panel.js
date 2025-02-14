@@ -95,6 +95,99 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+
+    // Récupérez l'URL de l'arrière-plan à partir du stockage local
+    let backgroundURL = localStorage.getItem("backgroundURL");
+    // Récupérez le type d'arrière-plan à partir du stockage local
+    let backgroundType = localStorage.getItem("backgroundType");
+
+    // Vérifiez si une URL d'arrière-plan est présente
+    if (backgroundURL) {
+        // Appliquez l'URL de l'arrière-plan à l'élément body
+        document.body.style.backgroundImage = "url('" + backgroundURL + "')";
+    }
+
+    // Vérifiez si un type d'arrière-plan est présent
+    if (backgroundType) {
+        // Vérifiez si le type d'arrière-plan est "night" (nuit)
+        if (backgroundType === "night") {
+            // Appliquez la couleur blanche au texte de l'élément body
+            document.body.style.color = "#ffffff";
+            // Appliquez la couleur noire au texte des éléments de tous les articles
+            document.querySelectorAll("article").forEach(article => {
+                // Vérifier si le thème sombre du navigateur est actif, si c'est le cas, appliquer la couleur blanche
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    article.style.color = "#ffffff";
+                } else {
+                    article.style.color = "#000000";
+                }
+            });
+        }
+    }
+
+    const apiKey = '6271124950ad3a11168970847a769525';
+    const weatherDiv = document.getElementById('weather');
+
+    // Fonction pour obtenir la position de l'utilisateur
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            weatherDiv.innerHTML = "La géolocalisation n'est pas supportée par ce navigateur.";
+        }
+    }
+
+    // Fonction pour afficher la position et obtenir la météo
+    function showPosition(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=fr`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.weather && data.weather.length > 0) {
+                    const city = data.name;
+                    const weatherDescription = data.weather[0].description;
+                    const temperature = data.main.temp.toFixed(1);
+                    weatherDiv.innerHTML = `${city} : ${weatherDescription} | ${temperature}°C.`;
+                } else {
+                    weatherDiv.innerHTML = "Impossible de récupérer les données météo.";
+                }
+            })
+            .catch(error => {
+                weatherDiv.innerHTML = "Erreur lors de la récupération des données météo.";
+                console.error("Erreur :", error);
+            });
+    }
+
+    // Fonction pour afficher les erreurs de géolocalisation
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                weatherDiv.innerHTML = "L'utilisateur a refusé la demande de géolocalisation.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                weatherDiv.innerHTML = "Les informations de localisation ne sont pas disponibles.";
+                break;
+            case error.TIMEOUT:
+                weatherDiv.innerHTML = "La demande de localisation a expiré.";
+                break;
+            case error.UNKNOWN_ERROR:
+                weatherDiv.innerHTML = "Une erreur inconnue est survenue.";
+                break;
+        }
+    }
+
+    // Appel de la fonction pour obtenir la localisation
+    getLocation();
+
+    // refreshWeather.addEventListener('click', getLocation);
+    setTimeout(getLocation, 60000);
 });
 
 // Fonction de déconnexion
@@ -141,3 +234,8 @@ if (localStorage.getItem("dev-mode") === "true") {
 }
 
 setInterval(welcomeMessage, 500);
+
+function toggleDetails(button) {
+    const details = button.closest('article').querySelector('.details');
+    details.classList.toggle('none');
+}

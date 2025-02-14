@@ -11,11 +11,10 @@
     height: 150px;
 }
 
-.container progress {
-    display: none;
-    margin: 3vh 0;
-}
-
 .container #message {
     display: none;
+}
+
+.container .spinner {
+    margin: 3vh 0;
 }
