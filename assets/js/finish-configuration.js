@@ -5,7 +5,7 @@ let finish = document.querySelector('#finish');
 // Enregistrer l'image de profil dans le stockage local
 function setupPfp() {
     if (profilePicture === '') {
-        localStorage.setItem('pfp', 'https://enioaiello.github.io/admin-services/assets/img/users/empty.jpg');
+        localStorage.setItem('pfp', 'https://enioaiello.github.io/admin-services-legacy/assets/img/users/empty.jpg');
     } else {
         localStorage.setItem('pfp', profilePicture);
     }

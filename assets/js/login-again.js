@@ -14,11 +14,11 @@ const dateElement = document.querySelector("#date");
 function check() {
     if (!username || !password || !pfp) {
         // Rediriger vers une autre page si les valeurs sont manquantes
-        window.location.href = 'https://enioaiello.github.io/admin-services/';
+        window.location.href = 'https://enioaiello.github.io/admin-services-legacy/';
     }
 
     if (localStorage.getItem('fast-reconnect') === 'false') {
-        window.location.href = 'https://enioaiello.github.io/admin-services/';
+        window.location.href = 'https://enioaiello.github.io/admin-services-legacy/';
     }
 
     // Afficher le nom d'utilisateur et l'image de profil

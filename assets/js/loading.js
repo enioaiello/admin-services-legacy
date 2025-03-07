@@ -49,7 +49,7 @@ function checkUserchange() {
         if (localStorage.getItem("username") !== localStorage.getItem("usernameBackup") ||
             localStorage.getItem("email") !== localStorage.getItem("emailBackup") ||
             localStorage.getItem("password") !== localStorage.getItem("passwordBackup")) {
-            window.location.href = "https://enioaiello.github.io/admin-services/views/utility/developer-mode/safe-mode.html";
+            window.location.href = "https://enioaiello.github.io/admin-services-legacy/views/utility/developer-mode/safe-mode.html";
         }
     } else {
         console.info("Le système de sécurité est inactif !");

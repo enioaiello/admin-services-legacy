@@ -22,11 +22,11 @@ function logout() {
             setTimeout(() => {
                 audio.pause();
                 // Redirige vers la page de déconnexion si l'utilisateur confirme
-                window.location.href = "https://enioaiello.github.io/admin-services/";
+                window.location.href = "https://enioaiello.github.io/admin-services-legacy/";
             }, 4000);
         } else {
             // Redirige vers la page de déconnexion si l'utilisateur confirme
-            window.location.href = "https://enioaiello.github.io/admin-services/";
+            window.location.href = "https://enioaiello.github.io/admin-services-legacy/";
         }
     }
 }

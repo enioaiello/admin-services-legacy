@@ -18,7 +18,7 @@ Ensuite, ouvrez le fichier `index.html` dans votre navigateur. Utilisez **Admin 
 
 ### Version Web
 
-Cliquez [ici](https://enioaiello.github.io/admin-services/) pour ouvrir la version Web d'**Admin Services**.\
+Cliquez [ici](https://enioaiello.github.io/admin-services-legacy/) pour ouvrir la version Web d'**Admin Services**.\
 Note : Nous vous déconseillons d'utiliser un mot de passe déjà utilisé, l'ensemble de vos informations peuvent être consultée dans votre navigateur.
 
 ## Avantages

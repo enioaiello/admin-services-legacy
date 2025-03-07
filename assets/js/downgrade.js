@@ -7,5 +7,5 @@ gfapDown.addEventListener('click', function() {
     localStorage.setItem('redirection', 'google-mode');
     
     // Redirige vers l'URL spécifiée
-    window.location.href = "https://enioaiello.github.io/admin-services/";
+    window.location.href = "https://enioaiello.github.io/admin-services-legacy/";
 });

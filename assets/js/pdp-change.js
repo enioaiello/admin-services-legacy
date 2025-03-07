@@ -12,7 +12,7 @@ function changePdp() {
     // Vérifie si l'utilisateur a annulé la saisie ou n'a rien saisi
     if (userPdp === null || userPdp === undefined || userPdp === "") {
         // Stocke une URL par défaut dans le stockage local
-        localStorage.setItem("pfp", "https://enioaiello.github.io/admin-services/assets/img/users/empty.jpg");
+        localStorage.setItem("pfp", "https://enioaiello.github.io/admin-services-legacy/assets/img/users/empty.jpg");
         profilePicture.src = localStorage.getItem("pfp");
     } else {
         // Stocke l'URL de la photo de profil saisie par l'utilisateur dans le stockage local

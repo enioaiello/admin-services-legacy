@@ -1,18 +1,23 @@
 const articlesData = [
     {
-        titre: "Nouveau support",
-        description: "Obtenez plus d'informations sur notre nouveau support.",
-        lien: "new-support.html"
+        titre: "Futur du service",
+        description: "En apprendre plus sur l'avenir du service",
+        lien: "future-of-service.html"
+    },
+    {
+        titre: "Maintenance du système d'authentification",
+        description: "En apprendre plus sur la maintenance d'authentification'",
+        lien: "oobe.html"
     },
     {
         titre: "Présentation d'Admin Services 10",
-        description: "Admin Services 10 est enfin disponible ! Découvrez les nouvelles fonctionnalités et modifications apportées au service !",
+        description: "Découvrez les nouvelles fonctionnalités et modifications apportées au service !",
         lien: "version-ten.html"
     },
     {
-        titre: "Information importante concernant le système d'authentitication",
-        description: "Informations concernant la maintenance du système d'authentification",
-        lien: "oobe.html"
+        titre: "Nouveau support",
+        description: "Obtenez plus d'informations sur notre nouveau support.",
+        lien: "new-support.html"
     }
 ];
 

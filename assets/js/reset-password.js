@@ -6,7 +6,7 @@ function adminServicesReset() {
     let choice = confirm("Cette action va effacer vos données. Continuer ?"); // Affiche une boîte de dialogue de confirmation
     if (choice) {
         localStorage.clear(); // Efface toutes les données stockées localement
-        window.location.href = "https://enioaiello.github.io/admin-services/"; // Redirige vers une autre page
+        window.location.href = "https://enioaiello.github.io/admin-services-legacy/"; // Redirige vers une autre page
     }
 }
 
@@ -16,13 +16,13 @@ function passwordLoginReset() {
         alert("Veuillez renseigner un mot de passe"); // Affiche une alerte si aucun mot de passe n'est saisi
     }
     localStorage.setItem("password", passwordPrompt); // Stocke le mot de passe saisi localement
-    window.location.href = "https://enioaiello.github.io/admin-services/"; // Redirige vers une autre page
+    window.location.href = "https://enioaiello.github.io/admin-services-legacy/"; // Redirige vers une autre page
 }
 
 function quitFunction() {
     let quitConfirm = confirm("Voulez-vous vraiment quitter ?"); // Affiche une boîte de dialogue de confirmation
     if (quitConfirm) {
-        window.location.href = "https://enioaiello.github.io/admin-services/"; // Redirige vers une autre page
+        window.location.href = "https://enioaiello.github.io/admin-services-legacy/"; // Redirige vers une autre page
     }
 }
 
