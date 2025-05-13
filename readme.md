@@ -1,49 +1,68 @@
-<img src="./assets/img/github/logo.png">
-<h1 style="text-align: center">Admin Services</h1>
+<p align="center">
+    <img src="assets/img/logo.png" alt="Admin Services Logo" height="128">
+</p>
+
+# Admin Services (Legacy)
+
+## À propos
+
+**Admin Services** est une plateforme permettant de créer et d'utiliser des web-apps. Cette version a été conçue dans un but d'apprentissage. Si ce projet vous intéresse, consultez [la dernière version](https://github.com/enioaiello/admin-services/).
 
 ## Fonctionnement
-Pour utiliser **Admin Services**, deux choix s'offrent à vous :
-- Héberger **Admin Services** sur votre ordinateur.
-- Utiliser la version Web compatible avec la plupart des appareils connectés d'aujourd'hui.
 
-### Hébergement
+Pour utiliser **Admin Services**, deux options s'offrent à vous :
 
-Clonez **Admin Services** directement sur votre ordinateur ou votre serveur en utilisant la commande suivante :
+1. **Héberger Admin Services sur votre ordinateur.**
+2. **Utiliser la version Web**, compatible avec la plupart des appareils connectés.
 
-````cmd
+### Hébergement local
+
+Clonez le dépôt **Admin Services** directement sur votre ordinateur ou serveur en exécutant la commande suivante :
+
+```bash
 git clone https://github.com/enioaiello/admin-services.git
-````
+```
 
-Ensuite, ouvrez le fichier `index.html` dans votre navigateur. Utilisez **Admin Services** en local !
+Ensuite, ouvrez le fichier `index.html` dans votre navigateur pour utiliser **Admin Services** en local.
 
 ### Version Web
 
-Cliquez [ici](https://enioaiello.github.io/admin-services-legacy/) pour ouvrir la version Web d'**Admin Services**.\
-Note : Nous vous déconseillons d'utiliser un mot de passe déjà utilisé, l'ensemble de vos informations peuvent être consultée dans votre navigateur.
+Accédez à la version Web d'**Admin Services** en cliquant sur le lien suivant :  
+[Ouvrir la version Web](https://enioaiello.github.io/admin-services-legacy/)
+
+> [!CAUTION]  
+> **Admin Services** utilise exclusivement le **localStorage** pour stocker vos données. Par conséquent, il est fortement déconseillé d'utiliser un mot de passe déjà utilisé dans les cas suivants :  
+> - Mot de passe utilisé sur un autre site.  
+> - Mot de passe utilisé comme moyen d'authentification (BIOS/UEFI, code PIN, etc.).  
+>  
+> **Nous déclinons toute responsabilité en cas de piratage.**
 
 ## Avantages
-- Respectueux de la vie privée.
-- Toutes vos données sont stockées localement.
+
+- **Respect de la vie privée** : Toutes vos données sont stockées localement.
+- **Simplicité d'utilisation** : Pas de dépendance à des serveurs externes.
 
 ## Outils de développement
-Nous mettons à disposition des développeurs un **SDK** pour créer une application intégrable dans la bibliothèque de l'application.\
-Note : Nous vous conseillons de lire la documentation pour une meilleure intégration.\
-La mise en ligne nécessite l'envoie de votre application à l'équipe de développement pour une vérification de sécurité et l'ajout.
+
+Un [SDK](assets/files/sdk.zip) est disponible pour les développeurs souhaitant créer des applications intégrables dans la bibliothèque de l'application.
+
+> [!TIP]  
+> Consultez la documentation incluse dans le SDK pour une meilleure intégration de votre application.
+
+Pour publier votre application, envoyez-la à l'équipe de développement pour une vérification de sécurité et un ajout à la bibliothèque.
 
 ## Fonctionnalités
-- Connexion et inscription
-- Paramètres utilisateur
-- Page d'accueil personnalisable
-- Widgets
-- Applications tierces
-- Intégration Google-fake-admin-panel
-- Centre de sécurité
 
-## Technologies
-- HTML5
-- CSS3
-- JavaScript
+- **Connexion et inscription.**
+- **Paramètres utilisateur.**
+- **Page d'accueil personnalisable.**
+- **Widgets.**
+- **Applications tierces.**
+- **Intégration Google-fake-admin-panel.**
+- **Centre de sécurité.**
 
-## Principe
-**Admin Services** sert à apprendre le développement Web !\
-D'abord disponible avec les **localStorage**, **Admin Services** n'ayant pas vocation à être sécurisé ou, pour le moment, être un projet sérieux.
+## Technologies utilisées
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
