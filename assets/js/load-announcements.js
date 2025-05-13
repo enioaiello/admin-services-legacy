@@ -5,16 +5,6 @@ const articlesData = [
         lien: "future-of-service.html"
     },
     {
-        titre: "Maintenance du système d'authentification",
-        description: "En apprendre plus sur la maintenance d'authentification'",
-        lien: "oobe.html"
-    },
-    {
-        titre: "Présentation d'Admin Services 10",
-        description: "Découvrez les nouvelles fonctionnalités et modifications apportées au service !",
-        lien: "version-ten.html"
-    },
-    {
         titre: "Nouveau support",
         description: "Obtenez plus d'informations sur notre nouveau support.",
         lien: "new-support.html"

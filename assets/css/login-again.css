@@ -23,13 +23,18 @@ body {
     cursor: pointer;
 }
 
-#timeContainer.container #datetime {
-    font-size: 2rem;
-    margin: 2vh 0;
+#timeContainer.container .datetime {
+    
     text-transform: capitalize;
+    text-align: center;
 }
 
-#timeContainer.container h3 {
+#timeContainer.container .datetime #time {
+    font-size: 3rem;
+    margin: 1vh 0;
+}
+
+#timeContainer.container .datetime #date {
     font-size: 1.5rem;
 }
 
@@ -102,7 +107,7 @@ body {
     text-align: center;
 }
 
-.container #bottomText {
+.container .bottomText {
     width: 100%;
     color: var(--gray);
     text-align: center;
@@ -140,6 +145,18 @@ body {
     animation: spin 1s linear infinite;
 }
 
+#timeContainer,
+#passwordContainer {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+.blink {
+    animation: blink infinite 2s;
+}
+
 .none {
     display: none !important;
 }
@@ -147,6 +164,12 @@ body {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+    0% { opacity: 0;}
+    50% { opacity: 1;}
+    100% { opacity: 0;}
 }
 
 @media (prefers-color-scheme: dark) {
