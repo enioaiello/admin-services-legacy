@@ -154,7 +154,7 @@ body {
 }
 
 .blink {
-    animation: blink infinite 2s;
+    animation: blink infinite 3s;
 }
 
 .none {

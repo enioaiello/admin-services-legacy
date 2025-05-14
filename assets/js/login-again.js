@@ -73,19 +73,18 @@ function updateDateTime() {
         day: 'numeric'
     };
 
-    // Options pour l'heure
-    const timeOptions = {
-        hour: '2-digit',
-        minute: '2-digit'
-    };
-
     // Formatter en français
     const formattedDate = now.toLocaleDateString('fr-FR', dateOptions);
-    const formattedTime = now.toLocaleTimeString('fr-FR', timeOptions);
+
+    // Récupère l'heure et les minutes séparément
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    // Ajoute la classe blink au :
+    const formattedTime = `${hours}<span class="blink">:</span>${minutes}`;
 
     // Met à jour le contenu HTML
     document.querySelector('#date').textContent = formattedDate;
-    document.querySelector('#time').textContent = formattedTime;
+    document.querySelector('#time').innerHTML = formattedTime;
 }
 
 function unlock() {
