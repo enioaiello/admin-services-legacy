@@ -7,6 +7,7 @@ const images = [
     { name: "Montagnes enneigée de nuit", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-6.jpg", category: "night" },
     { name: "Mer translucide", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-7.jpg", category: "nature" },
     { name: "Forêt sur montagne", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-5.jpg", category: "nature" },
+    { name: "Bleu par défaut", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-10.png", category: "as" },
     { name: "Maisons colorées", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-1.jpg", category: "city" }
 ];
 
@@ -28,6 +29,9 @@ function displayImages() {
                 break;
             case "night":
                 document.getElementById("night").appendChild(imageElement);
+                break;
+            case "as":
+                document.getElementById("as").appendChild(imageElement);
                 break;
             default:
                 console.error(`Catégorie inconnue pour l'image : ${image.name}`);
