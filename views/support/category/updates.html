@@ -26,7 +26,8 @@
                     <a href="#" title="Retour" id="backPage"><i class="ri-arrow-left-line"></i></a>
                 </li>
                 <li>
-                    <a href="../support.html" title="Retourner au menu de l'application"><i class="ri-folder-open-fill"></i></a>
+                    <a href="../support.html" title="Retourner au menu de l'application"><i
+                            class="ri-folder-open-fill"></i></a>
                 </li>
                 <li>
                     <div id="logoutChamp">
@@ -40,36 +41,31 @@
     </header>
     <main>
         <div class="container">
-            <ul id="sidebar">
-                <li>
-                    <a href="../support.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="./account.html">Compte</a>
-                </li>
-                <li>
-                    <a href="./security.html">Sécurité</a>
-                </li>
-                <li>
-                    <a href="./functions.html">Fonctionnalités</a>
-                </li>
-                <li>
-                    <a href="./personnalisation.html">Personnalisation</a>
-                </li>
-                <li>
-                    <a href="./updates.html">Mises à jour</a>
-                </li>
-                <li>
-                    <a href="./dev.html"></a>
-                </li>
-            </ul>
+            <div id="sidebar">
+                <div id="topics">
+                    <a href="./support.html">Accueil</a>
+                    <a href="./category/account.html">Compte</a>
+                    <a href="./category/security.html">Sécurité</a>
+                    <a href="./category/functions.html">Fonctionnalités</a>
+                    <a href="./category/personnalisation.html">Personnalisation</a>
+                    <a href="./category/updates.html">Mises à jour</a>
+                    <a href="./category/dev.html">Développement</a>
+                </div>
+                <div id="chapter">
+                    <a href="#login">Connexion</a>
+                    <a href="#password">Mot de passe</a>
+                    <a href="#erase">Effacer votre compte</a>
+                    <a href="updates.html">Rester à jour</a>
+                </div>
+            </div>
             <div id="content">
                 <h1>Mises à jour</h1>
                 <p>Quel sujet vous intéresse ?</p>
                 <div id="category" class="articleContain">
                     <article>
                         <h2>Disponibilité du support</h2>
-                        <p>Consultez la disponibilité du support pour les versions d'<strong>Admin Services</strong>.</p>
+                        <p>Consultez la disponibilité du support pour les versions d'<strong>Admin Services</strong>.
+                        </p>
                         <a href="#available" class="button">Lire</a>
                     </article>
                     <article>
@@ -86,10 +82,16 @@
                 <div id="help">
                     <div id="available">
                         <h2>Disponibilité du support</h2>
-                        <p>Comme pour chaque logiciel important, tels que des systèmes d'exploitation, <strong>Admin Services</strong> contient un système de support particulier. Étant un site Web, il n'y a pas plusieurs versions disponibles sur navigateur. Cependant, vous pouvez <strong>downgrade</strong> vers une version antérieure via <strong>GitHub</strong>.</p>
-                        <p>Le support est donc proposé systématiquement pour deux versions, les versions actuelles et la version antérieure à celle-ci.</p>
-                        <p>Ce système de support ne garantit pas de mises à jour supplémentaires pour les anciennes versions, mais permet de porter assistance via le système de support ou par email.</p>
-                        <p>Voici la disponibilité de support pour <strong>Admin Services</strong> (cela ne s'applique pas pour les versions customisées) :</p>
+                        <p>Comme pour chaque logiciel important, tels que des systèmes d'exploitation, <strong>Admin
+                                Services</strong> contient un système de support particulier. Étant un site Web, il n'y
+                            a pas plusieurs versions disponibles sur navigateur. Cependant, vous pouvez
+                            <strong>downgrade</strong> vers une version antérieure via <strong>GitHub</strong>.</p>
+                        <p>Le support est donc proposé systématiquement pour deux versions, les versions actuelles et la
+                            version antérieure à celle-ci.</p>
+                        <p>Ce système de support ne garantit pas de mises à jour supplémentaires pour les anciennes
+                            versions, mais permet de porter assistance via le système de support ou par email.</p>
+                        <p>Voici la disponibilité de support pour <strong>Admin Services</strong> (cela ne s'applique
+                            pas pour les versions customisées) :</p>
                         <ul>
                             <li>
                                 <strong>Version 10.x.x (actuelle)</strong> : Support disponible
@@ -125,13 +127,21 @@
                                 <strong>Versions alpha et canal développement</strong> : Support non disponible
                             </li>
                         </ul>
-                        <p>Concernant l'application de bureau, qui a été supprimée, aucune version n'est supportée à l'heure actuelle, nous vous conseillons également de supprimer <strong>Admin Services Web</strong> de votre poste de travail.</p>
-                        <p>Veuillez également noter que les croix présentes dans les numéros de versions indiquent que cela concerne toutes les mises à jour postées pour cette version.</p>
+                        <p>Concernant l'application de bureau, qui a été supprimée, aucune version n'est supportée à
+                            l'heure actuelle, nous vous conseillons également de supprimer <strong>Admin Services
+                                Web</strong> de votre poste de travail.</p>
+                        <p>Veuillez également noter que les croix présentes dans les numéros de versions indiquent que
+                            cela concerne toutes les mises à jour postées pour cette version.</p>
                     </div>
                     <div id="custom">
                         <h2>Versions modifiées</h2>
-                        <p>Vous pouvez télécharger <strong>Admin Services</strong> et apporter des modifications en interne ou pour plusieurs postes, cependant, celles-ci ne sont pas contrôlées, et peuvent donc ne plus être supportées officiellement, contenir du code malveillant, contenir des bugs non résolus, contenir d'anciennes versions de paquets (tels qu'<strong>ArticlesUI</strong>).</p>
-                        <p>Certaines fonctionnalités liées aux versions modifiées peuvent également être différentes du système de support ou d'astuces.</p>
+                        <p>Vous pouvez télécharger <strong>Admin Services</strong> et apporter des modifications en
+                            interne ou pour plusieurs postes, cependant, celles-ci ne sont pas contrôlées, et peuvent
+                            donc ne plus être supportées officiellement, contenir du code malveillant, contenir des bugs
+                            non résolus, contenir d'anciennes versions de paquets (tels qu'<strong>ArticlesUI</strong>).
+                        </p>
+                        <p>Certaines fonctionnalités liées aux versions modifiées peuvent également être différentes du
+                            système de support ou d'astuces.</p>
                     </div>
                     <div id="list">
                         <h2>Liste des mises à jour</h2>

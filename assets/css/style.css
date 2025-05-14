@@ -51,9 +51,10 @@ a:hover {
 
 code {
     display: inline-block;
+    font-family: monospace;
     width: 100%;
-    padding: 0.5%;
-    background: var(--gray-bg);
+    padding: 2vh 0.5vw;
+    background: var(--black);
     color: var(--white);
     margin: 1vh 0;
     border-radius: 5px;

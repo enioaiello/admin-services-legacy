@@ -227,6 +227,13 @@ article img {
     padding: 0;
 }
 
+article h1,
+article h2,
+article h3,
+article h4 {
+    margin: 0.5vh 0 !important;
+}
+
 article * {
     margin: 0.25vh 0;
 }
