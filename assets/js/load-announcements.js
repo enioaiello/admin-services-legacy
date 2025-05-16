@@ -1,5 +1,10 @@
 const articlesData = [
     {
+        titre: "Mise à jour exceptionnelle",
+        description: "Découvrez en plus sur la mise à jour exceptionnelle de fonctionnalité.",
+        lien: "exceptional-update.html"
+    },
+    {
         titre: "Futur du service",
         description: "En apprendre plus sur l'avenir du service",
         lien: "future-of-service.html"
