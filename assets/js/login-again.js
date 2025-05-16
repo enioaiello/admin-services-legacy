@@ -101,8 +101,7 @@ updateDateTime();
 // Affiche le fond d'écran dans les deux container
 function applyBackground() {
     if (localStorage.getItem("backgroundURL")) {
-        document.querySelector("#timeContainer").style.background = "url('" + localStorage.getItem("backgroundURL") + "')";
-        document.querySelector("#passwordContainer").style.background = "url('" + localStorage.getItem("backgroundURL") + "')";
+        document.querySelector(".container").style.background = "url('" + localStorage.getItem("backgroundURL") + "')";
     }
 }
 

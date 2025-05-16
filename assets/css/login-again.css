@@ -11,7 +11,7 @@ body {
     display: none;
 }
 
-#timeContainer.container {
+.container {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     padding: 20px;
@@ -20,30 +20,32 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
-#timeContainer.container .datetime {
-    
+.container .datetime {
     text-transform: capitalize;
     text-align: center;
 }
 
-#timeContainer.container .datetime #time {
+.container .datetime #time {
     font-size: 3rem;
     margin: 1vh 0;
 }
 
-#timeContainer.container .datetime #date {
+.container .datetime #date {
     font-size: 1.5rem;
 }
 
-#passwordContainer.container {
+.container {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     padding: 20px;
     width: 75%;
     margin: 20px auto 0 auto;
+}
+
+.container #passwordContainer {
+    width: 100%;
 }
 
 .container #profilePicture {
@@ -59,6 +61,10 @@ body {
     margin: 20px 0;
     color: var(--black);
     text-align: center;
+}
+
+.container #form {
+    width: 100%;
 }
 
 .container form {
@@ -145,8 +151,7 @@ body {
     animation: spin 1s linear infinite;
 }
 
-#timeContainer,
-#passwordContainer {
+.container {
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-attachment: fixed !important;
@@ -154,22 +159,12 @@ body {
 }
 
 .blink {
-    animation: blink infinite 3s;
+    margin: 0 5px;
+    animation: blink infinite 1s;
 }
 
 .none {
     display: none !important;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes blink {
-    0% { opacity: 0;}
-    50% { opacity: 1;}
-    100% { opacity: 0;}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -180,6 +175,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;    
+    }
+
+    #timeContainer {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
     }
 
     #timeContainer.container {
