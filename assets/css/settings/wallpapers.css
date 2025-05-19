@@ -1,0 +1,40 @@
+#remove {
+    color: #40798c;
+    cursor: pointer;
+}
+
+#remove:hover {
+    text-decoration: underline;
+}
+
+.articleContain {
+    justify-content: flex-start;
+}
+
+article {
+    width: 24%;
+    height: 25vh;
+    position: relative;
+    padding: 0;
+    background: none;
+    margin: 0 1% 1em 0;
+    overflow: hidden;
+}
+
+article:hover {
+    cursor: pointer;
+}
+
+article img {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+#information {
+    margin-top: 1em;
+}
+
+#background {
+    margin: 1vh 0;
+}

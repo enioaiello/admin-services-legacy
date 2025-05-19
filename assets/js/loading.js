@@ -96,7 +96,7 @@ function loader() {
             if (localStorage.getItem("username") === null) {
                 window.location.href = "./views/login/options.html";
             } else {
-                window.location.href = "./views/login/password.html";
+                window.location.href = "../../views/login/reconnect.html";
             }
         }
     }, 750);

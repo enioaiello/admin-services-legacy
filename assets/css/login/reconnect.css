@@ -1,5 +1,5 @@
 body {
-    background: url("../img/background/login/white.jpg") no-repeat center center fixed;
+    background: url("../../img/background/background-12.jpg") no-repeat center center fixed;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,19 +7,18 @@ body {
     justify-content: center;
 }
 
-#passwordContainer {
-    display: none;
-}
-
 .container {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
-    padding: 20px;
     width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
 }
 
 .container .datetime {
@@ -36,12 +35,13 @@ body {
     font-size: 1.5rem;
 }
 
-.container {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    padding: 20px;
-    width: 75%;
-    margin: 20px auto 0 auto;
+#passwordContainer {
+    display: none;
+}
+
+#timeContainer,
+#passwordContainer {
+    margin: 20px;
 }
 
 .container #passwordContainer {
@@ -54,7 +54,6 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     display: block;
-
 }
 
 .container #username {
@@ -151,13 +150,6 @@ body {
     animation: spin 1s linear infinite;
 }
 
-.container {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-size: cover !important;
-}
-
 .blink {
     margin: 0 5px;
     animation: blink infinite 1s;
@@ -169,12 +161,12 @@ body {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: url("../img/background/login/dark.jpg") no-repeat center center fixed;
+        background: url("../../img/background/background-11.jpg") no-repeat center center fixed;
         width: 100%;
         height: 100vh;
         display: flex;
         align-items: center;
-        justify-content: center;    
+        justify-content: center;
     }
 
     #timeContainer {

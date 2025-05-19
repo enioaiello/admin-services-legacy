@@ -1,0 +1,41 @@
+
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+#profilePictureDiv {
+    width: 25%;
+}
+
+#profilePicture {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#profilePicture:hover {
+    transform: scale(1.025);
+}
+
+#settingsDiv {
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #profilePictureDiv {
+        width: 100%;
+        text-align: center;
+    }
+
+    #settingsDiv {
+        width: 100%;
+        margin: 2vh 0;
+    }
+}

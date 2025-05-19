@@ -29,7 +29,7 @@ function changePassword(e) {
     // Si toutes les vérifications passent, le mot de passe est changé
     else {
         localStorage.setItem("password", newPasswordValue);
-        window.location.href = "https://enioaiello.github.io/admin-services/views/login/password.html";
+        window.location.href = "../../views/login/reconnect.html";
     }
 }
 

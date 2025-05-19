@@ -1,83 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez Admin Services, un projet d'étudiant géré par la team Corundum">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Découvrez Admin Services : un projet étudiant">
     <title>Admin Services</title>
+    <link rel="icon" href="https://enioaiello.github.io/admin-services-legacy/assets/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/articlesui.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <style>
-        #remove {
-            color: #40798c;
-            cursor: pointer;
-        }
-
-        #remove:hover {
-            text-decoration: underline;
-        }
-
-        .articleContain {
-            justify-content: flex-start;
-        }
-
-        article {
-            width: 24%;
-            height: 25vh;
-            position: relative;
-            padding: 0;
-            background: none;
-            margin: 0 1% 1em 0;
-            overflow: hidden;
-        }
-
-        article:hover {
-            cursor: pointer;
-        }
-
-        article img {
-            width: auto;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        #information {
-            margin-top: 1em;
-        }
-
-        #background {
-            margin: 1vh 0;
-        }
-    </style>
-    <link rel="icon" href="../../assets/img/logo.png">
+    <link rel="stylesheet" href="../../assets/css/settings/wallpapers.css">
 </head>
-
 <body>
-<header>
-    <nav>
-        <a href="../panel.html" id="brand">
-            <img src="../../assets/img/logo.png" alt="Logo Admin Services" id="brandIcon">
-        </a>
-        <ul id="navItems">
-            <li>
-                <a href="#" title="Retour"><i class="ri-arrow-left-line"></i></a>
-            </li>
-            <li>
-                <a href="../applications/settings.html" title="Retourner au menu de l'application"><i class="ri-folder-open-fill"></i></a>
-            </li>
-            <li>
-                <div id="logoutChamp">
-                    <a href="#" id="logout">
-                        <img src="#" alt="Photo de profil" id="pfpLogout">
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <a href="../panel.html" id="brand">
+                <img src="../../assets/img/logo.png" alt="Logo Admin Services" id="brandIcon">
+            </a>
+            <ul id="navItems">
+                <li>
+                    <a href="#" title="Retour"><i class="ri-arrow-left-line"></i></a>
+                </li>
+                <li>
+                    <a href="../applications/settings.html" title="Retourner au menu de l'application"><i class="ri-folder-open-fill"></i></a>
+                </li>
+                <li>
+                    <div id="logoutChamp">
+                        <a href="#" id="logout">
+                            <img src="#" alt="Photo de profil" id="pfpLogout">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <h1>Fonds d'écran</h1>
         <p>Sélectionnez un fond d'écran, il sera appliqué sur votre page d'accueil. Cliquez <span id="remove">ici</span>
@@ -101,13 +57,11 @@
         </div>
         <p id="information"><small>Fonds d'écran fournis par <a href="https://pexels.com/fr-fr/" target="_blank">Pexels</a>.</small></p>
     </main>
-<footer>
-    <p>&copy;2025, <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a>. All rights
-        reserved.</p>
-</footer>
-    <script src="../../assets/js/load-pfp.js"></script>
-    <script src="../../assets/js/wallpapers-components.js"></script>
+    <footer>
+        <p>&copy;2025, <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a>. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="../../assets/js/load-pfp.js"></script>
+    <script type="text/javascript" src="../../assets/js/wallpapers-components.js"></script>
     <script type="text/javascript" src="../../assets/js/back.js"></script>
 </body>
-
 </html>
