@@ -32,7 +32,7 @@ articles.forEach(articleData => {
     // Définit le contenu HTML de l'article en utilisant les données de l'article actuel
     article.innerHTML = `
         <h3>${articleData.title}</h3>
-        <p>${articleData.description}</p>
+<!--        <p>${articleData.description}</p>-->
         <a href="${articleData.link}" class="button">Démarrer</a>
     `;
 

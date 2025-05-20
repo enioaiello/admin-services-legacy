@@ -20,7 +20,7 @@ function getAppById(appId) {
 function init() {
     const username = localStorage.getItem('username');
     const appId = localStorage.getItem('app');
-    const appIndicationElement = document.getElementById('app-indication');
+    const appIndicationElement = document.querySelector('#app-indication');
 
     if (!username) {
         window.location.href = 'https://enioaiello.github.io/admin-services-legacy/';
@@ -32,25 +32,25 @@ function init() {
     if (app) {
         appIndicationElement.textContent = `L'application ${app.name} tente d'accéder à vos informations personnelles.`;
 
-        const permissionsElement = document.getElementById('app-autorisation');
+        const permissionsElement = document.querySelector('#app-autorisation');
         app.permissions.forEach(permission => {
             const li = document.createElement('li');
             li.textContent = permission;
             permissionsElement.appendChild(li);
         });
-        document.getElementById('app-accept').addEventListener('click', () => {
+        document.querySelector('#app-accept').addEventListener('click', () => {
             localStorage.removeItem('app');
             window.location.href = app.url;
         });
     } else {
         appIndicationElement.textContent = 'Application inconnue ou non autorisée.';
-        document.getElementById('continue').style.display = 'none';
-        document.getElementById('app-autorisation').style.display = 'none';
-        document.getElementById('buttons').style.display = 'none';
+        document.querySelector('#continue').style.display = 'none';
+        document.querySelector('#app-autorisation').style.display = 'none';
+        document.querySelector('#buttons').style.display = 'none';
     }
 }
 
-document.getElementById('app-refuse').addEventListener('click', () => {
+document.querySelector('#app-refuse').addEventListener('click', () => {
     localStorage.removeItem('app');
     window.location.href = 'https://enioaiello.github.io/admin-services-legacy/';
 });

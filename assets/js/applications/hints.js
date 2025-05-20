@@ -1,4 +1,4 @@
-let topicsDiv = document.getElementById("hints");
+let topicsDiv = document.querySelector("#hints");
 
 let articles = [
     {

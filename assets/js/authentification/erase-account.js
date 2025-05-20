@@ -9,7 +9,7 @@ function eraseAccount() {
         // Efface toutes les données stockées localement
         localStorage.clear();
         // Redirige vers la page d'accueil
-        window.location.href = "../../index.html";
+        window.location.href = "../../../index.html";
     } else {
         alert('Mot de passe incorrect');
     }

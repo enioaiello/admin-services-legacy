@@ -12,3 +12,7 @@ if (username) {
 if (email) {
     emailLabel.textContent = email;
 }
+
+if (password) {
+    passwordLabel.textContent = password.replace(/./g, "*");
+}

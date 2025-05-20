@@ -7,7 +7,7 @@ let pfp = localStorage.getItem("pfp");
 // Fonction pour charger l'image de profil
 function loadImage() {
     // Définit la source de l'image de déconnexion avec l'image de profil récupérée
-    pfpLogout.src = pfp;
+    pfpLogout.src = pfp && pfp.trim() !== "" ? pfp : "https://enioaiello.github.io/admin-services-legacy/assets/img/users/empty.jpg";
 }
 
 // Fonction pour se déconnecter
@@ -36,3 +36,19 @@ loadImage();
 
 // Ajoute un écouteur d'événement pour la déconnexion lors du clic sur l'image de déconnexion
 pfpLogout.addEventListener("click", logout);
+
+// Sélectionne l'élément de retour en arrière
+const backPage = document.querySelector("#backPage");
+
+// Si l'historique du navigateur ne contient pas de pages, on masque le bouton de retour
+if (window.history.length === 0) {
+    backPage.style.display = "none";
+}
+
+// Fonction pour revenir à la page précédente dans l'historique
+function goBack() {
+    window.history.back();
+}
+
+// Ajoute un écouteur d'événement pour revenir en arrière lors d'un clic sur le bouton
+backPage.addEventListener("click", goBack);

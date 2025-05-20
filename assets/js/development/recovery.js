@@ -62,7 +62,7 @@ function updateProfile() {
 
 function resetAdminServices() {
     localStorage.clear(); // Supprimer tous les éléments du stockage local
-    window.location.href = "./index.html"; // Rediriger vers la page d'accueil
+    window.location.href = "../../../index.html"; // Rediriger vers la page d'accueil
 }
 
 function resetStartup() {
@@ -92,7 +92,7 @@ function returnToHome() {
 
 // Fonction pour quitter
 function quit() {
-    window.location.href = "./index.html"; // Rediriger vers la page d'accueil
+    window.location.href = "../../../index.html"; // Rediriger vers la page d'accueil
 }
 
 // Ajout des écouteurs d'événements pour les boutons et les actions

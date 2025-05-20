@@ -1,8 +1,8 @@
 // Récupération des éléments du formulaire
-let oldPassword = document.getElementById("oldPassword");
-let newPassword = document.getElementById("newPassword");
-let repeatPassword = document.getElementById("repeatPassword");
-let confirmPassword = document.getElementById("confirmPassword");
+let oldPassword = document.querySelector("#oldPassword");
+let newPassword = document.querySelector("#newPassword");
+let repeatPassword = document.querySelector("#repeatPassword");
+let confirmPassword = document.querySelector("#confirmPassword");
 let errorField = document.querySelector("#error");
 
 // Fonction pour changer le mot de passe
@@ -29,7 +29,7 @@ function changePassword(e) {
     // Si toutes les vérifications passent, le mot de passe est changé
     else {
         localStorage.setItem("password", newPasswordValue);
-        window.location.href = "../../views/login/reconnect.html";
+        window.location.href = "../../../views/login/reconnect.html";
     }
 }
 

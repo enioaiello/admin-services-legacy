@@ -2,7 +2,7 @@ let version = '10.2.1';
 let bootMessage = document.querySelector("#message");
 
 function init() {
-    console.info("Vous exécutez Admin Services en version 10.2.1");
+    console.info("Vous exécutez Admin Services en version " + version);
     console.log("Préparation du chargeur d'Admin Services...");
 
     localStorage.setItem("version", version);

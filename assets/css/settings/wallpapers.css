@@ -1,3 +1,7 @@
+h2 {
+    margin: 1vh 0;
+}
+
 #remove {
     color: #40798c;
     cursor: pointer;
@@ -16,9 +20,10 @@ article {
     height: 25vh;
     position: relative;
     padding: 0;
-    background: none;
     margin: 0 1% 1em 0;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 article:hover {
