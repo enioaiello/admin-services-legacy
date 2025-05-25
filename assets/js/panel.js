@@ -13,6 +13,14 @@ let logoutButton = document.querySelector('#logoutButton');
 // Sélectionne l'élément avec l'ID 'devMode'
 let devMode = document.querySelector("#devMode");
 
+// Sélectionne l'élément avec l'ID 'notificationWidget'
+let notificationWidget = document.querySelector("#notificationWidget");
+
+// Vérifie si les notifications sont activées dans le stockage local
+if (localStorage.getItem("notifications-status") === "disabled") {
+    notificationWidget.style.display = "none";
+}
+
 // Vérifie si l'heure actuelle est entre 8h et 19h
 function welcomeMessage() {
     if (actualHour >= 8 && actualHour < 12) {
