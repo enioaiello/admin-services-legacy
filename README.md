@@ -2,11 +2,9 @@
     <img src="assets/img/logo.png" alt="Admin Services Logo" height="128">
 </p>
 
-# Admin Services (Legacy)
-
 ## À propos
 
-**Admin Services** est une plateforme permettant de créer et d'utiliser des webapps. Cette version a été conçue dans un but d'apprentissage. Si ce projet vous intéresse, consultez [la dernière version](https://github.com/enioaiello/admin-services/).
+**Admin Services** est une plateforme permettant de créer et d'utiliser des web apps. Cette version a été conçue dans un but d'apprentissage. Si ce projet vous intéresse, consultez [la dernière version](https://github.com/enioaiello/admin-services/).
 
 ## Fonctionnement
 
@@ -27,7 +25,8 @@ Ensuite, ouvrez le fichier `index.html` dans votre navigateur pour utiliser **Ad
 
 ### Version Web
 
-Accédez à la version Web d'**Admin Services** en cliquant sur le lien suivant : [Ouvrir la version Web](https://enioaiello.github.io/admin-services-legacy/)
+Accédez à la version Web d'**Admin Services** en cliquant sur le lien suivant :  
+[Ouvrir la version Web](https://enioaiello.github.io/admin-services-legacy/)
 
 > [!CAUTION]  
 > **Admin Services** utilise exclusivement le **localStorage** pour stocker vos données. Par conséquent, il est fortement déconseillé d'utiliser un mot de passe déjà utilisé dans les cas suivants :  
