@@ -10,6 +10,9 @@ let error = document.querySelector('#error');
 const timeElement = document.querySelector("#time");
 const dateElement = document.querySelector("#date");
 
+// Récupérer le texte de nom d'utilisateur
+let usernameText = document.querySelector("#username");
+
 // Vérifier si les valeurs existent dans le localStorage
 function check() {
     if (!username || !password || !pfp) {
@@ -102,6 +105,9 @@ updateDateTime();
 function applyBackground() {
     if (localStorage.getItem("backgroundURL")) {
         document.querySelector(".container").style.background = "url('" + localStorage.getItem("backgroundURL") + "')";
+        dateElement.style.color = "#ffffff";
+        timeElement.style.color = "#ffffff";
+        usernameText.style.color = "#ffffff";
     }
 }
 
