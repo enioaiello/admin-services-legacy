@@ -2,7 +2,7 @@
     <img src="assets/img/logo.png" alt="Admin Services Logo" height="128">
 </p>
 
-## À propos
+## À propos d'Admin Services
 
 **Admin Services** est une plateforme permettant de créer et d'utiliser des web apps. Cette version a été conçue dans un but d'apprentissage. Si ce projet vous intéresse, consultez [la dernière version](https://github.com/enioaiello/admin-services/).
 
