@@ -44,23 +44,39 @@
             <div class="articleContain">
                 <article>
                     <h3>Rétrograder</h3>
-                    <p>Rétrograder <strong>Admin Services</strong> vers <strong>Google Fake Admin Panel</strong>.</p>
-                    <a href="#" id="gfapDown" class="button">Commencer</a>
+                    <div class="details none">
+                        <p>Rétrograder <strong>Admin Services</strong> vers <strong>Google Fake Admin Panel</strong>.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" id="gfapDown" class="button semi" style="width: 84%;">Commencer</a>
+                        <a onclick="toggleDetails(this)" class="button semi" style="width: 15%;" title="Obtenir des informations">
+                            <i class="ri-information-line"></i>
+                        </a>
+                    </div>
                 </article>
                 <article>
                     <h3>Réinitialisation</h3>
-                    <p>Réinitialiser <strong>Admin Services</strong> pour effacer les données utilisateurs.</p>
-                    <a href="../security/erase-account.html" class="button">Modifier dans le centre de sécurité</a>
-                </article>
-                <article>
-                    <h3>Mode de récupération</h3>
-                    <p>Rechargez <strong>Admin Services</strong> en mode de récupération.</p>
-                    <a href="https://enioaiello.github.io/admin-services-legacy/views/utility/developer-mode/safe-mode.html" class="button">Commencer</a>
+                    <div class="details none">
+                        <p>Réinitialiser <strong>Admin Services</strong> pour effacer les données utilisateurs.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="../security/erase-account.html" class="button semi" style="width: 84%;">Modifier dans le centre de sécurité</a>
+                        <a onclick="toggleDetails(this)" class="button semi" style="width: 15%;" title="Obtenir des informations">
+                            <i class="ri-information-line"></i>
+                        </a>
+                    </div>
                 </article>
                 <article id="dev">
                     <h3>Mode développeur</h3>
-                    <p>Activez le mode développeur pour accéder aux outils supplémentaires.</p>
-                    <a href="#" id="devModeSettings" class="button">Activer</a>
+                    <div class="details none">
+                        <p>Activez le mode développeur pour accéder aux outils supplémentaires.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" id="devModeSettings" class="button semi" style="width: 84%;">Activer</a>
+                        <a onclick="toggleDetails(this)" class="button semi" style="width: 15%;" title="Obtenir des informations">
+                            <i class="ri-information-line"></i>
+                        </a>
+                    </div>
                 </article>
             </div>
             <h2>Informations</h2>
@@ -85,5 +101,6 @@
     <script type="text/javascript" src="../../assets/js/development/downgrade.js"></script>
     <script type="text/javascript" src="../../assets/js/applications/news.js"></script>
     <script type="text/javascript" src="../../assets/js/development/dev-mode-settings.js"></script>
+    <script type="text/javascript" src="../../assets/js/basic-functions.js"></script>
 </body>
 </html>

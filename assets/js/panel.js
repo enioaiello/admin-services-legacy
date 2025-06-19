@@ -242,8 +242,3 @@ if (localStorage.getItem("dev-mode") === "true") {
 }
 
 setInterval(welcomeMessage, 500);
-
-function toggleDetails(button) {
-    const details = button.closest('article').querySelector('.details');
-    details.classList.toggle('none');
-}
