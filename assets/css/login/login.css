@@ -49,7 +49,7 @@ form label input, #pfp {
     font-size: 1.1rem;
 }
 
-#email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus, #passwordRepeat:focus  {
+#email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus, #passwordRepeat:focus {
     border: 2px solid var(--default);
 }
 
@@ -124,7 +124,7 @@ form label input, #pfp {
         border: 2px solid var(--black);
     }
 
-    #email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus  {
+    #email:focus, #password:focus, #login:focus, #username:focus, #pfp:focus {
         border: 2px solid var(--default);
     }
 

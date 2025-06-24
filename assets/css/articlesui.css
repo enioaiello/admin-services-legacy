@@ -262,7 +262,7 @@ article:hover {
     margin: 0;
 }
 
-article>.buttons {
+article > .buttons {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -279,8 +279,12 @@ article>.buttons {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 768px) {
