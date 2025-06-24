@@ -7,6 +7,9 @@ const images = [
     { name: "Montagnes enneigée de nuit", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-6.jpg", category: "night" },
     { name: "Mer translucide", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-7.jpg", category: "nature" },
     { name: "Forêt sur montagne", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-5.jpg", category: "nature" },
+    { name: "Forêt sur montagne", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-11.jpg", category: "abstract" },
+    { name: "Forêt sur montagne", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-12.jpg", category: "abstract" },
+    { name: "Bleu par défaut", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-10.png", category: "as" },
     { name: "Maisons colorées", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-1.jpg", category: "city" }
 ];
 
@@ -16,18 +19,25 @@ const background = document.querySelector("#background");
 function displayImages() {
     images.forEach(image => {
         const imageElement = document.createElement("article");
-        imageElement.innerHTML = `<img src="${image.link}" alt="${image.name}" onclick="redirect('${image.name}')" title="${image.name}">`;
+        imageElement.onclick = () => redirect(image.name);
+        imageElement.style.backgroundImage = "url('" + image.link + "')";
 
         // Ajouter l'image à la catégorie correspondante
         switch (image.category) {
             case "nature":
-                document.getElementById("nature").appendChild(imageElement);
+                document.querySelector("#nature").appendChild(imageElement);
                 break;
             case "city":
-                document.getElementById("city").appendChild(imageElement);
+                document.querySelector("#city").appendChild(imageElement);
                 break;
             case "night":
-                document.getElementById("night").appendChild(imageElement);
+                document.querySelector("#night").appendChild(imageElement);
+                break;
+            case "abstract":
+                document.querySelector("#abstract").appendChild(imageElement);
+                break;
+            case "as":
+                document.querySelector("#as").appendChild(imageElement);
                 break;
             default:
                 console.error(`Catégorie inconnue pour l'image : ${image.name}`);
@@ -56,7 +66,7 @@ function removeActiveBackground() {
 }
 
 // Ajouter un écouteur d'événement pour supprimer l'image de fond active lors du clic sur le bouton "remove"
-document.getElementById("remove").addEventListener("click", removeActiveBackground);
+document.querySelector("#remove").addEventListener("click", removeActiveBackground);
 
 // Appeler la fonction displayImages lorsque la page est entièrement chargée
 window.onload = displayImages;

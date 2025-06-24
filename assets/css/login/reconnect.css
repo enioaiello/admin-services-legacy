@@ -1,0 +1,203 @@
+body {
+    background-color: var(--default) !important;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+.container > #timeContainer {
+    cursor: pointer;
+}
+
+.container .datetime {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.container .datetime #time {
+    font-size: 3rem;
+    margin: 1vh 0;
+}
+
+.container .datetime #date {
+    font-size: 1.5rem;
+}
+
+#passwordContainer {
+    display: none;
+}
+
+#timeContainer,
+#passwordContainer {
+    margin: 20px;
+}
+
+.container #passwordContainer {
+    width: 100%;
+}
+
+.container #profilePicture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.container #username {
+    margin: 10px 0;
+    color: var(--black);
+    text-align: center;
+}
+
+.container #form {
+    width: 100%;
+}
+
+.container form {
+    margin: 5px auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container form label {
+    width: 82.5%;
+}
+
+.container form label input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid var(--lightgray-bg);
+    border-radius: 5px;
+}
+
+.container form label input:focus {
+    outline: none;
+    border: 1px solid var(--default);
+}
+
+.container form input[type=submit] {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid var(--default);
+    border-radius: 5px;
+    background: var(--default);
+    color: white;
+    cursor: pointer;
+    width: 15%;
+}
+
+.container form input[type=submit]:hover {
+    background: #40798caa;
+    border: 1px solid #40798c;
+}
+
+.container #resetPassword {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.container .bottomText {
+    width: 100%;
+    color: var(--gray);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container #error {
+    display: none;
+    margin-right: 10px;
+}
+
+#logo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 20px;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+#loading .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--lightgray-bg);
+    border-top: 5px solid var(--default);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.blink {
+    margin: 0 5px;
+    animation: blink infinite 1s;
+}
+
+.none {
+    display: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--black) !important;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #timeContainer {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    #timeContainer.container {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    #passwordContainer.container {
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        width: 75%;
+        margin: 20px auto 0 auto;
+    }
+
+    .container {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .container #username {
+        margin: 10px 0;
+        color: var(--white);
+        text-align: center;
+    }
+}

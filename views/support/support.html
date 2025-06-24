@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +7,12 @@
     <meta name="description" content="Découvrez Admin Services, un projet d'étudiant géré par la team Corundum">
     <title>Admin Services</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/panel.css">
-    <link rel="stylesheet" href="../../assets/css/support.css">
+    <link rel="stylesheet" href="../../assets/css/panel/panel.css">
+    <link rel="stylesheet" href="../../assets/css/applications/support.css">
     <link rel="stylesheet" href="../../assets/css/articlesui.css">
     <link rel="icon" href="../../assets/img/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <nav>
@@ -37,73 +35,57 @@
     </header>
     <main>
         <div class="container">
-            <ul id="sidebar">
-                <li>
+            <div id="sidebar">
+                <div id="topics">
                     <a href="./support.html">Accueil</a>
-                </li>
-                <li>
                     <a href="./category/account.html">Compte</a>
-                </li>
-                <li>
-                    <a href="./category/security.html">Sécurité</a>
-                </li>
-                <li>
-                    <a href="./category/functions.html">Fonctionnalités</a>
-                </li>
-                <li>
-                    <a href="./category/personnalisation.html">Personnalisation</a>
-                </li>
-                <li>
                     <a href="./category/updates.html">Mises à jour</a>
-                </li>
-                <li>
-                    <a href="./category/dev.html"></a>
-                </li>
-            </ul>
+                    <a href="./category/dev.html">Développement</a>
+                </div>
+            </div>
             <div id="content">
                 <h1>Support</h1>
-                <p>Bienvenue sur notre page de support ! Comment pouvons-nous vous aider aujourd'hui ?</p>
+                <p id="welcome">Bienvenue sur notre page de support ! Comment pouvons-nous vous aider aujourd'hui&nbsp;?
+                </p>
                 <div id="category" class="articleContain">
                     <article>
                         <h2>Compte</h2>
-                        <p>Obtenir de l'aide pour des paramètres liés à votre compte.</p>
-                        <a href="./category/account.html" class="button">Consulter</a>
+                        <div class="details none">
+                            <p>Obtenez de l'aide pour des paramètres liés à votre compte.</p>
+                        </div>
+                        <div class="buttons">
+                            <a href="category/account.html" class="button semi" style="width: 84%;">Consulter</a>
+                            <a onclick="toggleDetails(this)" class="button semi" style="width: 15%;"
+                                title="Obtenir des informations"><i class="ri-information-line"></i></a>
+                        </div>
                     </article>
-<!--                    <article>-->
-<!--                        <h2>Sécurité</h2>-->
-<!--                        <p>Obtenir de l'aide concernant la sécurité.</p>-->
-<!--                        <a href="#" class="button">Consulter</a>-->
-<!--                    </article>-->
-<!--                    <article>-->
-<!--                        <h2>Fonctionnalités</h2>-->
-<!--                        <p>Obtenir de l'aide concernant les fonctionnalités majeures.</p>-->
-<!--                        <a href="#" class="button">Consulter</a>-->
-<!--                    </article>-->
-<!--                    <article>-->
-<!--                        <h2>Personnalisation</h2>-->
-<!--                        <p>Obtenir de l'aide concernant votre page d'accueil.</p>-->
-<!--                        <a href="#" class="button">Consulter</a>-->
-<!--                    </article>-->
                     <article>
                         <h2>Mises à jour</h2>
-                        <p>Obtenir des informations sur les mises à jour.</p>
-                        <a href="./category/updates.html" class="button">Consulter</a>
+                        <div class="details none">
+                            <p>Obtenez des informations sur les mises à jour.</p>
+                        </div>
+                        <div class="buttons">
+                            <a href="./category/updates.html" class="button semi" style="width: 84%;">Consulter</a>
+                            <a onclick="toggleDetails(this)" class="button semi" style="width: 15%;"
+                                title="Obtenir des informations"><i class="ri-information-line"></i></a>
+                        </div>
                     </article>
                     <article>
                         <h2>Développement</h2>
-                        <p>Obtenir de l'aide concernant les outils de développement.</p>
-                        <a href="#" class="button">Consulter</a>
+                        <div class="details none">
+                            <p>Obtenez de l'aide concernant les outils de développement.</p>
+                        </div>
+                        <div class="buttons">
+                            <a href="./category/dev.html" class="button semi" style="width: 84%;">Consulter</a>
+                            <a onclick="toggleDetails(this)" class="button semi" style="width: 15%;"
+                                title="Obtenir des informations"><i class="ri-information-line"></i></a>
+                        </div>
                     </article>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <p>&copy;2025, <a href="https://enioaiello.github.io/" target="_blank">Enio Aiello</a>. All rights
-            reserved.</p>
-    </footer>
-    <script src="../../assets/js/load-pfp.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../../assets/js/back.js"></script>
+    <script type="text/javascript" src="../../assets/js/nav.js"></script>
+    <script type="text/javascript" src="../../assets/js/applications/support.js"></script>
 </body>
-
 </html>

@@ -1,8 +1,8 @@
-let version = '10.2.1';
+let version = '10.4.0';
 let bootMessage = document.querySelector("#message");
 
 function init() {
-    console.info("Vous exécutez Admin Services en version 10.2.1");
+    console.info("Vous exécutez Admin Services en version " + version);
     console.log("Préparation du chargeur d'Admin Services...");
 
     localStorage.setItem("version", version);
@@ -96,7 +96,7 @@ function loader() {
             if (localStorage.getItem("username") === null) {
                 window.location.href = "./views/login/options.html";
             } else {
-                window.location.href = "./views/login/password.html";
+                window.location.href = "../../views/login/reconnect.html";
             }
         }
     }, 750);
