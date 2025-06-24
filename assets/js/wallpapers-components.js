@@ -9,7 +9,7 @@ const images = [
     { name: "Forêt sur montagne", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-5.jpg", category: "nature" },
     { name: "Forêt sur montagne", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-11.jpg", category: "abstract" },
     { name: "Forêt sur montagne", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-12.jpg", category: "abstract" },
-    { name: "Bleu par défaut", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-10.png", category: "as" },
+    { name: "Bleu par défaut", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-10.jpg", category: "as" },
     { name: "Maisons colorées", link: "https://enioaiello.github.io/admin-services-legacy/assets/img/background/background-1.jpg", category: "city" }
 ];
 
