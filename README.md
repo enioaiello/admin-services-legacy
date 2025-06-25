@@ -18,7 +18,7 @@ Pour utiliser **Admin Services**, deux options s'offrent à vous :
 Clonez le dépôt **Admin Services** directement sur votre ordinateur ou serveur en exécutant la commande suivante :
 
 ```bash
-git clone https://github.com/enioaiello/admin-services.git
+git clone https://github.com/enioaiello/admin-services-legacy.git
 ```
 
 Ensuite, ouvrez le fichier `index.html` dans votre navigateur pour utiliser **Admin Services** en local.
