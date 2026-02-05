@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "type": "internal",
             "compatibility": "Admin Services 10.1",
             "version": "10.1",
-            "source": "https://github.com/enioaiello/admin-services/"
+            "source": "https://github.com/enioaiello/admin-services-legacy/"
         },
         {
             "name": "Paramètres",
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "compatibility": "Admin Services 10.1",
             "screen": "../../assets/img/capture/settings.png",
             "category": "Système",
-            "source": "https://github.com/enioaiello/admin-services/"
+            "source": "https://github.com/enioaiello/admin-services-legacy/"
         },
         {
             "name": "Support",
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "compatibility": "Admin Services 10.1",
             "screen": "../../assets/img/capture/support.png",
             "category": "Système",
-            "source": "https://github.com/enioaiello/admin-services/"
+            "source": "https://github.com/enioaiello/admin-services-legacy/"
         },
         {
             "name": "Services",
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "compatibility": "Admin Services 10.1",
             "screen": "../../assets/img/capture/services.png",
             "category": "Système",
-            "source": "https://github.com/enioaiello/admin-services/"
+            "source": "https://github.com/enioaiello/admin-services-legacy/"
         },
         {
             "name": "Centre de sécurité",
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "compatibility": "Admin Services 10.1",
             "screen": "../../assets/img/capture/security.png",
             "category": "Système",
-            "source": "https://github.com/enioaiello/admin-services/"
+            "source": "https://github.com/enioaiello/admin-services-legacy/"
         },
         {
             "name": "Astuces",
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "compatibility": "Admin Services 10.1",
             "screen": "../../assets/img/capture/hints.png",
             "category": "Système",
-            "source": "https://github.com/enioaiello/admin-services/"
+            "source": "https://github.com/enioaiello/admin-services-legacy/"
         },
         {
             "name": "Éditeur de texte",
